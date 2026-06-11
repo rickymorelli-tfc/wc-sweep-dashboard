@@ -1,0 +1,9 @@
+{
+  "name": "wc-sweep-dashboard",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/",
+    "fetch": "node scripts/fetch-scores.js"
+  }
+}

@@ -1,0 +1,6 @@
+[
+  { "name": "EDIT-ME Person 1", "teams": ["ARG", "AUS"] },
+  { "name": "EDIT-ME Person 2", "teams": ["FRA", "JPN"] },
+  { "name": "EDIT-ME Person 3", "teams": ["BRA", "USA"] },
+  { "name": "EDIT-ME Person 4", "teams": ["ENG", "MEX"] }
+]
