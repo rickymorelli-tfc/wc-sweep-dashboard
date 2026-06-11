@@ -64,7 +64,9 @@ function renderLeaderboard(board) {
 
 function matchCard(match) {
   const card = el('div', 'match');
-  const stage = match.group || STAGE_LABELS[match.stage] || match.stage;
+  const stage = match.group
+    ? match.group.replace('GROUP_', 'Group ')
+    : STAGE_LABELS[match.stage] || match.stage;
   card.append(el('div', 'match-stage', stage));
   const line = el('div', 'match-line');
   line.append(el('span', 'team home', match.home.name));
