@@ -36,9 +36,11 @@ function renderLeaderHero(board) {
   const names = leaders.map((p) => p.name);
   hero.classList.remove('hidden');
   hero.append(el('div', 'crown', '\u{1F451}'));
-  hero.append(el('div', 'leader-name', names.join(' & ')));
-  hero.append(el('div', 'leader-sub',
+  const text = el('div', 'leader-text');
+  text.append(el('div', 'leader-name', names.join(' & ')));
+  text.append(el('div', 'leader-sub',
     names.length > 1 ? `tied on ${board[0].points} pts` : `leading with ${board[0].points} pts`));
+  hero.append(text);
 }
 
 function renderLeaderboard(board) {
