@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { computeTeamTable, computeLeaderboard } from '../assets/score.js';
+import { computeTeamTable, computeLeaderboard, teamMatches } from '../assets/score.js';
 
 const T = (code, name) => ({ code, name, crest: '' });
 const m = (over) => ({
@@ -100,4 +100,28 @@ test('unknown roster code scores zero and is flagged', () => {
   const board = computeLeaderboard([{ name: 'Amy', teams: ['XXX'] }], new Map());
   assert.equal(board[0].points, 0);
   assert.equal(board[0].teams[0].unknown, true);
+});
+
+test('teamMatches returns the team history in date order with outcomes', () => {
+  const fixtures = [
+    m({ id: 2, utcDate: '2026-06-18T00:00:00Z', home: T('CCC', 'Gamma'), away: T('AAA', 'Alpha'), homeScore: 0, awayScore: 2, winner: 'AWAY_TEAM' }),
+    m({ id: 1, utcDate: '2026-06-12T00:00:00Z', homeScore: 1, awayScore: 1 }),
+    m({ id: 3, utcDate: '2026-06-24T00:00:00Z', status: 'TIMED', home: T('AAA', 'Alpha'), away: T('DDD', 'Delta'), homeScore: null, awayScore: null, winner: null }),
+    m({ id: 4, utcDate: '2026-06-20T00:00:00Z', home: T('CCC', 'Gamma'), away: T('DDD', 'Delta'), homeScore: 1, awayScore: 0, winner: 'HOME_TEAM' }),
+  ];
+  const history = teamMatches(fixtures, 'AAA');
+  assert.deepEqual(history.map((h) => h.match.id), [1, 2, 3]);
+  assert.deepEqual(history.map((h) => h.outcome), ['D', 'W', null]);
+});
+
+test('teamMatches marks shootouts as draws with the progression note', () => {
+  const history = teamMatches([
+    m({ stage: 'LAST_16', group: null, homeScore: 2, awayScore: 2, decidedBy: 'PENALTIES', winner: 'HOME_TEAM' }),
+  ], 'BBB');
+  assert.equal(history[0].outcome, 'D');
+  assert.equal(history[0].pensProgressed, false);
+  const winnerSide = teamMatches([
+    m({ stage: 'LAST_16', group: null, homeScore: 2, awayScore: 2, decidedBy: 'PENALTIES', winner: 'HOME_TEAM' }),
+  ], 'AAA');
+  assert.equal(winnerSide[0].pensProgressed, true);
 });

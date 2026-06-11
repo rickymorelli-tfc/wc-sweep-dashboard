@@ -94,3 +94,26 @@ export function computeLeaderboard(roster, teamTable) {
 function sameRank(a, b) {
   return a.points === b.points && a.gd === b.gd && a.gf === b.gf;
 }
+
+export function teamMatches(matches, code) {
+  return matches
+    .filter((m) => m.home?.code === code || m.away?.code === code)
+    .sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate))
+    .map((match) => {
+      const isHome = match.home?.code === code;
+      let outcome = null;
+      let pensProgressed = null;
+      if (match.status === 'FINISHED') {
+        if (match.decidedBy === 'PENALTIES' || match.homeScore === match.awayScore) {
+          outcome = 'D';
+        } else {
+          const homeWon = match.homeScore > match.awayScore;
+          outcome = homeWon === isHome ? 'W' : 'L';
+        }
+        if (match.decidedBy === 'PENALTIES' && match.winner && match.winner !== 'DRAW') {
+          pensProgressed = (match.winner === 'HOME_TEAM') === isHome;
+        }
+      }
+      return { match, isHome, outcome, pensProgressed };
+    });
+}

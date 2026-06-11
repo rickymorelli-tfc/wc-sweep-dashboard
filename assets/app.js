@@ -1,4 +1,7 @@
-import { computeTeamTable, computeLeaderboard } from './score.js';
+import { computeTeamTable, computeLeaderboard, teamMatches } from './score.js';
+
+let allMatches = [];
+let teamTableRef = new Map();
 
 const STAGE_LABELS = {
   GROUP_STAGE: 'Groups', LAST_32: 'R32', LAST_16: 'R16',
@@ -13,7 +16,8 @@ function el(tag, cls, text) {
 }
 
 function teamChip(team) {
-  const chip = el('span', 'chip' + (team.exitStage ? ' out' : ''));
+  const chip = el('button', 'chip' + (team.exitStage ? ' out' : ''));
+  chip.type = 'button';
   if (team.crest) {
     const img = el('img', 'crest');
     img.src = team.crest;
@@ -25,7 +29,104 @@ function teamChip(team) {
   if (team.unknown) chip.append(el('span', 'badge warn', 'unknown code'));
   else if (team.champion) chip.append(el('span', 'badge gold', 'CHAMPIONS'));
   else if (team.exitStage) chip.append(el('span', 'badge', `out ${STAGE_LABELS[team.exitStage] || team.exitStage}`));
+  if (!team.unknown) {
+    chip.setAttribute('aria-label', `Show ${team.name} matches`);
+    chip.addEventListener('click', () => openTeamModal(team.code));
+  } else {
+    chip.disabled = true;
+  }
   return chip;
+}
+
+function closeTeamModal() {
+  document.querySelector('.modal-overlay')?.remove();
+  document.removeEventListener('keydown', onModalKeydown);
+}
+
+function onModalKeydown(e) {
+  if (e.key === 'Escape') closeTeamModal();
+}
+
+function teamModalRow({ match, isHome, outcome, pensProgressed }) {
+  const opponent = isHome ? match.away : match.home;
+  const row = el('div', 'tm-row' + (outcome === null ? ' upcoming' : ''));
+
+  const when = el('div', 'tm-when');
+  const date = new Date(match.utcDate);
+  when.append(el('div', 'tm-date', date.toLocaleDateString([], { day: 'numeric', month: 'short' })));
+  const stage = match.group ? match.group.replace('GROUP_', 'Group ') : STAGE_LABELS[match.stage] || match.stage;
+  when.append(el('div', 'tm-stage', stage));
+  row.append(when);
+
+  const opp = el('div', 'tm-opp');
+  if (opponent.crest) {
+    const img = el('img', 'crest');
+    img.src = opponent.crest;
+    img.alt = '';
+    opp.append(img);
+  }
+  opp.append(el('span', null, `vs ${opponent.name}`));
+  row.append(opp);
+
+  const right = el('div', 'tm-result');
+  if (outcome === null) {
+    right.append(el('span', 'tm-kickoff',
+      date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })));
+  } else {
+    const us = isHome ? match.homeScore : match.awayScore;
+    const them = isHome ? match.awayScore : match.homeScore;
+    right.append(el('span', 'tm-score', `${us} - ${them}`));
+    if (pensProgressed !== null) {
+      right.append(el('span', 'tm-pens', pensProgressed ? 'through on pens' : 'out on pens'));
+    }
+    right.append(el('span', `result-badge result-${outcome.toLowerCase()}`, outcome));
+  }
+  row.append(right);
+  return row;
+}
+
+function openTeamModal(code) {
+  closeTeamModal();
+  const team = teamTableRef.get(code);
+  if (!team) return;
+  const history = teamMatches(allMatches, code);
+
+  const overlay = el('div', 'modal-overlay');
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) closeTeamModal(); });
+  const modal = el('div', 'modal');
+  modal.setAttribute('role', 'dialog');
+  modal.setAttribute('aria-label', `${team.name} matches`);
+
+  const head = el('div', 'modal-head');
+  if (team.crest) {
+    const img = el('img', 'modal-crest');
+    img.src = team.crest;
+    img.alt = '';
+    head.append(img);
+  }
+  const info = el('div', 'modal-info');
+  info.append(el('div', 'modal-team', team.name));
+  info.append(el('div', 'modal-record',
+    `${team.won}W ${team.drawn}D ${team.lost}L · ${team.points} pts · GD ${team.gd > 0 ? '+' : ''}${team.gd}`));
+  if (team.champion) info.append(el('span', 'badge gold', 'CHAMPIONS'));
+  else if (team.exitStage) info.append(el('span', 'badge', `out ${STAGE_LABELS[team.exitStage] || team.exitStage}`));
+  head.append(info);
+  const close = el('button', 'modal-close', '×');
+  close.type = 'button';
+  close.setAttribute('aria-label', 'Close');
+  close.addEventListener('click', closeTeamModal);
+  head.append(close);
+  modal.append(head);
+
+  const list = el('div', 'tm-list');
+  if (history.length) history.forEach((h) => list.append(teamModalRow(h)));
+  else list.append(el('p', 'empty', 'No matches in the feed for this team yet.'));
+  modal.append(list);
+
+  overlay.append(modal);
+  document.body.append(overlay);
+  document.addEventListener('keydown', onModalKeydown);
+  close.focus();
 }
 
 function renderLeaderHero(board) {
@@ -121,6 +222,8 @@ async function main() {
       loadJson('data/matches.json'),
     ]);
     const teamTable = computeTeamTable(data.matches);
+    allMatches = data.matches;
+    teamTableRef = teamTable;
     const board = computeLeaderboard(roster, teamTable);
     renderLeaderHero(board);
     renderLeaderboard(board);
