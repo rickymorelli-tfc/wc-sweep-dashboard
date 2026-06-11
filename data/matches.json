@@ -1,1 +1,26 @@
-{ "lastUpdated": null, "matches": [] }
+{
+  "lastUpdated": "2026-06-12T08:00:00.000Z",
+  "matches": [
+    {
+      "id": 1, "stage": "GROUP_STAGE", "group": "Group A", "utcDate": "2026-06-11T19:00:00Z",
+      "status": "FINISHED",
+      "home": { "code": "MEX", "name": "Mexico", "crest": "" },
+      "away": { "code": "RSA", "name": "South Africa", "crest": "" },
+      "homeScore": 2, "awayScore": 1, "decidedBy": "REGULAR", "winner": "HOME_TEAM"
+    },
+    {
+      "id": 2, "stage": "GROUP_STAGE", "group": "Group B", "utcDate": "2026-06-12T01:00:00Z",
+      "status": "FINISHED",
+      "home": { "code": "ARG", "name": "Argentina", "crest": "" },
+      "away": { "code": "DEN", "name": "Denmark", "crest": "" },
+      "homeScore": 3, "awayScore": 0, "decidedBy": "REGULAR", "winner": "HOME_TEAM"
+    },
+    {
+      "id": 3, "stage": "GROUP_STAGE", "group": "Group C", "utcDate": "2026-06-12T22:00:00Z",
+      "status": "TIMED",
+      "home": { "code": "AUS", "name": "Australia", "crest": "" },
+      "away": { "code": "FRA", "name": "France", "crest": "" },
+      "homeScore": null, "awayScore": null, "decidedBy": "REGULAR", "winner": null
+    }
+  ]
+}
