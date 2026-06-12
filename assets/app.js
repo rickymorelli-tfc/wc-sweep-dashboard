@@ -3,6 +3,7 @@ import { computeTeamTable, computeLeaderboard, teamMatches, matchPoints } from '
 let allMatches = [];
 let teamTableRef = new Map();
 let ownersByCode = new Map();
+let predictionsById = {};
 
 const STAGE_LABELS = {
   GROUP_STAGE: 'Groups', LAST_32: 'R32', LAST_16: 'R16',
@@ -261,6 +262,9 @@ function openMatchModal(match) {
   body.append(matchModalSide(match.away, pts ? pts.away : null));
   modal.append(body);
 
+  const prediction = predictionFor(match);
+  if (prediction) modal.append(predictionBar(match, prediction, 'mm-predict'));
+
   const homeOwner = match.home.code ? ownersByCode.get(match.home.code) : null;
   const awayOwner = match.away.code ? ownersByCode.get(match.away.code) : null;
   if (homeOwner && awayOwner) {
@@ -274,6 +278,31 @@ function openMatchModal(match) {
   document.body.append(overlay);
   document.addEventListener('keydown', onModalKeydown);
   close.focus();
+}
+
+function predictionFor(match) {
+  if (match.status !== 'TIMED' && match.status !== 'SCHEDULED') return null;
+  return predictionsById[match.id] || null;
+}
+
+function predictionBar(match, p, cls) {
+  const wrap = el('div', cls);
+  const bar = el('div', 'predict-bar');
+  for (const [cls, share] of [['seg-home', p.home], ['seg-draw', p.draw], ['seg-away', p.away]]) {
+    const seg = el('span', cls);
+    seg.style.width = `${share * 100}%`;
+    bar.append(seg);
+  }
+  wrap.append(bar);
+  const legend = el('div', 'predict-legend');
+  const top = Math.max(p.home, p.draw, p.away);
+  const entry = (name, share) =>
+    el('span', share === top ? 'predict-fav' : null, `${name} ${Math.round(share * 100)}%`);
+  legend.append(entry(match.home.name, p.home));
+  legend.append(entry('Draw', p.draw));
+  legend.append(entry(match.away.name, p.away));
+  wrap.append(legend);
+  return wrap;
 }
 
 function dayLabel(date, now) {
@@ -327,6 +356,8 @@ function feedRow(match, isLive) {
     middle.append(el('div', 'feed-owners',
       homeOwner === awayOwner ? `${homeOwner} v ${homeOwner} (owns both!)` : `${homeOwner} v ${awayOwner}`));
   }
+  const prediction = predictionFor(match);
+  if (prediction) middle.append(predictionBar(match, prediction, 'feed-predict'));
   row.append(middle);
   row.append(el('span', 'feed-chevron', '›'));
   return row;
@@ -390,10 +421,12 @@ async function main() {
   const updated = document.querySelector('#updated');
   try {
     clearSections();
-    const [roster, data] = await Promise.all([
+    const [roster, data, predictions] = await Promise.all([
       loadJson('data/roster.json'),
       loadJson('data/matches.json'),
+      loadJson('data/predictions.json').catch(() => null),
     ]);
+    predictionsById = predictions?.predictions || {};
     const teamTable = computeTeamTable(data.matches);
     allMatches = data.matches;
     teamTableRef = teamTable;
@@ -410,6 +443,11 @@ async function main() {
     updated.textContent = `Could not load data: ${err.message}`;
   }
 }
+
+// Remove any image that fails to load instead of showing a broken icon.
+document.addEventListener('error', (e) => {
+  if (e.target.tagName === 'IMG') e.target.remove();
+}, true);
 
 main();
 

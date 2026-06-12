@@ -14,11 +14,14 @@ jobs:
         run: node scripts/fetch-scores.js
         env:
           FOOTBALL_DATA_TOKEN: ${{ secrets.FOOTBALL_DATA_TOKEN }}
+      - name: Fetch win predictions
+        run: node scripts/fetch-predictions.js
+        continue-on-error: true
       - name: Commit if changed
         run: |
           git config user.name "wc-sweep-bot"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/matches.json
+          git add data/matches.json data/predictions.json
           git diff --cached --quiet && echo "No changes" && exit 0
           git commit -m "Update scores"
           git push
