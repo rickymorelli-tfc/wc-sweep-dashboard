@@ -276,18 +276,93 @@ function openMatchModal(match) {
   close.focus();
 }
 
-function renderMatches(matches) {
-  const today = document.querySelector('#today');
-  const latest = document.querySelector('#latest');
+function dayLabel(date, now) {
+  const startOfDay = (d) => new Date(d.getFullYear(), d.getMonth(), d.getDate());
+  const diff = Math.round((startOfDay(date) - startOfDay(now)) / 86400000);
+  if (diff === 0) return 'Today';
+  if (diff === 1) return 'Tomorrow';
+  return date.toLocaleDateString([], { weekday: 'long', day: 'numeric', month: 'short' });
+}
+
+function feedSide(team, away) {
+  const side = el('span', 'feed-team' + (away ? ' away' : ''));
+  const name = el('span', null, team.name);
+  if (team.crest) {
+    const img = el('img', 'crest');
+    img.src = team.crest;
+    img.alt = '';
+    if (away) side.append(name, img); else side.append(img, name);
+  } else {
+    side.append(name);
+  }
+  return side;
+}
+
+function feedRow(match, isLive) {
+  const row = el('button', 'feed-row');
+  row.type = 'button';
+  row.addEventListener('click', () => openMatchModal(match));
+
+  const when = el('div', 'feed-when');
+  if (isLive) {
+    when.append(el('div', 'feed-live', 'LIVE'));
+    when.append(el('div', 'feed-score', `${match.homeScore ?? 0} - ${match.awayScore ?? 0}`));
+  } else {
+    when.append(el('div', 'feed-time',
+      new Date(match.utcDate).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })));
+    const stage = match.group ? match.group.replace('GROUP_', 'Grp ') : STAGE_LABELS[match.stage] || match.stage;
+    when.append(el('div', 'feed-stage', stage));
+  }
+  row.append(when);
+
+  const middle = el('div', 'feed-middle');
+  const line = el('div', 'feed-line');
+  line.append(feedSide(match.home, false));
+  line.append(el('span', 'feed-v', 'v'));
+  line.append(feedSide(match.away, true));
+  middle.append(line);
+  const homeOwner = match.home.code ? ownersByCode.get(match.home.code) : null;
+  const awayOwner = match.away.code ? ownersByCode.get(match.away.code) : null;
+  if (homeOwner && awayOwner) {
+    middle.append(el('div', 'feed-owners',
+      homeOwner === awayOwner ? `${homeOwner} v ${homeOwner} (owns both!)` : `${homeOwner} v ${awayOwner}`));
+  }
+  row.append(middle);
+  row.append(el('span', 'feed-chevron', '›'));
+  return row;
+}
+
+function renderFeed(matches) {
+  const feed = document.querySelector('#feed');
   const now = new Date();
-  const isToday = (d) => {
-    const date = new Date(d);
-    return date.getFullYear() === now.getFullYear()
-      && date.getMonth() === now.getMonth() && date.getDate() === now.getDate();
-  };
-  const todays = matches.filter((m) => isToday(m.utcDate));
-  if (todays.length) todays.forEach((m) => today.append(matchCard(m)));
-  else today.append(el('p', 'empty', 'No matches today.'));
+  const live = matches
+    .filter((m) => m.status === 'IN_PLAY' || m.status === 'PAUSED')
+    .sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate));
+  const upcoming = matches
+    .filter((m) => m.status === 'TIMED' || m.status === 'SCHEDULED')
+    .sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate))
+    .slice(0, 10);
+  if (!live.length && !upcoming.length) {
+    feed.append(el('p', 'empty', 'No more games. What a tournament.'));
+    return;
+  }
+  if (live.length) {
+    feed.append(el('div', 'feed-day', 'On now'));
+    live.forEach((m) => feed.append(feedRow(m, true)));
+  }
+  let lastLabel = null;
+  for (const match of upcoming) {
+    const label = dayLabel(new Date(match.utcDate), now);
+    if (label !== lastLabel) {
+      feed.append(el('div', 'feed-day', label));
+      lastLabel = label;
+    }
+    feed.append(feedRow(match, false));
+  }
+}
+
+function renderLatest(matches) {
+  const latest = document.querySelector('#latest');
   const finished = matches
     .filter((m) => m.status === 'FINISHED')
     .sort((a, b) => new Date(b.utcDate) - new Date(a.utcDate))
@@ -306,7 +381,7 @@ function clearSections() {
   const hero = document.querySelector('#leader-hero');
   hero.innerHTML = '';
   hero.classList.add('hidden');
-  for (const id of ['#leaderboard', '#today', '#latest']) {
+  for (const id of ['#leaderboard', '#feed', '#latest']) {
     document.querySelector(id).innerHTML = '';
   }
 }
@@ -326,7 +401,8 @@ async function main() {
     const board = computeLeaderboard(roster, teamTable);
     renderLeaderHero(board);
     renderLeaderboard(board);
-    renderMatches(data.matches);
+    renderFeed(data.matches);
+    renderLatest(data.matches);
     updated.textContent = data.lastUpdated
       ? `Updated ${new Date(data.lastUpdated).toLocaleString()}`
       : 'Waiting for the first score sync';
