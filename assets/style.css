@@ -125,8 +125,9 @@ tr.top td { background: var(--green-tint); }
 .feed-v { color: var(--muted); font-size: 0.75rem; flex-shrink: 0; }
 .feed-owners { text-align: center; font-size: 0.74rem; color: var(--green-dark); font-weight: 600; margin-top: 0.1rem; }
 .feed-chevron { color: var(--muted); font-size: 1.2rem; flex-shrink: 0; }
-.feed-predict { text-align: center; font-size: 0.72rem; color: var(--muted); margin-top: 0.1rem; }
-.feed-predict strong { color: var(--green-dark); }
+.feed-predict { margin-top: 0.35rem; }
+.feed-predict .predict-bar { height: 7px; }
+.feed-predict .predict-legend { font-size: 0.68rem; margin-top: 0.2rem; }
 .mm-predict { padding: 0 1.25rem 1.2rem; }
 .predict-bar { display: flex; height: 10px; border-radius: 35px; overflow: hidden; background: var(--dim); }
 .predict-bar .seg-home { background: var(--green); }
@@ -137,10 +138,6 @@ tr.top td { background: var(--green-tint); }
   font-size: 0.74rem; color: var(--muted); margin-top: 0.35rem;
 }
 .predict-fav { font-weight: 700; color: var(--brown); }
-.predict-caption {
-  text-align: center; font-size: 0.6rem; color: var(--muted);
-  text-transform: uppercase; letter-spacing: 0.06em; margin-top: 0.45rem;
-}
 .match-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 0.7rem; }
 .match {
   background: #fff; border: 1px solid var(--border);

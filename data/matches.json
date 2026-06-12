@@ -10,12 +10,12 @@
       "home": {
         "code": "MEX",
         "name": "Mexico",
-        "crest": "https://crests.football-data.org/769.svg"
+        "crest": "assets/crests/MEX.svg"
       },
       "away": {
         "code": "RSA",
         "name": "South Africa",
-        "crest": "https://crests.football-data.org/9396.svg"
+        "crest": "assets/crests/RSA.svg"
       },
       "homeScore": 2,
       "awayScore": 0,
@@ -31,12 +31,12 @@
       "home": {
         "code": "KOR",
         "name": "South Korea",
-        "crest": "https://crests.football-data.org/772.png"
+        "crest": "assets/crests/KOR.png"
       },
       "away": {
         "code": "CZE",
         "name": "Czechia",
-        "crest": "https://crests.football-data.org/798.svg"
+        "crest": "assets/crests/CZE.svg"
       },
       "homeScore": 2,
       "awayScore": 1,
@@ -52,12 +52,12 @@
       "home": {
         "code": "CAN",
         "name": "Canada",
-        "crest": "https://crests.football-data.org/canada.svg"
+        "crest": "assets/crests/CAN.svg"
       },
       "away": {
         "code": "BIH",
         "name": "Bosnia-Herzegovina",
-        "crest": "https://crests.football-data.org/bosnia.svg"
+        "crest": "assets/crests/BIH.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -73,12 +73,12 @@
       "home": {
         "code": "USA",
         "name": "United States",
-        "crest": "https://crests.football-data.org/usa.svg"
+        "crest": "assets/crests/USA.svg"
       },
       "away": {
         "code": "PAR",
         "name": "Paraguay",
-        "crest": "https://crests.football-data.org/761.svg"
+        "crest": "assets/crests/PAR.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -94,12 +94,12 @@
       "home": {
         "code": "QAT",
         "name": "Qatar",
-        "crest": "https://crests.football-data.org/8030.svg"
+        "crest": "assets/crests/QAT.svg"
       },
       "away": {
         "code": "SUI",
         "name": "Switzerland",
-        "crest": "https://crests.football-data.org/788.svg"
+        "crest": "assets/crests/SUI.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -115,12 +115,12 @@
       "home": {
         "code": "BRA",
         "name": "Brazil",
-        "crest": "https://crests.football-data.org/764.svg"
+        "crest": "assets/crests/BRA.svg"
       },
       "away": {
         "code": "MAR",
         "name": "Morocco",
-        "crest": "https://crests.football-data.org/morocco.svg"
+        "crest": "assets/crests/MAR.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -136,12 +136,12 @@
       "home": {
         "code": "HAI",
         "name": "Haiti",
-        "crest": "https://crests.football-data.org/haiti.svg"
+        "crest": "assets/crests/HAI.svg"
       },
       "away": {
         "code": "SCO",
         "name": "Scotland",
-        "crest": "https://crests.football-data.org/814.svg"
+        "crest": "assets/crests/SCO.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -157,12 +157,12 @@
       "home": {
         "code": "AUS",
         "name": "Australia",
-        "crest": "https://crests.football-data.org/779.svg"
+        "crest": "assets/crests/AUS.svg"
       },
       "away": {
         "code": "TUR",
         "name": "Turkey",
-        "crest": "https://crests.football-data.org/803.svg"
+        "crest": "assets/crests/TUR.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -178,12 +178,12 @@
       "home": {
         "code": "GER",
         "name": "Germany",
-        "crest": "https://crests.football-data.org/759.svg"
+        "crest": "assets/crests/GER.svg"
       },
       "away": {
         "code": "CUW",
         "name": "Curaçao",
-        "crest": "https://crests.football-data.org/curacao.svg"
+        "crest": "assets/crests/CUW.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -199,12 +199,12 @@
       "home": {
         "code": "NED",
         "name": "Netherlands",
-        "crest": "https://crests.football-data.org/8601.svg"
+        "crest": "assets/crests/NED.svg"
       },
       "away": {
         "code": "JPN",
         "name": "Japan",
-        "crest": "https://crests.football-data.org/766.svg"
+        "crest": "assets/crests/JPN.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -220,12 +220,12 @@
       "home": {
         "code": "CIV",
         "name": "Ivory Coast",
-        "crest": "https://crests.football-data.org/787.svg"
+        "crest": "assets/crests/CIV.svg"
       },
       "away": {
         "code": "ECU",
         "name": "Ecuador",
-        "crest": "https://crests.football-data.org/791.svg"
+        "crest": "assets/crests/ECU.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -241,12 +241,12 @@
       "home": {
         "code": "SWE",
         "name": "Sweden",
-        "crest": "https://crests.football-data.org/792.svg"
+        "crest": "assets/crests/SWE.svg"
       },
       "away": {
         "code": "TUN",
         "name": "Tunisia",
-        "crest": "https://crests.football-data.org/tunisia.svg"
+        "crest": "assets/crests/TUN.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -262,12 +262,12 @@
       "home": {
         "code": "ESP",
         "name": "Spain",
-        "crest": "https://crests.football-data.org/760.svg"
+        "crest": "assets/crests/ESP.svg"
       },
       "away": {
         "code": "CPV",
         "name": "Cape Verde Islands",
-        "crest": "https://crests.football-data.org/cape_verde.svg"
+        "crest": "assets/crests/CPV.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -283,12 +283,12 @@
       "home": {
         "code": "BEL",
         "name": "Belgium",
-        "crest": "https://crests.football-data.org/805.svg"
+        "crest": "assets/crests/BEL.svg"
       },
       "away": {
         "code": "EGY",
         "name": "Egypt",
-        "crest": "https://crests.football-data.org/825.svg"
+        "crest": "assets/crests/EGY.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -304,12 +304,12 @@
       "home": {
         "code": "KSA",
         "name": "Saudi Arabia",
-        "crest": "https://crests.football-data.org/saudi_arabia.svg"
+        "crest": "assets/crests/KSA.svg"
       },
       "away": {
         "code": "URY",
         "name": "Uruguay",
-        "crest": "https://crests.football-data.org/758.svg"
+        "crest": "assets/crests/URY.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -325,12 +325,12 @@
       "home": {
         "code": "IRN",
         "name": "Iran",
-        "crest": "https://crests.football-data.org/iran.svg"
+        "crest": "assets/crests/IRN.svg"
       },
       "away": {
         "code": "NZL",
         "name": "New Zealand",
-        "crest": "https://crests.football-data.org/783.svg"
+        "crest": "assets/crests/NZL.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -346,12 +346,12 @@
       "home": {
         "code": "FRA",
         "name": "France",
-        "crest": "https://crests.football-data.org/773.svg"
+        "crest": "assets/crests/FRA.svg"
       },
       "away": {
         "code": "SEN",
         "name": "Senegal",
-        "crest": "https://crests.football-data.org/senegal.svg"
+        "crest": "assets/crests/SEN.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -367,12 +367,12 @@
       "home": {
         "code": "IRQ",
         "name": "Iraq",
-        "crest": "https://crests.football-data.org/iraq.svg"
+        "crest": "assets/crests/IRQ.svg"
       },
       "away": {
         "code": "NOR",
         "name": "Norway",
-        "crest": "https://crests.football-data.org/813.svg"
+        "crest": "assets/crests/NOR.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -388,12 +388,12 @@
       "home": {
         "code": "ARG",
         "name": "Argentina",
-        "crest": "https://crests.football-data.org/762.png"
+        "crest": "assets/crests/ARG.png"
       },
       "away": {
         "code": "ALG",
         "name": "Algeria",
-        "crest": "https://crests.football-data.org/algeria.svg"
+        "crest": "assets/crests/ALG.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -409,12 +409,12 @@
       "home": {
         "code": "AUT",
         "name": "Austria",
-        "crest": "https://crests.football-data.org/816.svg"
+        "crest": "assets/crests/AUT.svg"
       },
       "away": {
         "code": "JOR",
         "name": "Jordan",
-        "crest": "https://crests.football-data.org/8049.png"
+        "crest": "assets/crests/JOR.png"
       },
       "homeScore": null,
       "awayScore": null,
@@ -430,12 +430,12 @@
       "home": {
         "code": "POR",
         "name": "Portugal",
-        "crest": "https://crests.football-data.org/765.svg"
+        "crest": "assets/crests/POR.svg"
       },
       "away": {
         "code": "COD",
         "name": "Congo DR",
-        "crest": "https://crests.football-data.org/congo_dr.svg"
+        "crest": "assets/crests/COD.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -451,12 +451,12 @@
       "home": {
         "code": "ENG",
         "name": "England",
-        "crest": "https://crests.football-data.org/770.svg"
+        "crest": "assets/crests/ENG.svg"
       },
       "away": {
         "code": "CRO",
         "name": "Croatia",
-        "crest": "https://crests.football-data.org/799.svg"
+        "crest": "assets/crests/CRO.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -472,12 +472,12 @@
       "home": {
         "code": "GHA",
         "name": "Ghana",
-        "crest": "https://crests.football-data.org/ghana.svg"
+        "crest": "assets/crests/GHA.svg"
       },
       "away": {
         "code": "PAN",
         "name": "Panama",
-        "crest": "https://crests.football-data.org/panama.svg"
+        "crest": "assets/crests/PAN.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -493,12 +493,12 @@
       "home": {
         "code": "UZB",
         "name": "Uzbekistan",
-        "crest": "https://crests.football-data.org/8070.png"
+        "crest": "assets/crests/UZB.png"
       },
       "away": {
         "code": "COL",
         "name": "Colombia",
-        "crest": "https://crests.football-data.org/818.svg"
+        "crest": "assets/crests/COL.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -514,12 +514,12 @@
       "home": {
         "code": "CZE",
         "name": "Czechia",
-        "crest": "https://crests.football-data.org/798.svg"
+        "crest": "assets/crests/CZE.svg"
       },
       "away": {
         "code": "RSA",
         "name": "South Africa",
-        "crest": "https://crests.football-data.org/9396.svg"
+        "crest": "assets/crests/RSA.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -535,12 +535,12 @@
       "home": {
         "code": "SUI",
         "name": "Switzerland",
-        "crest": "https://crests.football-data.org/788.svg"
+        "crest": "assets/crests/SUI.svg"
       },
       "away": {
         "code": "BIH",
         "name": "Bosnia-Herzegovina",
-        "crest": "https://crests.football-data.org/bosnia.svg"
+        "crest": "assets/crests/BIH.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -556,12 +556,12 @@
       "home": {
         "code": "CAN",
         "name": "Canada",
-        "crest": "https://crests.football-data.org/canada.svg"
+        "crest": "assets/crests/CAN.svg"
       },
       "away": {
         "code": "QAT",
         "name": "Qatar",
-        "crest": "https://crests.football-data.org/8030.svg"
+        "crest": "assets/crests/QAT.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -577,12 +577,12 @@
       "home": {
         "code": "MEX",
         "name": "Mexico",
-        "crest": "https://crests.football-data.org/769.svg"
+        "crest": "assets/crests/MEX.svg"
       },
       "away": {
         "code": "KOR",
         "name": "South Korea",
-        "crest": "https://crests.football-data.org/772.png"
+        "crest": "assets/crests/KOR.png"
       },
       "homeScore": null,
       "awayScore": null,
@@ -598,12 +598,12 @@
       "home": {
         "code": "USA",
         "name": "United States",
-        "crest": "https://crests.football-data.org/usa.svg"
+        "crest": "assets/crests/USA.svg"
       },
       "away": {
         "code": "AUS",
         "name": "Australia",
-        "crest": "https://crests.football-data.org/779.svg"
+        "crest": "assets/crests/AUS.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -619,12 +619,12 @@
       "home": {
         "code": "SCO",
         "name": "Scotland",
-        "crest": "https://crests.football-data.org/814.svg"
+        "crest": "assets/crests/SCO.svg"
       },
       "away": {
         "code": "MAR",
         "name": "Morocco",
-        "crest": "https://crests.football-data.org/morocco.svg"
+        "crest": "assets/crests/MAR.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -640,12 +640,12 @@
       "home": {
         "code": "BRA",
         "name": "Brazil",
-        "crest": "https://crests.football-data.org/764.svg"
+        "crest": "assets/crests/BRA.svg"
       },
       "away": {
         "code": "HAI",
         "name": "Haiti",
-        "crest": "https://crests.football-data.org/haiti.svg"
+        "crest": "assets/crests/HAI.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -661,12 +661,12 @@
       "home": {
         "code": "TUR",
         "name": "Turkey",
-        "crest": "https://crests.football-data.org/803.svg"
+        "crest": "assets/crests/TUR.svg"
       },
       "away": {
         "code": "PAR",
         "name": "Paraguay",
-        "crest": "https://crests.football-data.org/761.svg"
+        "crest": "assets/crests/PAR.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -682,12 +682,12 @@
       "home": {
         "code": "NED",
         "name": "Netherlands",
-        "crest": "https://crests.football-data.org/8601.svg"
+        "crest": "assets/crests/NED.svg"
       },
       "away": {
         "code": "SWE",
         "name": "Sweden",
-        "crest": "https://crests.football-data.org/792.svg"
+        "crest": "assets/crests/SWE.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -703,12 +703,12 @@
       "home": {
         "code": "GER",
         "name": "Germany",
-        "crest": "https://crests.football-data.org/759.svg"
+        "crest": "assets/crests/GER.svg"
       },
       "away": {
         "code": "CIV",
         "name": "Ivory Coast",
-        "crest": "https://crests.football-data.org/787.svg"
+        "crest": "assets/crests/CIV.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -724,12 +724,12 @@
       "home": {
         "code": "ECU",
         "name": "Ecuador",
-        "crest": "https://crests.football-data.org/791.svg"
+        "crest": "assets/crests/ECU.svg"
       },
       "away": {
         "code": "CUW",
         "name": "Curaçao",
-        "crest": "https://crests.football-data.org/curacao.svg"
+        "crest": "assets/crests/CUW.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -745,12 +745,12 @@
       "home": {
         "code": "TUN",
         "name": "Tunisia",
-        "crest": "https://crests.football-data.org/tunisia.svg"
+        "crest": "assets/crests/TUN.svg"
       },
       "away": {
         "code": "JPN",
         "name": "Japan",
-        "crest": "https://crests.football-data.org/766.svg"
+        "crest": "assets/crests/JPN.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -766,12 +766,12 @@
       "home": {
         "code": "ESP",
         "name": "Spain",
-        "crest": "https://crests.football-data.org/760.svg"
+        "crest": "assets/crests/ESP.svg"
       },
       "away": {
         "code": "KSA",
         "name": "Saudi Arabia",
-        "crest": "https://crests.football-data.org/saudi_arabia.svg"
+        "crest": "assets/crests/KSA.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -787,12 +787,12 @@
       "home": {
         "code": "BEL",
         "name": "Belgium",
-        "crest": "https://crests.football-data.org/805.svg"
+        "crest": "assets/crests/BEL.svg"
       },
       "away": {
         "code": "IRN",
         "name": "Iran",
-        "crest": "https://crests.football-data.org/iran.svg"
+        "crest": "assets/crests/IRN.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -808,12 +808,12 @@
       "home": {
         "code": "URY",
         "name": "Uruguay",
-        "crest": "https://crests.football-data.org/758.svg"
+        "crest": "assets/crests/URY.svg"
       },
       "away": {
         "code": "CPV",
         "name": "Cape Verde Islands",
-        "crest": "https://crests.football-data.org/cape_verde.svg"
+        "crest": "assets/crests/CPV.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -829,12 +829,12 @@
       "home": {
         "code": "NZL",
         "name": "New Zealand",
-        "crest": "https://crests.football-data.org/783.svg"
+        "crest": "assets/crests/NZL.svg"
       },
       "away": {
         "code": "EGY",
         "name": "Egypt",
-        "crest": "https://crests.football-data.org/825.svg"
+        "crest": "assets/crests/EGY.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -850,12 +850,12 @@
       "home": {
         "code": "ARG",
         "name": "Argentina",
-        "crest": "https://crests.football-data.org/762.png"
+        "crest": "assets/crests/ARG.png"
       },
       "away": {
         "code": "AUT",
         "name": "Austria",
-        "crest": "https://crests.football-data.org/816.svg"
+        "crest": "assets/crests/AUT.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -871,12 +871,12 @@
       "home": {
         "code": "FRA",
         "name": "France",
-        "crest": "https://crests.football-data.org/773.svg"
+        "crest": "assets/crests/FRA.svg"
       },
       "away": {
         "code": "IRQ",
         "name": "Iraq",
-        "crest": "https://crests.football-data.org/iraq.svg"
+        "crest": "assets/crests/IRQ.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -892,12 +892,12 @@
       "home": {
         "code": "NOR",
         "name": "Norway",
-        "crest": "https://crests.football-data.org/813.svg"
+        "crest": "assets/crests/NOR.svg"
       },
       "away": {
         "code": "SEN",
         "name": "Senegal",
-        "crest": "https://crests.football-data.org/senegal.svg"
+        "crest": "assets/crests/SEN.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -913,12 +913,12 @@
       "home": {
         "code": "JOR",
         "name": "Jordan",
-        "crest": "https://crests.football-data.org/8049.png"
+        "crest": "assets/crests/JOR.png"
       },
       "away": {
         "code": "ALG",
         "name": "Algeria",
-        "crest": "https://crests.football-data.org/algeria.svg"
+        "crest": "assets/crests/ALG.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -934,12 +934,12 @@
       "home": {
         "code": "POR",
         "name": "Portugal",
-        "crest": "https://crests.football-data.org/765.svg"
+        "crest": "assets/crests/POR.svg"
       },
       "away": {
         "code": "UZB",
         "name": "Uzbekistan",
-        "crest": "https://crests.football-data.org/8070.png"
+        "crest": "assets/crests/UZB.png"
       },
       "homeScore": null,
       "awayScore": null,
@@ -955,12 +955,12 @@
       "home": {
         "code": "ENG",
         "name": "England",
-        "crest": "https://crests.football-data.org/770.svg"
+        "crest": "assets/crests/ENG.svg"
       },
       "away": {
         "code": "GHA",
         "name": "Ghana",
-        "crest": "https://crests.football-data.org/ghana.svg"
+        "crest": "assets/crests/GHA.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -976,12 +976,12 @@
       "home": {
         "code": "PAN",
         "name": "Panama",
-        "crest": "https://crests.football-data.org/panama.svg"
+        "crest": "assets/crests/PAN.svg"
       },
       "away": {
         "code": "CRO",
         "name": "Croatia",
-        "crest": "https://crests.football-data.org/799.svg"
+        "crest": "assets/crests/CRO.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -997,12 +997,12 @@
       "home": {
         "code": "COL",
         "name": "Colombia",
-        "crest": "https://crests.football-data.org/818.svg"
+        "crest": "assets/crests/COL.svg"
       },
       "away": {
         "code": "COD",
         "name": "Congo DR",
-        "crest": "https://crests.football-data.org/congo_dr.svg"
+        "crest": "assets/crests/COD.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1018,12 +1018,12 @@
       "home": {
         "code": "SUI",
         "name": "Switzerland",
-        "crest": "https://crests.football-data.org/788.svg"
+        "crest": "assets/crests/SUI.svg"
       },
       "away": {
         "code": "CAN",
         "name": "Canada",
-        "crest": "https://crests.football-data.org/canada.svg"
+        "crest": "assets/crests/CAN.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1039,12 +1039,12 @@
       "home": {
         "code": "BIH",
         "name": "Bosnia-Herzegovina",
-        "crest": "https://crests.football-data.org/bosnia.svg"
+        "crest": "assets/crests/BIH.svg"
       },
       "away": {
         "code": "QAT",
         "name": "Qatar",
-        "crest": "https://crests.football-data.org/8030.svg"
+        "crest": "assets/crests/QAT.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1060,12 +1060,12 @@
       "home": {
         "code": "MAR",
         "name": "Morocco",
-        "crest": "https://crests.football-data.org/morocco.svg"
+        "crest": "assets/crests/MAR.svg"
       },
       "away": {
         "code": "HAI",
         "name": "Haiti",
-        "crest": "https://crests.football-data.org/haiti.svg"
+        "crest": "assets/crests/HAI.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1081,12 +1081,12 @@
       "home": {
         "code": "SCO",
         "name": "Scotland",
-        "crest": "https://crests.football-data.org/814.svg"
+        "crest": "assets/crests/SCO.svg"
       },
       "away": {
         "code": "BRA",
         "name": "Brazil",
-        "crest": "https://crests.football-data.org/764.svg"
+        "crest": "assets/crests/BRA.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1102,12 +1102,12 @@
       "home": {
         "code": "CZE",
         "name": "Czechia",
-        "crest": "https://crests.football-data.org/798.svg"
+        "crest": "assets/crests/CZE.svg"
       },
       "away": {
         "code": "MEX",
         "name": "Mexico",
-        "crest": "https://crests.football-data.org/769.svg"
+        "crest": "assets/crests/MEX.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1123,12 +1123,12 @@
       "home": {
         "code": "RSA",
         "name": "South Africa",
-        "crest": "https://crests.football-data.org/9396.svg"
+        "crest": "assets/crests/RSA.svg"
       },
       "away": {
         "code": "KOR",
         "name": "South Korea",
-        "crest": "https://crests.football-data.org/772.png"
+        "crest": "assets/crests/KOR.png"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1144,12 +1144,12 @@
       "home": {
         "code": "ECU",
         "name": "Ecuador",
-        "crest": "https://crests.football-data.org/791.svg"
+        "crest": "assets/crests/ECU.svg"
       },
       "away": {
         "code": "GER",
         "name": "Germany",
-        "crest": "https://crests.football-data.org/759.svg"
+        "crest": "assets/crests/GER.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1165,12 +1165,12 @@
       "home": {
         "code": "CUW",
         "name": "Curaçao",
-        "crest": "https://crests.football-data.org/curacao.svg"
+        "crest": "assets/crests/CUW.svg"
       },
       "away": {
         "code": "CIV",
         "name": "Ivory Coast",
-        "crest": "https://crests.football-data.org/787.svg"
+        "crest": "assets/crests/CIV.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1186,12 +1186,12 @@
       "home": {
         "code": "TUN",
         "name": "Tunisia",
-        "crest": "https://crests.football-data.org/tunisia.svg"
+        "crest": "assets/crests/TUN.svg"
       },
       "away": {
         "code": "NED",
         "name": "Netherlands",
-        "crest": "https://crests.football-data.org/8601.svg"
+        "crest": "assets/crests/NED.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1207,12 +1207,12 @@
       "home": {
         "code": "JPN",
         "name": "Japan",
-        "crest": "https://crests.football-data.org/766.svg"
+        "crest": "assets/crests/JPN.svg"
       },
       "away": {
         "code": "SWE",
         "name": "Sweden",
-        "crest": "https://crests.football-data.org/792.svg"
+        "crest": "assets/crests/SWE.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1228,12 +1228,12 @@
       "home": {
         "code": "TUR",
         "name": "Turkey",
-        "crest": "https://crests.football-data.org/803.svg"
+        "crest": "assets/crests/TUR.svg"
       },
       "away": {
         "code": "USA",
         "name": "United States",
-        "crest": "https://crests.football-data.org/usa.svg"
+        "crest": "assets/crests/USA.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1249,12 +1249,12 @@
       "home": {
         "code": "PAR",
         "name": "Paraguay",
-        "crest": "https://crests.football-data.org/761.svg"
+        "crest": "assets/crests/PAR.svg"
       },
       "away": {
         "code": "AUS",
         "name": "Australia",
-        "crest": "https://crests.football-data.org/779.svg"
+        "crest": "assets/crests/AUS.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1270,12 +1270,12 @@
       "home": {
         "code": "NOR",
         "name": "Norway",
-        "crest": "https://crests.football-data.org/813.svg"
+        "crest": "assets/crests/NOR.svg"
       },
       "away": {
         "code": "FRA",
         "name": "France",
-        "crest": "https://crests.football-data.org/773.svg"
+        "crest": "assets/crests/FRA.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1291,12 +1291,12 @@
       "home": {
         "code": "SEN",
         "name": "Senegal",
-        "crest": "https://crests.football-data.org/senegal.svg"
+        "crest": "assets/crests/SEN.svg"
       },
       "away": {
         "code": "IRQ",
         "name": "Iraq",
-        "crest": "https://crests.football-data.org/iraq.svg"
+        "crest": "assets/crests/IRQ.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1312,12 +1312,12 @@
       "home": {
         "code": "URY",
         "name": "Uruguay",
-        "crest": "https://crests.football-data.org/758.svg"
+        "crest": "assets/crests/URY.svg"
       },
       "away": {
         "code": "ESP",
         "name": "Spain",
-        "crest": "https://crests.football-data.org/760.svg"
+        "crest": "assets/crests/ESP.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1333,12 +1333,12 @@
       "home": {
         "code": "CPV",
         "name": "Cape Verde Islands",
-        "crest": "https://crests.football-data.org/cape_verde.svg"
+        "crest": "assets/crests/CPV.svg"
       },
       "away": {
         "code": "KSA",
         "name": "Saudi Arabia",
-        "crest": "https://crests.football-data.org/saudi_arabia.svg"
+        "crest": "assets/crests/KSA.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1354,12 +1354,12 @@
       "home": {
         "code": "NZL",
         "name": "New Zealand",
-        "crest": "https://crests.football-data.org/783.svg"
+        "crest": "assets/crests/NZL.svg"
       },
       "away": {
         "code": "BEL",
         "name": "Belgium",
-        "crest": "https://crests.football-data.org/805.svg"
+        "crest": "assets/crests/BEL.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1375,12 +1375,12 @@
       "home": {
         "code": "EGY",
         "name": "Egypt",
-        "crest": "https://crests.football-data.org/825.svg"
+        "crest": "assets/crests/EGY.svg"
       },
       "away": {
         "code": "IRN",
         "name": "Iran",
-        "crest": "https://crests.football-data.org/iran.svg"
+        "crest": "assets/crests/IRN.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1396,12 +1396,12 @@
       "home": {
         "code": "PAN",
         "name": "Panama",
-        "crest": "https://crests.football-data.org/panama.svg"
+        "crest": "assets/crests/PAN.svg"
       },
       "away": {
         "code": "ENG",
         "name": "England",
-        "crest": "https://crests.football-data.org/770.svg"
+        "crest": "assets/crests/ENG.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1417,12 +1417,12 @@
       "home": {
         "code": "CRO",
         "name": "Croatia",
-        "crest": "https://crests.football-data.org/799.svg"
+        "crest": "assets/crests/CRO.svg"
       },
       "away": {
         "code": "GHA",
         "name": "Ghana",
-        "crest": "https://crests.football-data.org/ghana.svg"
+        "crest": "assets/crests/GHA.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1438,12 +1438,12 @@
       "home": {
         "code": "COL",
         "name": "Colombia",
-        "crest": "https://crests.football-data.org/818.svg"
+        "crest": "assets/crests/COL.svg"
       },
       "away": {
         "code": "POR",
         "name": "Portugal",
-        "crest": "https://crests.football-data.org/765.svg"
+        "crest": "assets/crests/POR.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1459,12 +1459,12 @@
       "home": {
         "code": "COD",
         "name": "Congo DR",
-        "crest": "https://crests.football-data.org/congo_dr.svg"
+        "crest": "assets/crests/COD.svg"
       },
       "away": {
         "code": "UZB",
         "name": "Uzbekistan",
-        "crest": "https://crests.football-data.org/8070.png"
+        "crest": "assets/crests/UZB.png"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1480,12 +1480,12 @@
       "home": {
         "code": "JOR",
         "name": "Jordan",
-        "crest": "https://crests.football-data.org/8049.png"
+        "crest": "assets/crests/JOR.png"
       },
       "away": {
         "code": "ARG",
         "name": "Argentina",
-        "crest": "https://crests.football-data.org/762.png"
+        "crest": "assets/crests/ARG.png"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1501,12 +1501,12 @@
       "home": {
         "code": "ALG",
         "name": "Algeria",
-        "crest": "https://crests.football-data.org/algeria.svg"
+        "crest": "assets/crests/ALG.svg"
       },
       "away": {
         "code": "AUT",
         "name": "Austria",
-        "crest": "https://crests.football-data.org/816.svg"
+        "crest": "assets/crests/AUT.svg"
       },
       "homeScore": null,
       "awayScore": null,

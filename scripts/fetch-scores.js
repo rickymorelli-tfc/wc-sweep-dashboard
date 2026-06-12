@@ -1,13 +1,24 @@
-import { writeFileSync } from 'node:fs';
+import { writeFileSync, readdirSync } from 'node:fs';
 import { pathToFileURL } from 'node:url';
 
 const API_URL = 'https://api.football-data.org/v4/competitions/WC/matches';
+
+// Self-hosted crests (see fetch-crests.js): the football-data CDN
+// rate-limits bursts, so prefer the local copy when one exists.
+const localCrests = (() => {
+  try {
+    const files = readdirSync(new URL('../assets/crests/', import.meta.url));
+    return new Map(files.map((f) => [f.split('.')[0], `assets/crests/${f}`]));
+  } catch {
+    return new Map();
+  }
+})();
 
 export function normalise(apiData) {
   const team = (t) => ({
     code: t?.tla || null,
     name: t?.name || 'TBD',
-    crest: t?.crest || '',
+    crest: localCrests.get(t?.tla) || t?.crest || '',
   });
   return {
     lastUpdated: new Date().toISOString(),

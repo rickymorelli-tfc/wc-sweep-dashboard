@@ -263,7 +263,7 @@ function openMatchModal(match) {
   modal.append(body);
 
   const prediction = predictionFor(match);
-  if (prediction) modal.append(predictionBar(match, prediction));
+  if (prediction) modal.append(predictionBar(match, prediction, 'mm-predict'));
 
   const homeOwner = match.home.code ? ownersByCode.get(match.home.code) : null;
   const awayOwner = match.away.code ? ownersByCode.get(match.away.code) : null;
@@ -285,16 +285,8 @@ function predictionFor(match) {
   return predictionsById[match.id] || null;
 }
 
-function marketFavourite(match, p) {
-  const top = Math.max(p.home, p.draw, p.away);
-  const pct = Math.round(top * 100);
-  if (top === p.home && top === p.away) return { label: 'too close to call', pct: null };
-  if (top === p.draw) return { label: 'Draw', pct };
-  return { label: top === p.home ? match.home.name : match.away.name, pct };
-}
-
-function predictionBar(match, p) {
-  const wrap = el('div', 'mm-predict');
+function predictionBar(match, p, cls) {
+  const wrap = el('div', cls);
   const bar = el('div', 'predict-bar');
   for (const [cls, share] of [['seg-home', p.home], ['seg-draw', p.draw], ['seg-away', p.away]]) {
     const seg = el('span', cls);
@@ -310,7 +302,6 @@ function predictionBar(match, p) {
   legend.append(entry('Draw', p.draw));
   legend.append(entry(match.away.name, p.away));
   wrap.append(legend);
-  wrap.append(el('div', 'predict-caption', 'Polymarket market odds, 90 min result'));
   return wrap;
 }
 
@@ -366,13 +357,7 @@ function feedRow(match, isLive) {
       homeOwner === awayOwner ? `${homeOwner} v ${homeOwner} (owns both!)` : `${homeOwner} v ${awayOwner}`));
   }
   const prediction = predictionFor(match);
-  if (prediction) {
-    const fav = marketFavourite(match, prediction);
-    const line = el('div', 'feed-predict');
-    line.append('Market tips ');
-    line.append(el('strong', null, fav.pct === null ? fav.label : `${fav.label} ${fav.pct}%`));
-    middle.append(line);
-  }
+  if (prediction) middle.append(predictionBar(match, prediction, 'feed-predict'));
   row.append(middle);
   row.append(el('span', 'feed-chevron', '›'));
   return row;
@@ -458,6 +443,11 @@ async function main() {
     updated.textContent = `Could not load data: ${err.message}`;
   }
 }
+
+// Remove any image that fails to load instead of showing a broken icon.
+document.addEventListener('error', (e) => {
+  if (e.target.tagName === 'IMG') e.target.remove();
+}, true);
 
 main();
 
