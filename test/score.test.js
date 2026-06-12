@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { computeTeamTable, computeLeaderboard, teamMatches } from '../assets/score.js';
+import { computeTeamTable, computeLeaderboard, teamMatches, matchPoints } from '../assets/score.js';
 
 const T = (code, name) => ({ code, name, crest: '' });
 const m = (over) => ({
@@ -124,4 +124,12 @@ test('teamMatches marks shootouts as draws with the progression note', () => {
     m({ stage: 'LAST_16', group: null, homeScore: 2, awayScore: 2, decidedBy: 'PENALTIES', winner: 'HOME_TEAM' }),
   ], 'AAA');
   assert.equal(winnerSide[0].pensProgressed, true);
+});
+
+test('matchPoints awards 3/0 for wins, 1/1 for draws and shootouts, null unfinished', () => {
+  assert.deepEqual(matchPoints(m({ homeScore: 2, awayScore: 0, winner: 'HOME_TEAM' })), { home: 3, away: 0 });
+  assert.deepEqual(matchPoints(m({ homeScore: 0, awayScore: 1, winner: 'AWAY_TEAM' })), { home: 0, away: 3 });
+  assert.deepEqual(matchPoints(m({ homeScore: 1, awayScore: 1 })), { home: 1, away: 1 });
+  assert.deepEqual(matchPoints(m({ stage: 'FINAL', homeScore: 2, awayScore: 2, decidedBy: 'PENALTIES', winner: 'HOME_TEAM' })), { home: 1, away: 1 });
+  assert.equal(matchPoints(m({ status: 'TIMED', homeScore: null, awayScore: null })), null);
 });

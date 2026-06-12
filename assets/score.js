@@ -11,6 +11,13 @@ function blankTeam(t) {
   };
 }
 
+export function matchPoints(match) {
+  if (match.status !== 'FINISHED') return null;
+  const isDraw = match.decidedBy === 'PENALTIES' || match.homeScore === match.awayScore;
+  if (isDraw) return { home: 1, away: 1 };
+  return match.homeScore > match.awayScore ? { home: 3, away: 0 } : { home: 0, away: 3 };
+}
+
 export function computeTeamTable(matches) {
   const teams = new Map();
   const ensure = (t) => {
@@ -27,14 +34,11 @@ export function computeTeamTable(matches) {
     home.played++; away.played++;
     home.gf += match.homeScore; home.ga += match.awayScore;
     away.gf += match.awayScore; away.ga += match.homeScore;
-    const isDraw = match.decidedBy === 'PENALTIES' || match.homeScore === match.awayScore;
-    if (isDraw) {
-      home.drawn++; away.drawn++; home.points += 1; away.points += 1;
-    } else if (match.homeScore > match.awayScore) {
-      home.won++; away.lost++; home.points += 3;
-    } else {
-      away.won++; home.lost++; away.points += 3;
-    }
+    const pts = matchPoints(match);
+    home.points += pts.home; away.points += pts.away;
+    if (pts.home === pts.away) { home.drawn++; away.drawn++; }
+    else if (pts.home === 3) { home.won++; away.lost++; }
+    else { away.won++; home.lost++; }
   }
   for (const team of teams.values()) team.gd = team.gf - team.ga;
   applyEliminations(teams, matches);

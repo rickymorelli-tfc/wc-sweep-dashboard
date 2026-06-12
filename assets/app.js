@@ -1,7 +1,8 @@
-import { computeTeamTable, computeLeaderboard, teamMatches } from './score.js';
+import { computeTeamTable, computeLeaderboard, teamMatches, matchPoints } from './score.js';
 
 let allMatches = [];
 let teamTableRef = new Map();
+let ownersByCode = new Map();
 
 const STAGE_LABELS = {
   GROUP_STAGE: 'Groups', LAST_32: 'R32', LAST_16: 'R16',
@@ -166,7 +167,10 @@ function renderLeaderboard(board) {
 }
 
 function matchCard(match) {
-  const card = el('div', 'match');
+  const card = el('button', 'match');
+  card.type = 'button';
+  card.setAttribute('aria-label', `${match.home.name} v ${match.away.name}: details`);
+  card.addEventListener('click', () => openMatchModal(match));
   const stage = match.group
     ? match.group.replace('GROUP_', 'Group ')
     : STAGE_LABELS[match.stage] || match.stage;
@@ -186,6 +190,90 @@ function matchCard(match) {
   }
   if (meta.length) card.append(el('div', 'match-meta' + (meta.includes('LIVE') ? ' live' : ''), meta.join(' · ')));
   return card;
+}
+
+function pointsChip(points) {
+  const cls = points === 3 ? 'mm-pts win' : points === 1 ? 'mm-pts draw' : 'mm-pts loss';
+  return el('span', cls, `+${points} pts`);
+}
+
+function matchModalSide(team, points) {
+  const side = el('div', 'mm-side');
+  if (team.crest) {
+    const img = el('img', 'mm-crest');
+    img.src = team.crest;
+    img.alt = '';
+    side.append(img);
+  }
+  side.append(el('div', 'mm-country', team.name));
+  const owner = team.code ? ownersByCode.get(team.code) : null;
+  side.append(el('div', 'mm-owner', owner || 'unclaimed'));
+  if (points !== null) side.append(pointsChip(points));
+  return side;
+}
+
+function openMatchModal(match) {
+  closeTeamModal();
+  const overlay = el('div', 'modal-overlay');
+  overlay.addEventListener('click', (e) => { if (e.target === overlay) closeTeamModal(); });
+  const modal = el('div', 'modal');
+  modal.setAttribute('role', 'dialog');
+  modal.setAttribute('aria-label', `${match.home.name} v ${match.away.name}`);
+
+  const head = el('div', 'modal-head');
+  const info = el('div', 'modal-info');
+  const stage = match.group ? match.group.replace('GROUP_', 'Group ') : STAGE_LABELS[match.stage] || match.stage;
+  info.append(el('div', 'modal-team', stage));
+  info.append(el('div', 'modal-record', new Date(match.utcDate).toLocaleString([], {
+    weekday: 'short', day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit',
+  })));
+  head.append(info);
+  const close = el('button', 'modal-close', '×');
+  close.type = 'button';
+  close.setAttribute('aria-label', 'Close');
+  close.addEventListener('click', closeTeamModal);
+  head.append(close);
+  modal.append(head);
+
+  const pts = matchPoints(match);
+  const body = el('div', 'mm');
+  body.append(matchModalSide(match.home, pts ? pts.home : null));
+
+  const centre = el('div', 'mm-centre');
+  if (match.homeScore !== null) {
+    centre.append(el('div', 'mm-score', `${match.homeScore} - ${match.awayScore}`));
+    if (match.decidedBy === 'PENALTIES') {
+      const through = match.winner === 'HOME_TEAM' ? match.home.name : match.away.name;
+      centre.append(el('div', 'mm-note', `${through} through on pens`));
+    } else if (match.decidedBy === 'EXTRA_TIME') {
+      centre.append(el('div', 'mm-note', 'after extra time'));
+    }
+    if (match.status === 'IN_PLAY' || match.status === 'PAUSED') {
+      centre.append(el('div', 'mm-note live', 'LIVE'));
+    }
+  } else {
+    centre.append(el('div', 'mm-score muted', 'v'));
+    centre.append(el('div', 'mm-note', new Date(match.utcDate).toLocaleTimeString([], {
+      hour: '2-digit', minute: '2-digit',
+    })));
+  }
+  body.append(centre);
+  body.append(matchModalSide(match.away, pts ? pts.away : null));
+  modal.append(body);
+
+  const homeOwner = match.home.code ? ownersByCode.get(match.home.code) : null;
+  const awayOwner = match.away.code ? ownersByCode.get(match.away.code) : null;
+  if (homeOwner && awayOwner) {
+    const line = homeOwner === awayOwner
+      ? `${homeOwner} owns both teams. Cannot lose this one.`
+      : `${homeOwner} v ${awayOwner} in the sweep`;
+    modal.append(el('div', 'mm-sweep-line', line));
+  }
+
+  overlay.append(modal);
+  document.body.append(overlay);
+  document.addEventListener('keydown', onModalKeydown);
+  close.focus();
 }
 
 function renderMatches(matches) {
@@ -224,6 +312,7 @@ async function main() {
     const teamTable = computeTeamTable(data.matches);
     allMatches = data.matches;
     teamTableRef = teamTable;
+    ownersByCode = new Map(roster.flatMap((p) => p.teams.map((code) => [code, p.name])));
     const board = computeLeaderboard(roster, teamTable);
     renderLeaderHero(board);
     renderLeaderboard(board);
