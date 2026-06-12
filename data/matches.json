@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-12T04:00:47.325Z",
+  "lastUpdated": "2026-06-12T04:42:51.795Z",
   "matches": [
     {
       "id": 537327,
@@ -27,7 +27,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_A",
       "utcDate": "2026-06-12T02:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "home": {
         "code": "KOR",
         "name": "South Korea",
