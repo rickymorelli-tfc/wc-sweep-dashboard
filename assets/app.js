@@ -302,9 +302,19 @@ async function loadJson(path) {
   return res.json();
 }
 
+function clearSections() {
+  const hero = document.querySelector('#leader-hero');
+  hero.innerHTML = '';
+  hero.classList.add('hidden');
+  for (const id of ['#leaderboard', '#today', '#latest']) {
+    document.querySelector(id).innerHTML = '';
+  }
+}
+
 async function main() {
   const updated = document.querySelector('#updated');
   try {
+    clearSections();
     const [roster, data] = await Promise.all([
       loadJson('data/roster.json'),
       loadJson('data/matches.json'),
@@ -326,3 +336,8 @@ async function main() {
 }
 
 main();
+
+// Keep an open tab current: re-fetch every 10 minutes unless a modal is open.
+setInterval(() => {
+  if (!document.querySelector('.modal-overlay')) main();
+}, 10 * 60 * 1000);
