@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-13T21:40:16.693Z",
+  "lastUpdated": "2026-06-13T23:35:09.696Z",
   "matches": [
     {
       "id": 537327,
@@ -111,7 +111,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_C",
       "utcDate": "2026-06-13T22:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "home": {
         "code": "BRA",
         "name": "Brazil",
@@ -122,10 +122,10 @@
         "name": "Morocco",
         "crest": "assets/crests/MAR.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 1,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "DRAW"
     },
     {
       "id": 537340,
