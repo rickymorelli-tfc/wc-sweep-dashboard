@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-12T23:55:15.349Z",
+  "lastUpdated": "2026-06-13T04:54:51.003Z",
   "matches": [
     {
       "id": 537327,
@@ -69,7 +69,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_D",
       "utcDate": "2026-06-13T01:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "home": {
         "code": "USA",
         "name": "United States",
@@ -80,10 +80,10 @@
         "name": "Paraguay",
         "crest": "assets/crests/PAR.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 4,
+      "awayScore": 1,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "HOME_TEAM"
     },
     {
       "id": 537334,
