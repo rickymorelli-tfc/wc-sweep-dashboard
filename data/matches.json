@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-13T17:48:08.075Z",
+  "lastUpdated": "2026-06-13T19:56:13.260Z",
   "matches": [
     {
       "id": 537327,
@@ -90,7 +90,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_B",
       "utcDate": "2026-06-13T19:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "home": {
         "code": "QAT",
         "name": "Qatar",
@@ -101,10 +101,10 @@
         "name": "Switzerland",
         "crest": "assets/crests/SUI.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 1,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "AWAY_TEAM"
     },
     {
       "id": 537339,
