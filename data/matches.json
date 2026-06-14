@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-14T05:11:27.287Z",
+  "lastUpdated": "2026-06-14T09:57:47.731Z",
   "matches": [
     {
       "id": 537327,
@@ -153,7 +153,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_D",
       "utcDate": "2026-06-14T04:00:00Z",
-      "status": "PAUSED",
+      "status": "FINISHED",
       "home": {
         "code": "AUS",
         "name": "Australia",
@@ -164,7 +164,7 @@
         "name": "Turkey",
         "crest": "assets/crests/TUR.svg"
       },
-      "homeScore": 1,
+      "homeScore": 2,
       "awayScore": 0,
       "decidedBy": "REGULAR",
       "winner": "HOME_TEAM"
