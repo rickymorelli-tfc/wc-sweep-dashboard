@@ -74,7 +74,8 @@ body {
 header { border-bottom: 1px solid var(--border); }
 .header-inner {
   max-width: 900px; margin: 0 auto; padding: 1.8rem 1.25rem 1.4rem;
-  display: flex; flex-direction: column; gap: 0.9rem; align-items: flex-start;
+  display: flex; flex-direction: column; gap: 0.9rem; align-items: center;
+  text-align: center;
 }
 .logo { display: block; height: 28px; width: auto; }
 h1 {

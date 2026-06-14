@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ticker frame preview (TFC World Cup Sweep)</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    :root { --barH: 42px; }
+    body { padding: var(--barH); }
+    /* The four rails form a frame around the viewport. */
+    .rail {
+      position: fixed; overflow: hidden; z-index: 100;
+      background: var(--brown-deep); color: var(--cream);
+    }
+    .rail.top    { top: 0; left: 0; width: 100vw; height: var(--barH); border-bottom: 2px solid var(--green); }
+    .rail.bottom { bottom: 0; left: 0; width: 100vw; height: var(--barH); border-top: 2px solid var(--green); }
+    .rail.left   { top: 0; left: 0; height: 100vh; width: var(--barH); border-right: 2px solid var(--green); }
+    .rail.right  { top: 0; right: 0; height: 100vh; width: var(--barH); border-left: 2px solid var(--green); }
+
+    /* Horizontal rails: a duplicated track sliding along X. */
+    .htrack { display: inline-flex; white-space: nowrap; will-change: transform; }
+    .rail.top .htrack    { animation: scroll-rtl var(--dur, 60s) linear infinite; }
+    .rail.bottom .htrack { animation: scroll-ltr var(--dur, 60s) linear infinite; }
+    @keyframes scroll-rtl { from { transform: translateX(0); }     to { transform: translateX(-50%); } }
+    @keyframes scroll-ltr { from { transform: translateX(-50%); }  to { transform: translateX(0); } }
+
+    /* Vertical rails: same horizontal track, rotated onto the edge. */
+    .vtrack { position: absolute; display: inline-flex; white-space: nowrap; width: 100vh; will-change: transform; }
+    .rail.right .vtrack {
+      top: 0; right: 0; transform-origin: right top;
+      animation: scroll-down var(--dur, 60s) linear infinite;
+    }
+    .rail.left .vtrack {
+      top: 0; left: 0; transform-origin: left top;
+      animation: scroll-up var(--dur, 60s) linear infinite;
+    }
+    @keyframes scroll-down { from { transform: rotate(90deg) translateX(0); }    to { transform: rotate(90deg) translateX(-50%); } }
+    @keyframes scroll-up   { from { transform: rotate(-90deg) translateX(-50%); } to { transform: rotate(-90deg) translateX(0); } }
+
+    .rail:hover .htrack, .rail:hover .vtrack { animation-play-state: paused; }
+
+    .preview-note {
+      max-width: 640px; margin: 4rem auto; text-align: center; color: var(--muted);
+    }
+    .preview-note h1 {
+      font-family: var(--heading); text-transform: uppercase; color: var(--brown);
+      font-size: 1.6rem; letter-spacing: -0.01em;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .htrack, .vtrack { animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <div class="rail top"><div class="htrack" data-track></div></div>
+  <div class="rail right"><div class="vtrack" data-track></div></div>
+  <div class="rail bottom"><div class="htrack" data-track></div></div>
+  <div class="rail left"><div class="vtrack" data-track></div></div>
+
+  <div class="preview-note">
+    <h1>Ticker frame preview</h1>
+    <p>The scores bar wrapped around all four edges of the screen, scrolling clockwise.
+    Hover any edge to pause. This is a test page; the live dashboard is unchanged.</p>
+  </div>
+
+  <script type="module">
+    const STAGE = { GROUP_STAGE:'Groups', LAST_32:'R32', LAST_16:'R16', QUARTER_FINALS:'QF', SEMI_FINALS:'SF', THIRD_PLACE:'3rd', FINAL:'Final' };
+    const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text !== undefined) n.textContent = text; return n; };
+
+    function tag(m) {
+      if (m.status === 'IN_PLAY' || m.status === 'PAUSED') return { text: 'LIVE', live: true };
+      if (m.status === 'FINISHED') return { text: m.decidedBy === 'PENALTIES' ? 'FT pens' : m.decidedBy === 'EXTRA_TIME' ? 'FT aet' : 'FT' };
+      return { text: new Date(m.utcDate).toLocaleString([], { day:'numeric', month:'short', hour:'2-digit', minute:'2-digit' }) };
+    }
+    function side(team, away) {
+      const s = el('span', 'tk-team' + (away ? ' away' : ''));
+      const label = el('span', 'tk-code', team.code || team.name);
+      if (team.crest) { const img = el('img', 'tk-crest'); img.src = team.crest; img.alt = ''; if (away) s.append(label, img); else s.append(img, label); }
+      else s.append(label);
+      return s;
+    }
+    function cell(m) {
+      const item = el('span', 'tk-item');
+      const t = tag(m);
+      item.append(el('span', 'tk-tag' + (t.live ? ' live' : ''), t.text));
+      item.append(side(m.home, false));
+      item.append(el('span', 'tk-score' + (t.live ? ' live' : ''), m.homeScore === null ? 'v' : `${m.homeScore}-${m.awayScore}`));
+      item.append(side(m.away, true));
+      return item;
+    }
+
+    async function main() {
+      const res = await fetch('data/matches.json', { cache: 'no-store' });
+      const data = await res.json();
+      const live = data.matches.filter(m => m.status === 'IN_PLAY' || m.status === 'PAUSED').sort((a,b)=>new Date(a.utcDate)-new Date(b.utcDate));
+      const finished = data.matches.filter(m => m.status === 'FINISHED').sort((a,b)=>new Date(b.utcDate)-new Date(a.utcDate)).slice(0,12);
+      const upcoming = data.matches.filter(m => m.status === 'TIMED' || m.status === 'SCHEDULED').sort((a,b)=>new Date(a.utcDate)-new Date(b.utcDate)).slice(0,6);
+      const ordered = [...live, ...finished, ...upcoming];
+      const dur = `${Math.max(ordered.length * 4, 24)}s`;
+      for (const track of document.querySelectorAll('[data-track]')) {
+        track.style.setProperty('--dur', dur);
+        // two copies so the marquee loops seamlessly at 50%
+        ordered.forEach(m => track.append(cell(m)));
+        ordered.forEach(m => track.append(cell(m)));
+      }
+    }
+    main();
+  </script>
+</body>
+</html>
