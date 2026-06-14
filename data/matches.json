@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-13T23:35:09.696Z",
+  "lastUpdated": "2026-06-14T05:11:27.287Z",
   "matches": [
     {
       "id": 537327,
@@ -111,7 +111,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_C",
       "utcDate": "2026-06-13T22:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "home": {
         "code": "BRA",
         "name": "Brazil",
@@ -132,7 +132,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_C",
       "utcDate": "2026-06-14T01:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "home": {
         "code": "HAI",
         "name": "Haiti",
@@ -143,17 +143,17 @@
         "name": "Scotland",
         "crest": "assets/crests/SCO.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 1,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "AWAY_TEAM"
     },
     {
       "id": 537346,
       "stage": "GROUP_STAGE",
       "group": "GROUP_D",
       "utcDate": "2026-06-14T04:00:00Z",
-      "status": "TIMED",
+      "status": "PAUSED",
       "home": {
         "code": "AUS",
         "name": "Australia",
@@ -164,10 +164,10 @@
         "name": "Turkey",
         "crest": "assets/crests/TUR.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 0,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "HOME_TEAM"
     },
     {
       "id": 537351,
