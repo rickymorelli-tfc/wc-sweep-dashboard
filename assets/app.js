@@ -392,6 +392,74 @@ function renderFeed(matches) {
   }
 }
 
+function tickerSide(team, away) {
+  const side = el('span', 'tk-team' + (away ? ' away' : ''));
+  const label = el('span', 'tk-code', team.code || team.name);
+  if (team.crest) {
+    const img = el('img', 'tk-crest');
+    img.src = team.crest;
+    img.alt = '';
+    if (away) side.append(label, img); else side.append(img, label);
+  } else {
+    side.append(label);
+  }
+  return side;
+}
+
+function tickerTag(match) {
+  if (match.status === 'IN_PLAY' || match.status === 'PAUSED') return { text: 'LIVE', live: true };
+  if (match.status === 'FINISHED') {
+    if (match.decidedBy === 'PENALTIES') return { text: 'FT pens' };
+    if (match.decidedBy === 'EXTRA_TIME') return { text: 'FT aet' };
+    return { text: 'FT' };
+  }
+  return {
+    text: new Date(match.utcDate).toLocaleString([], {
+      day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit',
+    }),
+  };
+}
+
+function tickerItem(match) {
+  const item = el('button', 'tk-item');
+  item.type = 'button';
+  item.addEventListener('click', () => openMatchModal(match));
+  const tag = tickerTag(match);
+  item.append(el('span', 'tk-tag' + (tag.live ? ' live' : ''), tag.text));
+  item.append(tickerSide(match.home, false));
+  const score = match.homeScore === null ? 'v' : `${match.homeScore}-${match.awayScore}`;
+  item.append(el('span', 'tk-score' + (tag.live ? ' live' : ''), score));
+  item.append(tickerSide(match.away, true));
+  return item;
+}
+
+function renderTicker(matches) {
+  const ticker = document.querySelector('#ticker');
+  const live = matches
+    .filter((m) => m.status === 'IN_PLAY' || m.status === 'PAUSED')
+    .sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate));
+  const finished = matches
+    .filter((m) => m.status === 'FINISHED')
+    .sort((a, b) => new Date(b.utcDate) - new Date(a.utcDate))
+    .slice(0, 12);
+  const upcoming = matches
+    .filter((m) => m.status === 'TIMED' || m.status === 'SCHEDULED')
+    .sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate))
+    .slice(0, 6);
+  const ordered = [...live, ...finished, ...upcoming];
+  if (!ordered.length) {
+    ticker.hidden = true;
+    return;
+  }
+  ticker.hidden = false;
+  const track = el('div', 'ticker-track');
+  // Render the run twice so the marquee loops seamlessly at translateX(-50%).
+  ordered.forEach((m) => track.append(tickerItem(m)));
+  ordered.forEach((m) => track.append(tickerItem(m)));
+  track.style.setProperty('--tk-duration', `${Math.max(ordered.length * 4, 20)}s`);
+  ticker.append(track);
+}
+
 function renderLatest(matches) {
   const latest = document.querySelector('#latest');
   const finished = matches
@@ -412,7 +480,7 @@ function clearSections() {
   const hero = document.querySelector('#leader-hero');
   hero.innerHTML = '';
   hero.classList.add('hidden');
-  for (const id of ['#leaderboard', '#feed', '#latest']) {
+  for (const id of ['#ticker', '#leaderboard', '#feed', '#latest']) {
     document.querySelector(id).innerHTML = '';
   }
 }
@@ -432,6 +500,7 @@ async function main() {
     teamTableRef = teamTable;
     ownersByCode = new Map(roster.flatMap((p) => p.teams.map((code) => [code, p.name])));
     const board = computeLeaderboard(roster, teamTable);
+    renderTicker(data.matches);
     renderLeaderHero(board);
     renderLeaderboard(board);
     renderFeed(data.matches);

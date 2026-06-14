@@ -28,6 +28,49 @@ body {
   text-transform: uppercase; letter-spacing: 0.08em;
   padding: 0.4rem 1rem;
 }
+.ticker {
+  background: var(--brown-deep); color: var(--cream);
+  overflow: hidden; white-space: nowrap;
+  border-bottom: 2px solid var(--green);
+}
+.ticker[hidden] { display: none; }
+.ticker-track {
+  display: inline-flex; align-items: stretch;
+  animation: ticker-scroll var(--tk-duration, 60s) linear infinite;
+  will-change: transform;
+}
+.ticker:hover .ticker-track,
+.ticker:focus-within .ticker-track { animation-play-state: paused; }
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.tk-item {
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  padding: 0.5rem 1.1rem; flex-shrink: 0;
+  border: none; border-right: 1px solid rgba(255, 239, 215, 0.12);
+  background: transparent; color: inherit; cursor: pointer;
+  font-family: inherit; font-size: 0.82rem; letter-spacing: inherit;
+}
+.tk-item:hover { background: rgba(255, 239, 215, 0.08); }
+.tk-tag {
+  font-size: 0.6rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.06em; color: var(--peach);
+}
+.tk-tag.live {
+  background: var(--green); color: var(--brown-deep);
+  border-radius: 35px; padding: 0.08rem 0.45rem;
+  animation: tk-live-pulse 1.6s ease-in-out infinite;
+}
+@keyframes tk-live-pulse { 50% { opacity: 0.55; } }
+.tk-team { display: inline-flex; align-items: center; gap: 0.3rem; font-weight: 600; }
+.tk-crest { width: 16px; height: 16px; object-fit: contain; }
+.tk-score { font-weight: 700; font-variant-numeric: tabular-nums; }
+.tk-score.live { color: var(--green); }
+@media (prefers-reduced-motion: reduce) {
+  .ticker { overflow-x: auto; }
+  .ticker-track { animation: none; }
+}
 header { border-bottom: 1px solid var(--border); }
 .header-inner {
   max-width: 900px; margin: 0 auto; padding: 1.8rem 1.25rem 1.4rem;
