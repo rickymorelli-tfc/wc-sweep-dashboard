@@ -41,17 +41,31 @@ export function normalise(apiData) {
   };
 }
 
+// football-data.org occasionally drops the TLS connection mid-request
+// (UND_ERR_SOCKET, "other side closed"). Retry with backoff so a single
+// transient socket drop doesn't fail the whole run.
+async function fetchWithRetry(url, opts, attempts = 4) {
+  for (let i = 1; i <= attempts; i++) {
+    try {
+      const res = await fetch(url, opts);
+      if (!res.ok) throw new Error(`returned ${res.status} ${res.statusText}`);
+      return res;
+    } catch (err) {
+      if (i === attempts) throw err;
+      const wait = 2 ** i * 1000; // 2s, 4s, 8s
+      console.warn(`fetch attempt ${i} failed (${err.message}), retrying in ${wait}ms`);
+      await new Promise((r) => setTimeout(r, wait));
+    }
+  }
+}
+
 async function main() {
   const token = process.env.FOOTBALL_DATA_TOKEN;
   if (!token) {
     console.error('FOOTBALL_DATA_TOKEN is not set');
     process.exit(1);
   }
-  const res = await fetch(API_URL, { headers: { 'X-Auth-Token': token } });
-  if (!res.ok) {
-    console.error(`football-data.org returned ${res.status} ${res.statusText}`);
-    process.exit(1);
-  }
+  const res = await fetchWithRetry(API_URL, { headers: { 'X-Auth-Token': token } });
   const data = await res.json();
   const out = normalise(data);
   const target = new URL('../data/matches.json', import.meta.url);
