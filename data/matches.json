@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-14T15:59:24.590Z",
+  "lastUpdated": "2026-06-14T17:52:06.865Z",
   "matches": [
     {
       "id": 537327,
@@ -174,7 +174,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_E",
       "utcDate": "2026-06-14T17:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "home": {
         "code": "GER",
         "name": "Germany",
@@ -185,10 +185,10 @@
         "name": "Curaçao",
         "crest": "assets/crests/CUW.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 2,
+      "awayScore": 1,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "HOME_TEAM"
     },
     {
       "id": 537357,
