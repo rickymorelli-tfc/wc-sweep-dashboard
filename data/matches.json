@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-15T18:56:42.191Z",
+  "lastUpdated": "2026-06-15T21:41:07.860Z",
   "matches": [
     {
       "id": 537327,
@@ -279,7 +279,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
       "utcDate": "2026-06-15T19:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "home": {
         "code": "BEL",
         "name": "Belgium",
@@ -290,10 +290,10 @@
         "name": "Egypt",
         "crest": "assets/crests/EGY.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 1,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "DRAW"
     },
     {
       "id": 537370,
