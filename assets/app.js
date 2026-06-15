@@ -5,6 +5,14 @@ let teamTableRef = new Map();
 let ownersByCode = new Map();
 let predictionsById = {};
 
+// "Certain it's live" means football-data itself reports the match as
+// running. Never infer live from the kickoff clock: a passed kickoff can
+// just be a late feed update, and a FINISHED match with a null score is a
+// data gap, not a result.
+const isLive = (m) => m.status === 'IN_PLAY' || m.status === 'PAUSED';
+const hasResult = (m) =>
+  m.status === 'FINISHED' && m.homeScore !== null && m.awayScore !== null;
+
 const STAGE_LABELS = {
   GROUP_STAGE: 'Groups', LAST_32: 'R32', LAST_16: 'R16',
   QUARTER_FINALS: 'QF', SEMI_FINALS: 'SF', THIRD_PLACE: '3rd place', FINAL: 'Final',
@@ -363,23 +371,33 @@ function feedRow(match, isLive) {
   return row;
 }
 
+// Live games get pinned to a dedicated section at the very top of the page,
+// shown only when at least one match is certainly live.
+function renderLive(matches) {
+  const section = document.querySelector('#live-now');
+  const root = document.querySelector('#live');
+  const live = matches
+    .filter(isLive)
+    .sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate));
+  if (!live.length) {
+    section.classList.add('hidden');
+    return;
+  }
+  section.classList.remove('hidden');
+  live.forEach((m) => root.append(matchCard(m)));
+}
+
 function renderFeed(matches) {
   const feed = document.querySelector('#feed');
   const now = new Date();
-  const live = matches
-    .filter((m) => m.status === 'IN_PLAY' || m.status === 'PAUSED')
-    .sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate));
+  // Live games are surfaced separately up top; the feed is upcoming only.
   const upcoming = matches
     .filter((m) => m.status === 'TIMED' || m.status === 'SCHEDULED')
     .sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate))
     .slice(0, 10);
-  if (!live.length && !upcoming.length) {
+  if (!upcoming.length) {
     feed.append(el('p', 'empty', 'No more games. What a tournament.'));
     return;
-  }
-  if (live.length) {
-    feed.append(el('div', 'feed-day', 'On now'));
-    live.forEach((m) => feed.append(feedRow(m, true)));
   }
   let lastLabel = null;
   for (const match of upcoming) {
@@ -436,10 +454,10 @@ function tickerItem(match) {
 function renderTicker(matches) {
   const ticker = document.querySelector('#ticker');
   const live = matches
-    .filter((m) => m.status === 'IN_PLAY' || m.status === 'PAUSED')
+    .filter(isLive)
     .sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate));
   const finished = matches
-    .filter((m) => m.status === 'FINISHED')
+    .filter(hasResult)
     .sort((a, b) => new Date(b.utcDate) - new Date(a.utcDate))
     .slice(0, 12);
   const upcoming = matches
@@ -463,7 +481,7 @@ function renderTicker(matches) {
 function renderLatest(matches) {
   const latest = document.querySelector('#latest');
   const finished = matches
-    .filter((m) => m.status === 'FINISHED')
+    .filter(hasResult)
     .sort((a, b) => new Date(b.utcDate) - new Date(a.utcDate))
     .slice(0, 8);
   if (finished.length) finished.forEach((m) => latest.append(matchCard(m)));
@@ -480,7 +498,7 @@ function clearSections() {
   const hero = document.querySelector('#leader-hero');
   hero.innerHTML = '';
   hero.classList.add('hidden');
-  for (const id of ['#ticker', '#leaderboard', '#feed', '#latest']) {
+  for (const id of ['#ticker', '#live', '#leaderboard', '#feed', '#latest']) {
     document.querySelector(id).innerHTML = '';
   }
 }
@@ -501,6 +519,7 @@ async function main() {
     ownersByCode = new Map(roster.flatMap((p) => p.teams.map((code) => [code, p.name])));
     const board = computeLeaderboard(roster, teamTable);
     renderTicker(data.matches);
+    renderLive(data.matches);
     renderLeaderHero(board);
     renderLeaderboard(board);
     renderFeed(data.matches);
