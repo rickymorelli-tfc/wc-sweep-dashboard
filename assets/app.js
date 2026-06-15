@@ -520,7 +520,21 @@ document.addEventListener('error', (e) => {
 
 main();
 
-// Keep an open tab current: re-fetch every 10 minutes unless a modal is open.
-setInterval(() => {
+// Keep an open tab current. The data is a static JSON on GitHub Pages, so
+// re-fetching costs no football-data API quota: poll every 2 minutes, and
+// refresh the moment someone switches back to the tab. Skip while a modal
+// is open so the view does not jump under the reader.
+const REFRESH_MS = 2 * 60 * 1000;
+function refreshIfIdle() {
   if (!document.querySelector('.modal-overlay')) main();
-}, 10 * 60 * 1000);
+}
+setInterval(refreshIfIdle, REFRESH_MS);
+
+let lastVisibleRefresh = 0;
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState !== 'visible') return;
+  const now = performance.now();
+  if (now - lastVisibleRefresh < 30 * 1000) return; // throttle rapid tab flicks
+  lastVisibleRefresh = now;
+  refreshIfIdle();
+});

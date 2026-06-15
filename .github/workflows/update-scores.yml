@@ -1,7 +1,9 @@
 name: Update scores
 on:
   schedule:
-    - cron: '17 */2 * * *'
+    # Every 5 min (GitHub's minimum). One football-data call per run, well
+    # under the free tier's 10 req/min. GitHub may delay runs under load.
+    - cron: '*/5 * * * *'
   workflow_dispatch:
 permissions:
   contents: write
