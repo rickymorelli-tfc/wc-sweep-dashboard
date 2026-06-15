@@ -26,7 +26,13 @@
     </section>
     <section id="leader-hero" class="hidden"></section>
     <section>
-      <h2>Leaderboard</h2>
+      <div class="board-head">
+        <h2>Leaderboard</h2>
+        <div class="board-toggle" role="tablist" aria-label="Leaderboard view">
+          <button type="button" id="tab-people" class="board-tab active" role="tab" aria-selected="true">People</button>
+          <button type="button" id="tab-countries" class="board-tab" role="tab" aria-selected="false">Countries</button>
+        </div>
+      </div>
       <div id="leaderboard" class="card"></div>
     </section>
     <section>

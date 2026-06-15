@@ -4,6 +4,8 @@ let allMatches = [];
 let teamTableRef = new Map();
 let ownersByCode = new Map();
 let predictionsById = {};
+let peopleBoardRef = [];
+let boardView = 'people'; // 'people' | 'countries'
 
 // "Certain it's live" means football-data itself reports the match as
 // running. Never infer live from the kickoff clock: a passed kickoff can
@@ -173,6 +175,74 @@ function renderLeaderboard(board) {
     table.append(row);
   });
   root.append(table);
+}
+
+// A country cell for the countries board: crest + name + standing badge,
+// clickable into the same team match-history modal as the people chips.
+function countryNameCell(team) {
+  const btn = el('button', 'country-name' + (team.exitStage ? ' out' : ''));
+  btn.type = 'button';
+  if (team.crest) {
+    const img = el('img', 'crest');
+    img.src = team.crest;
+    img.alt = '';
+    btn.append(img);
+  }
+  btn.append(el('span', 'chip-name', team.name));
+  if (team.champion) btn.append(el('span', 'badge gold', 'CHAMPIONS'));
+  else if (team.exitStage) btn.append(el('span', 'badge', `out ${STAGE_LABELS[team.exitStage] || team.exitStage}`));
+  btn.setAttribute('aria-label', `Show ${team.name} matches`);
+  btn.addEventListener('click', () => openTeamModal(team.code));
+  return btn;
+}
+
+function renderCountryBoard() {
+  const root = document.querySelector('#leaderboard');
+  const teams = [...teamTableRef.values()].sort(
+    (a, b) => b.points - a.points || b.gd - a.gd || b.gf - a.gf || a.name.localeCompare(b.name)
+  );
+  const table = el('table');
+  const head = el('tr');
+  for (const h of ['#', 'Country', 'Owner', 'Pts', 'GD', 'GF']) head.append(el('th', null, h));
+  table.append(head);
+  teams.forEach((team, i) => {
+    const row = el('tr', i === 0 && team.points > 0 ? 'top' : null);
+    row.append(el('td', 'rank', `${i + 1}`));
+    const country = el('td', 'country');
+    country.append(countryNameCell(team));
+    row.append(country);
+    row.append(el('td', 'owner', ownersByCode.get(team.code) || 'unclaimed'));
+    row.append(el('td', 'num pts', `${team.points}`));
+    row.append(el('td', 'num', `${team.gd > 0 ? '+' : ''}${team.gd}`));
+    row.append(el('td', 'num', `${team.gf}`));
+    table.append(row);
+  });
+  root.append(table);
+}
+
+// Render whichever leaderboard view is active. Safe to call from main() or
+// from a tab click: it owns the hero + leaderboard contents.
+function renderBoard() {
+  const people = boardView === 'people';
+  const peopleTab = document.querySelector('#tab-people');
+  const countriesTab = document.querySelector('#tab-countries');
+  peopleTab.classList.toggle('active', people);
+  countriesTab.classList.toggle('active', !people);
+  peopleTab.setAttribute('aria-selected', String(people));
+  countriesTab.setAttribute('aria-selected', String(!people));
+
+  const hero = document.querySelector('#leader-hero');
+  hero.innerHTML = '';
+  hero.classList.add('hidden');
+  const root = document.querySelector('#leaderboard');
+  root.innerHTML = '';
+
+  if (people) {
+    renderLeaderHero(peopleBoardRef);
+    renderLeaderboard(peopleBoardRef);
+  } else {
+    renderCountryBoard();
+  }
 }
 
 function matchCard(match) {
@@ -517,11 +587,10 @@ async function main() {
     allMatches = data.matches;
     teamTableRef = teamTable;
     ownersByCode = new Map(roster.flatMap((p) => p.teams.map((code) => [code, p.name])));
-    const board = computeLeaderboard(roster, teamTable);
+    peopleBoardRef = computeLeaderboard(roster, teamTable);
     renderTicker(data.matches);
     renderLive(data.matches);
-    renderLeaderHero(board);
-    renderLeaderboard(board);
+    renderBoard();
     renderFeed(data.matches);
     renderLatest(data.matches);
     updated.textContent = data.lastUpdated
@@ -536,6 +605,16 @@ async function main() {
 document.addEventListener('error', (e) => {
   if (e.target.tagName === 'IMG') e.target.remove();
 }, true);
+
+// Leaderboard view toggle: re-render in place from the data already loaded,
+// no refetch. The chosen view persists across the 2-minute auto-refresh.
+function setBoardView(view) {
+  if (view === boardView) return;
+  boardView = view;
+  renderBoard();
+}
+document.querySelector('#tab-people').addEventListener('click', () => setBoardView('people'));
+document.querySelector('#tab-countries').addEventListener('click', () => setBoardView('countries'));
 
 main();
 

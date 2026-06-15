@@ -140,6 +140,33 @@ tr.top td { background: var(--green-tint); }
 }
 .badge.gold { background: var(--green); color: var(--brown); }
 .badge.warn { background: var(--peach); color: var(--brown); }
+.board-head {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 1rem; flex-wrap: wrap;
+  border-bottom: 2px solid var(--border);
+  margin: 2.6rem 0 1rem; padding-bottom: 0.4rem;
+}
+.board-head h2 { border: none; margin: 0; padding: 0; }
+.board-toggle {
+  display: inline-flex; background: var(--dim);
+  border-radius: 35px; padding: 0.2rem;
+}
+.board-tab {
+  border: none; background: none; cursor: pointer;
+  font-family: inherit; font-size: 0.75rem; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted);
+  padding: 0.35rem 0.9rem; border-radius: 35px;
+}
+.board-tab.active { background: var(--brown); color: var(--cream); }
+.country-name {
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  background: none; border: none; padding: 0; cursor: pointer;
+  font-family: inherit; font-size: inherit; letter-spacing: inherit;
+  color: inherit; font-weight: 600; text-align: left;
+}
+.country-name:hover { color: var(--green-dark); }
+.country-name.out { opacity: 0.55; }
+.owner { color: var(--muted); white-space: nowrap; }
 .feed-day {
   font-family: var(--heading); font-weight: 600; font-size: 0.85rem;
   text-transform: uppercase; letter-spacing: 0.02em; color: var(--green-dark);
