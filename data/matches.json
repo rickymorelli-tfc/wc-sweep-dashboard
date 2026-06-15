@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-15T14:47:18.445Z",
+  "lastUpdated": "2026-06-15T18:56:42.191Z",
   "matches": [
     {
       "id": 537327,
@@ -258,7 +258,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_H",
       "utcDate": "2026-06-15T16:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "home": {
         "code": "ESP",
         "name": "Spain",
@@ -269,10 +269,10 @@
         "name": "Cape Verde Islands",
         "crest": "assets/crests/CPV.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "DRAW"
     },
     {
       "id": 537363,
