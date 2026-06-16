@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WC Sweep: Bracket prototypes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="bracket-shared.css">
+  <style>
+    body { background: #faf7f1; }
+    .wrap { max-width: 640px; margin: 0 auto; padding: 2rem 1.2rem 4rem; }
+    .cards { display: grid; gap: 1rem; }
+    .opt {
+      display: block; text-decoration: none; color: var(--brown);
+      background: #fff; border: 1px solid var(--border); border-radius: 16px;
+      padding: 1.1rem 1.2rem; box-shadow: var(--shadow);
+    }
+    .opt:hover { border-color: var(--green); }
+    .opt h3 { margin: 0 0 0.3rem; font-family: var(--heading); text-transform: uppercase; font-size: 1.2rem; }
+    .opt p { margin: 0; font-size: 0.85rem; color: var(--muted); }
+    .opt .best { display: inline-block; margin-top: 0.5rem; font-size: 0.68rem; font-weight: 700; text-transform: uppercase; color: var(--green-dark); background: var(--green-tint); border-radius: 35px; padding: 0.15rem 0.6rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1 class="proto-title">Bracket prototypes</h1>
+    <p class="proto-sub">Three takes on the same idea. Open each, then tell me which to wire into the live dashboard.</p>
+    <div class="cards">
+      <a class="opt" href="bracket-a.html">
+        <h3>A. The Funnel</h3>
+        <p>Left to right, columns narrowing from 12 groups through R32, R16, QF, SF, Final, to the trophy.</p>
+        <span class="best">Best on desktop / office TV</span>
+      </a>
+      <a class="opt" href="bracket-b.html">
+        <h3>B. Bracket Tree</h3>
+        <p>Classic two sided knockout tree meeting at the final, with connector lines and a groups strip up top.</p>
+        <span class="best">Most "bracket" feel</span>
+      </a>
+      <a class="opt" href="bracket-c.html">
+        <h3>C. The Climb</h3>
+        <p>Scroll down a narrowing pyramid: groups, then each round, to a champion spotlight.</p>
+        <span class="best">Best on phones</span>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

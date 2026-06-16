@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bracket A: Funnel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@600&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="stylesheet" href="bracket-shared.css">
+  <style>
+    body { background: #faf7f1; }
+    .wrap { max-width: 1500px; margin: 0 auto; padding: 0 1rem 4rem; }
+    .rail {
+      display: flex; gap: 1rem; align-items: flex-start;
+      overflow-x: auto; padding: 0.5rem 0 1.5rem; scroll-snap-type: x proximity;
+    }
+    .col { flex-shrink: 0; scroll-snap-align: start; }
+    .col-head {
+      font-family: var(--heading); text-transform: uppercase; text-align: center;
+      font-size: 0.85rem; letter-spacing: 0.03em; color: var(--brown);
+      background: var(--cream); border: 1px solid var(--border);
+      border-radius: 35px; padding: 0.3rem 0.6rem; margin-bottom: 0.7rem;
+    }
+    /* The funnel: each column narrower than the last. */
+    .col.groups { width: 560px; }
+    .col.groups .col-head { background: var(--green); }
+    .col.r32 { width: 220px; }
+    .col.r16 { width: 220px; }
+    .col.qf  { width: 220px; }
+    .col.sf  { width: 220px; }
+    .col.final { width: 240px; }
+
+    .group-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+    .group-card { background: #fff; border: 1px solid var(--border); border-radius: 12px; padding: 0.5rem; box-shadow: var(--shadow); }
+    .group-card h4 {
+      margin: 0 0 0.4rem; font-family: var(--heading); font-size: 0.78rem;
+      text-transform: uppercase; color: var(--brown); display: flex;
+      justify-content: space-between; align-items: center;
+    }
+    .group-card h4 .prov { font-size: 0.58rem; color: var(--peach); font-weight: 600; }
+    .group-card .tm { padding: 0.22rem 0.3rem; font-size: 0.76rem; gap: 0.35rem; }
+    .group-card .tm .crest { width: 15px; height: 15px; }
+    .group-card .tm-owner { display: none; }
+
+    .ko-match {
+      background: #fff; border: 1px solid var(--border); border-radius: 10px;
+      padding: 0.4rem 0.5rem; margin-bottom: 0.6rem; box-shadow: var(--shadow);
+      display: flex; flex-direction: column; gap: 0.25rem;
+    }
+    .ko-match .when { font-size: 0.6rem; color: var(--muted); text-align: center; }
+    .ko-row { display: flex; align-items: center; gap: 0.4rem; }
+    .ko-row .crest { width: 16px; height: 16px; object-fit: contain; flex-shrink: 0; }
+    .ko-row .nm { flex: 1; font-size: 0.74rem; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .ko-row.win .nm { color: var(--green-dark); }
+    .ko-row.lose { opacity: 0.45; }
+    .ko-row .sc { font-variant-numeric: tabular-nums; font-weight: 700; font-size: 0.74rem; }
+    .ko-row .ownerdot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+    .ko-match.tbd .nm { color: var(--muted); font-style: italic; font-weight: 500; }
+
+    .champ-box {
+      background: linear-gradient(160deg, var(--peach), var(--green-soft));
+      border-radius: 16px; padding: 1.2rem 0.8rem; text-align: center;
+      border: 2px solid var(--green);
+    }
+    .champ-box .trophy { font-size: 2.4rem; }
+    .champ-box .lbl { font-family: var(--heading); text-transform: uppercase; font-size: 0.8rem; color: var(--brown-deep); }
+    .champ-box .nm { font-weight: 700; font-size: 1.1rem; margin-top: 0.2rem; }
+    .champ-box .own { font-size: 0.75rem; color: var(--brown-deep); }
+    @media (max-width: 640px) { .col.groups { width: 360px; } .group-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <nav class="proto-bar" id="nav"></nav>
+  <div class="wrap">
+    <h1 class="proto-title">The Funnel</h1>
+    <p class="proto-sub" id="sub">Loading...</p>
+    <div class="legend">
+      <span><i class="swatch q"></i> Through</span>
+      <span><i class="swatch t"></i> 3rd, in contention</span>
+      <span><i class="swatch o"></i> Out</span>
+      <span>Colour dot = sweep owner</span>
+    </div>
+    <div class="rail" id="rail"></div>
+  </div>
+  <script type="module">
+    import { loadAll, ownerColours, groupStandings, knockoutRounds, isFinished,
+      isLive, hasTeams, winnerLoser, champion } from './bracket-data.js';
+    import { protoNav } from './proto-nav.js';
+
+    const el = (t, c, x) => { const n = document.createElement(t); if (c) n.className = c; if (x !== undefined) n.textContent = x; return n; };
+    const fmtDate = (d) => new Date(d).toLocaleDateString([], { day: 'numeric', month: 'short' });
+
+    function teamRow(team, opts = {}) {
+      const row = el('div', 'tm ' + (team.statusClass || ''));
+      if (opts.rank) row.append(el('span', 'rankpill', String(opts.rank)));
+      if (team.crest) { const i = el('img', 'crest'); i.src = team.crest; row.append(i); }
+      row.append(el('span', 'tm-name', team.name));
+      if (opts.pts !== undefined) row.append(el('span', 'tm-pts', opts.pts));
+      return row;
+    }
+
+    function groupCard(g) {
+      const card = el('div', 'group-card');
+      const h = el('h4'); h.append(el('span', null, 'Group ' + g.letter));
+      if (!g.finished) h.append(el('span', 'prov', 'live'));
+      card.append(h);
+      g.rows.forEach((t) => {
+        const cls = t.status === 'qualified' ? 'q' : t.status === 'third' ? 't' : 'out';
+        card.append(teamRow({ ...t, statusClass: cls }, { rank: t.rank, pts: t.points }));
+      });
+      return card;
+    }
+
+    function koMatch(m, owners, ownersByCode) {
+      if (!m || !hasTeams(m)) {
+        const card = el('div', 'ko-match tbd');
+        const r1 = el('div', 'ko-row'); r1.append(el('span', 'nm', (m && m.home?.name) || 'TBD')); card.append(r1);
+        const r2 = el('div', 'ko-row'); r2.append(el('span', 'nm', (m && m.away?.name) || 'TBD')); card.append(r2);
+        if (m) card.append(el('div', 'when', fmtDate(m.utcDate)));
+        return card;
+      }
+      const card = el('div', 'ko-match');
+      const { winner } = winnerLoser(m);
+      const side = (team, score) => {
+        const won = winner && winner.code === team.code;
+        const lost = winner && winner.code !== team.code;
+        const row = el('div', 'ko-row' + (won ? ' win' : lost ? ' lose' : ''));
+        const dot = el('span', 'ownerdot');
+        const owner = ownersByCode.get(team.code);
+        dot.style.background = owner ? owners.get(owner) : 'transparent';
+        row.append(dot);
+        if (team.crest) { const i = el('img', 'crest'); i.src = team.crest; row.append(i); }
+        row.append(el('span', 'nm', team.name));
+        if (score != null) row.append(el('span', 'sc', score));
+        return row;
+      };
+      card.append(side(m.home, m.homeScore));
+      card.append(side(m.away, m.awayScore));
+      const note = isLive(m) ? 'LIVE' : isFinished(m)
+        ? (m.decidedBy === 'PENALTIES' ? 'pens' : m.decidedBy === 'EXTRA_TIME' ? 'aet' : 'FT')
+        : fmtDate(m.utcDate);
+      card.append(el('div', 'when', note));
+      return card;
+    }
+
+    function render(d) {
+      document.querySelector('#sub').textContent =
+        'Group standings are live; knockout slots fill as games finish. Updated ' +
+        new Date(d.lastUpdated).toLocaleString();
+      const owners = ownerColours(d.roster);
+      const { groups } = groupStandings(d.matches);
+      const rounds = knockoutRounds(d.matches);
+      const rail = document.querySelector('#rail');
+
+      const gcol = el('div', 'col groups');
+      gcol.append(el('div', 'col-head', '12 Groups'));
+      const grid = el('div', 'group-grid');
+      groups.forEach((g) => grid.append(groupCard(g)));
+      gcol.append(grid);
+      rail.append(gcol);
+
+      const classByShort = { R32: 'r32', R16: 'r16', QF: 'qf', SF: 'sf', Final: 'final' };
+      rounds.forEach((r) => {
+        const col = el('div', 'col ' + (classByShort[r.short] || ''));
+        col.append(el('div', 'col-head', r.label));
+        r.slots.forEach((m) => col.append(koMatch(m, owners, d.ownersByCode)));
+        rail.append(col);
+      });
+
+      const champ = champion(d.matches);
+      const ccol = el('div', 'col final');
+      ccol.append(el('div', 'col-head', 'Winner'));
+      const box = el('div', 'champ-box');
+      box.append(el('div', 'trophy', '🏆'));
+      box.append(el('div', 'lbl', 'Champions'));
+      box.append(el('div', 'nm', champ ? champ.name : 'TBD'));
+      const own = champ ? d.ownersByCode.get(champ.code) : null;
+      box.append(el('div', 'own', own ? own + ' wins the sweep' : 'To be decided'));
+      ccol.append(box);
+      rail.append(ccol);
+    }
+
+    document.querySelector('#nav').replaceWith(protoNav('a'));
+    loadAll().then(render).catch((e) => { document.querySelector('#sub').textContent = 'Could not load: ' + e.message; });
+  </script>
+</body>
+</html>
