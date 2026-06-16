@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-16T20:27:03.597Z",
+  "lastUpdated": "2026-06-16T22:29:30.741Z",
   "matches": [
     {
       "id": 537327,
@@ -307,9 +307,9 @@
         "crest": "assets/crests/KSA.svg"
       },
       "away": {
-        "code": "URY",
+        "code": "URU",
         "name": "Uruguay",
-        "crest": "assets/crests/URY.svg"
+        "crest": "https://crests.football-data.org/758.svg"
       },
       "homeScore": 1,
       "awayScore": 1,
@@ -342,7 +342,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
       "utcDate": "2026-06-16T19:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "home": {
         "code": "FRA",
         "name": "France",
@@ -353,17 +353,17 @@
         "name": "Senegal",
         "crest": "assets/crests/SEN.svg"
       },
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": 3,
+      "awayScore": 1,
       "decidedBy": "REGULAR",
-      "winner": "DRAW"
+      "winner": "HOME_TEAM"
     },
     {
       "id": 537392,
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
       "utcDate": "2026-06-16T22:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "home": {
         "code": "IRQ",
         "name": "Iraq",
@@ -374,10 +374,10 @@
         "name": "Norway",
         "crest": "assets/crests/NOR.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "DRAW"
     },
     {
       "id": 537397,
@@ -806,9 +806,9 @@
       "utcDate": "2026-06-21T22:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "URY",
+        "code": "URU",
         "name": "Uruguay",
-        "crest": "assets/crests/URY.svg"
+        "crest": "https://crests.football-data.org/758.svg"
       },
       "away": {
         "code": "CPV",
@@ -1310,9 +1310,9 @@
       "utcDate": "2026-06-27T00:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "URY",
+        "code": "URU",
         "name": "Uruguay",
-        "crest": "assets/crests/URY.svg"
+        "crest": "https://crests.football-data.org/758.svg"
       },
       "away": {
         "code": "ESP",
