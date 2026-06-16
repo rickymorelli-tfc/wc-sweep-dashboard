@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-16T17:32:06.476Z",
+  "lastUpdated": "2026-06-16T20:27:03.597Z",
   "matches": [
     {
       "id": 537327,
@@ -342,7 +342,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
       "utcDate": "2026-06-16T19:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "home": {
         "code": "FRA",
         "name": "France",
@@ -353,10 +353,10 @@
         "name": "Senegal",
         "crest": "assets/crests/SEN.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "DRAW"
     },
     {
       "id": 537392,
