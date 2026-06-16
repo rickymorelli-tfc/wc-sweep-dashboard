@@ -1,4 +1,5 @@
 import { computeTeamTable, computeLeaderboard, teamMatches, matchPoints } from './score.js';
+import { renderBracket } from './bracket.js';
 
 let allMatches = [];
 let teamTableRef = new Map();
@@ -568,7 +569,7 @@ function clearSections() {
   const hero = document.querySelector('#leader-hero');
   hero.innerHTML = '';
   hero.classList.add('hidden');
-  for (const id of ['#ticker', '#live', '#leaderboard', '#feed', '#latest']) {
+  for (const id of ['#ticker', '#live', '#leaderboard', '#bracket', '#feed', '#latest']) {
     document.querySelector(id).innerHTML = '';
   }
 }
@@ -591,6 +592,9 @@ async function main() {
     renderTicker(data.matches);
     renderLive(data.matches);
     renderBoard();
+    renderBracket(document.querySelector('#bracket'),
+      { matches: data.matches, roster, ownersByCode },
+      { onTeam: openTeamModal, onMatch: openMatchModal });
     renderFeed(data.matches);
     renderLatest(data.matches);
     updated.textContent = data.lastUpdated
