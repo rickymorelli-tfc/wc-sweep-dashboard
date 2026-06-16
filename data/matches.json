@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-16T22:29:30.741Z",
+  "lastUpdated": "2026-06-16T23:57:04.235Z",
   "matches": [
     {
       "id": 537327,
@@ -374,10 +374,10 @@
         "name": "Norway",
         "crest": "assets/crests/NOR.svg"
       },
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": 1,
+      "awayScore": 3,
       "decidedBy": "REGULAR",
-      "winner": "DRAW"
+      "winner": "AWAY_TEAM"
     },
     {
       "id": 537397,
