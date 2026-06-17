@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-16T23:57:04.235Z",
+  "lastUpdated": "2026-06-17T03:51:03.482Z",
   "matches": [
     {
       "id": 537327,
@@ -307,9 +307,9 @@
         "crest": "assets/crests/KSA.svg"
       },
       "away": {
-        "code": "URU",
+        "code": "URY",
         "name": "Uruguay",
-        "crest": "https://crests.football-data.org/758.svg"
+        "crest": "assets/crests/URY.svg"
       },
       "homeScore": 1,
       "awayScore": 1,
@@ -363,7 +363,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
       "utcDate": "2026-06-16T22:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "home": {
         "code": "IRQ",
         "name": "Iraq",
@@ -375,7 +375,7 @@
         "crest": "assets/crests/NOR.svg"
       },
       "homeScore": 1,
-      "awayScore": 3,
+      "awayScore": 4,
       "decidedBy": "REGULAR",
       "winner": "AWAY_TEAM"
     },
@@ -384,7 +384,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
       "utcDate": "2026-06-17T01:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "home": {
         "code": "ARG",
         "name": "Argentina",
@@ -395,10 +395,10 @@
         "name": "Algeria",
         "crest": "assets/crests/ALG.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 3,
+      "awayScore": 0,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "HOME_TEAM"
     },
     {
       "id": 537398,
@@ -806,9 +806,9 @@
       "utcDate": "2026-06-21T22:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "URU",
+        "code": "URY",
         "name": "Uruguay",
-        "crest": "https://crests.football-data.org/758.svg"
+        "crest": "assets/crests/URY.svg"
       },
       "away": {
         "code": "CPV",
@@ -1310,9 +1310,9 @@
       "utcDate": "2026-06-27T00:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "URU",
+        "code": "URY",
         "name": "Uruguay",
-        "crest": "https://crests.football-data.org/758.svg"
+        "crest": "assets/crests/URY.svg"
       },
       "away": {
         "code": "ESP",
