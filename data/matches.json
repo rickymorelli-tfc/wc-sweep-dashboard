@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-17T03:51:03.482Z",
+  "lastUpdated": "2026-06-17T08:51:15.929Z",
   "matches": [
     {
       "id": 537327,
@@ -307,9 +307,9 @@
         "crest": "assets/crests/KSA.svg"
       },
       "away": {
-        "code": "URY",
+        "code": "URU",
         "name": "Uruguay",
-        "crest": "assets/crests/URY.svg"
+        "crest": "https://crests.football-data.org/758.svg"
       },
       "homeScore": 1,
       "awayScore": 1,
@@ -405,7 +405,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
       "utcDate": "2026-06-17T04:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "home": {
         "code": "AUT",
         "name": "Austria",
@@ -416,10 +416,10 @@
         "name": "Jordan",
         "crest": "assets/crests/JOR.png"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 3,
+      "awayScore": 1,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "HOME_TEAM"
     },
     {
       "id": 537403,
@@ -806,9 +806,9 @@
       "utcDate": "2026-06-21T22:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "URY",
+        "code": "URU",
         "name": "Uruguay",
-        "crest": "assets/crests/URY.svg"
+        "crest": "https://crests.football-data.org/758.svg"
       },
       "away": {
         "code": "CPV",
@@ -1310,9 +1310,9 @@
       "utcDate": "2026-06-27T00:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "URY",
+        "code": "URU",
         "name": "Uruguay",
-        "crest": "assets/crests/URY.svg"
+        "crest": "https://crests.football-data.org/758.svg"
       },
       "away": {
         "code": "ESP",
