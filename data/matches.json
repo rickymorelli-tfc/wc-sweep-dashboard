@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-17T12:42:26.294Z",
+  "lastUpdated": "2026-06-17T16:28:18.429Z",
   "matches": [
     {
       "id": 537327,
@@ -59,10 +59,10 @@
         "name": "Bosnia-Herzegovina",
         "crest": "assets/crests/BIH.svg"
       },
-      "homeScore": 1,
-      "awayScore": 1,
+      "homeScore": null,
+      "awayScore": null,
       "decidedBy": "REGULAR",
-      "winner": "DRAW"
+      "winner": null
     },
     {
       "id": 537345,
