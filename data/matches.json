@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-17T20:55:50.376Z",
+  "lastUpdated": "2026-06-17T22:42:39.374Z",
   "matches": [
     {
       "id": 537327,
@@ -307,9 +307,9 @@
         "crest": "assets/crests/KSA.svg"
       },
       "away": {
-        "code": "URU",
+        "code": "URY",
         "name": "Uruguay",
-        "crest": "https://crests.football-data.org/758.svg"
+        "crest": "assets/crests/URY.svg"
       },
       "homeScore": 1,
       "awayScore": 1,
@@ -447,7 +447,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_L",
       "utcDate": "2026-06-17T20:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "home": {
         "code": "ENG",
         "name": "England",
@@ -458,10 +458,10 @@
         "name": "Croatia",
         "crest": "assets/crests/CRO.svg"
       },
-      "homeScore": 2,
+      "homeScore": 4,
       "awayScore": 2,
       "decidedBy": "REGULAR",
-      "winner": "DRAW"
+      "winner": "HOME_TEAM"
     },
     {
       "id": 537410,
@@ -806,9 +806,9 @@
       "utcDate": "2026-06-21T22:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "URU",
+        "code": "URY",
         "name": "Uruguay",
-        "crest": "https://crests.football-data.org/758.svg"
+        "crest": "assets/crests/URY.svg"
       },
       "away": {
         "code": "CPV",
@@ -1310,9 +1310,9 @@
       "utcDate": "2026-06-27T00:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "URU",
+        "code": "URY",
         "name": "Uruguay",
-        "crest": "https://crests.football-data.org/758.svg"
+        "crest": "assets/crests/URY.svg"
       },
       "away": {
         "code": "ESP",
