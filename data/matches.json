@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-17T08:51:15.929Z",
+  "lastUpdated": "2026-06-17T12:42:26.294Z",
   "matches": [
     {
       "id": 537327,
@@ -307,9 +307,9 @@
         "crest": "assets/crests/KSA.svg"
       },
       "away": {
-        "code": "URU",
+        "code": "URY",
         "name": "Uruguay",
-        "crest": "https://crests.football-data.org/758.svg"
+        "crest": "assets/crests/URY.svg"
       },
       "homeScore": 1,
       "awayScore": 1,
@@ -806,9 +806,9 @@
       "utcDate": "2026-06-21T22:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "URU",
+        "code": "URY",
         "name": "Uruguay",
-        "crest": "https://crests.football-data.org/758.svg"
+        "crest": "assets/crests/URY.svg"
       },
       "away": {
         "code": "CPV",
@@ -1310,9 +1310,9 @@
       "utcDate": "2026-06-27T00:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "URU",
+        "code": "URY",
         "name": "Uruguay",
-        "crest": "https://crests.football-data.org/758.svg"
+        "crest": "assets/crests/URY.svg"
       },
       "away": {
         "code": "ESP",
