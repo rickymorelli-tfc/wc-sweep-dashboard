@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-18T00:03:16.528Z",
+  "lastUpdated": "2026-06-18T04:55:28.928Z",
   "matches": [
     {
       "id": 537327,
@@ -468,7 +468,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_L",
       "utcDate": "2026-06-17T23:00:00Z",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "home": {
         "code": "GHA",
         "name": "Ghana",
@@ -479,17 +479,17 @@
         "name": "Panama",
         "crest": "assets/crests/PAN.svg"
       },
-      "homeScore": 0,
+      "homeScore": 1,
       "awayScore": 0,
       "decidedBy": "REGULAR",
-      "winner": "DRAW"
+      "winner": "HOME_TEAM"
     },
     {
       "id": 537404,
       "stage": "GROUP_STAGE",
       "group": "GROUP_K",
       "utcDate": "2026-06-18T02:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "home": {
         "code": "UZB",
         "name": "Uzbekistan",
@@ -500,10 +500,10 @@
         "name": "Colombia",
         "crest": "assets/crests/COL.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 3,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "AWAY_TEAM"
     },
     {
       "id": 537329,
