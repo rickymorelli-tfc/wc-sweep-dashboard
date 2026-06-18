@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-18T18:32:07.846Z",
+  "lastUpdated": "2026-06-18T21:04:59.778Z",
   "matches": [
     {
       "id": 537327,
@@ -531,7 +531,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_B",
       "utcDate": "2026-06-18T19:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "home": {
         "code": "SUI",
         "name": "Switzerland",
@@ -542,10 +542,10 @@
         "name": "Bosnia-Herzegovina",
         "crest": "assets/crests/BIH.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 4,
+      "awayScore": 1,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "HOME_TEAM"
     },
     {
       "id": 537336,
