@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-19T21:34:46.383Z",
+  "lastUpdated": "2026-06-19T22:32:33.196Z",
   "matches": [
     {
       "id": 537327,
@@ -615,7 +615,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_C",
       "utcDate": "2026-06-19T22:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "home": {
         "code": "SCO",
         "name": "Scotland",
@@ -626,10 +626,10 @@
         "name": "Morocco",
         "crest": "assets/crests/MAR.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 1,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "AWAY_TEAM"
     },
     {
       "id": 537341,
