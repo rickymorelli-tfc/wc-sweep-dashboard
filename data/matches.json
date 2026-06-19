@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-19T18:26:32.540Z",
+  "lastUpdated": "2026-06-19T20:13:22.467Z",
   "matches": [
     {
       "id": 537327,
@@ -594,7 +594,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_D",
       "utcDate": "2026-06-19T19:00:00Z",
-      "status": "TIMED",
+      "status": "PAUSED",
       "home": {
         "code": "USA",
         "name": "United States",
@@ -605,10 +605,10 @@
         "name": "Australia",
         "crest": "assets/crests/AUS.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 2,
+      "awayScore": 0,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "HOME_TEAM"
     },
     {
       "id": 537342,
