@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T16:47:34.748Z",
+  "lastUpdated": "2026-06-20T18:01:45.073Z",
   "matches": [
     {
       "id": 537327,
@@ -307,9 +307,9 @@
         "crest": "assets/crests/KSA.svg"
       },
       "away": {
-        "code": "URY",
+        "code": "URU",
         "name": "Uruguay",
-        "crest": "assets/crests/URY.svg"
+        "crest": "https://crests.football-data.org/758.svg"
       },
       "homeScore": 1,
       "awayScore": 1,
@@ -678,7 +678,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_F",
       "utcDate": "2026-06-20T17:00:00Z",
-      "status": "TIMED",
+      "status": "PAUSED",
       "home": {
         "code": "NED",
         "name": "Netherlands",
@@ -689,10 +689,10 @@
         "name": "Sweden",
         "crest": "assets/crests/SWE.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 2,
+      "awayScore": 0,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "HOME_TEAM"
     },
     {
       "id": 537353,
@@ -806,9 +806,9 @@
       "utcDate": "2026-06-21T22:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "URY",
+        "code": "URU",
         "name": "Uruguay",
-        "crest": "assets/crests/URY.svg"
+        "crest": "https://crests.football-data.org/758.svg"
       },
       "away": {
         "code": "CPV",
@@ -1310,9 +1310,9 @@
       "utcDate": "2026-06-27T00:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "URY",
+        "code": "URU",
         "name": "Uruguay",
-        "crest": "assets/crests/URY.svg"
+        "crest": "https://crests.football-data.org/758.svg"
       },
       "away": {
         "code": "ESP",
