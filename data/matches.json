@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-20T11:31:56.284Z",
+  "lastUpdated": "2026-06-20T13:07:56.690Z",
   "matches": [
     {
       "id": 537327,
@@ -181,9 +181,9 @@
         "crest": "assets/crests/GER.svg"
       },
       "away": {
-        "code": "CUW",
+        "code": "CUR",
         "name": "Curaçao",
-        "crest": "assets/crests/CUW.svg"
+        "crest": "https://crests.football-data.org/curacao.svg"
       },
       "homeScore": 7,
       "awayScore": 1,
@@ -727,9 +727,9 @@
         "crest": "assets/crests/ECU.svg"
       },
       "away": {
-        "code": "CUW",
+        "code": "CUR",
         "name": "Curaçao",
-        "crest": "assets/crests/CUW.svg"
+        "crest": "https://crests.football-data.org/curacao.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1163,9 +1163,9 @@
       "utcDate": "2026-06-25T20:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "CUW",
+        "code": "CUR",
         "name": "Curaçao",
-        "crest": "assets/crests/CUW.svg"
+        "crest": "https://crests.football-data.org/curacao.svg"
       },
       "away": {
         "code": "CIV",
