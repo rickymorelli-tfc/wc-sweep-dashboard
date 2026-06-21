@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-21T19:24:46.060Z",
+  "lastUpdated": "2026-06-21T20:50:44.106Z",
   "matches": [
     {
       "id": 537327,
@@ -307,9 +307,9 @@
         "crest": "assets/crests/KSA.svg"
       },
       "away": {
-        "code": "URU",
+        "code": "URY",
         "name": "Uruguay",
-        "crest": "https://crests.football-data.org/758.svg"
+        "crest": "assets/crests/URY.svg"
       },
       "homeScore": 1,
       "awayScore": 1,
@@ -773,7 +773,7 @@
         "name": "Saudi Arabia",
         "crest": "assets/crests/KSA.svg"
       },
-      "homeScore": 5,
+      "homeScore": 4,
       "awayScore": 0,
       "decidedBy": "REGULAR",
       "winner": "HOME_TEAM"
@@ -806,9 +806,9 @@
       "utcDate": "2026-06-21T22:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "URU",
+        "code": "URY",
         "name": "Uruguay",
-        "crest": "https://crests.football-data.org/758.svg"
+        "crest": "assets/crests/URY.svg"
       },
       "away": {
         "code": "CPV",
@@ -1310,9 +1310,9 @@
       "utcDate": "2026-06-27T00:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "URU",
+        "code": "URY",
         "name": "Uruguay",
-        "crest": "https://crests.football-data.org/758.svg"
+        "crest": "assets/crests/URY.svg"
       },
       "away": {
         "code": "ESP",
