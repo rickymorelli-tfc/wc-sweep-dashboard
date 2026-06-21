@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-21T01:43:30.454Z",
+  "lastUpdated": "2026-06-21T06:31:55.425Z",
   "matches": [
     {
       "id": 537327,
@@ -307,9 +307,9 @@
         "crest": "assets/crests/KSA.svg"
       },
       "away": {
-        "code": "URY",
+        "code": "URU",
         "name": "Uruguay",
-        "crest": "assets/crests/URY.svg"
+        "crest": "https://crests.football-data.org/758.svg"
       },
       "homeScore": 1,
       "awayScore": 1,
@@ -720,7 +720,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_E",
       "utcDate": "2026-06-21T00:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "home": {
         "code": "ECU",
         "name": "Ecuador",
@@ -741,7 +741,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_F",
       "utcDate": "2026-06-21T04:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "home": {
         "code": "TUN",
         "name": "Tunisia",
@@ -752,10 +752,10 @@
         "name": "Japan",
         "crest": "assets/crests/JPN.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 4,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "AWAY_TEAM"
     },
     {
       "id": 537371,
@@ -806,9 +806,9 @@
       "utcDate": "2026-06-21T22:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "URY",
+        "code": "URU",
         "name": "Uruguay",
-        "crest": "assets/crests/URY.svg"
+        "crest": "https://crests.football-data.org/758.svg"
       },
       "away": {
         "code": "CPV",
@@ -1310,9 +1310,9 @@
       "utcDate": "2026-06-27T00:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "URY",
+        "code": "URU",
         "name": "Uruguay",
-        "crest": "assets/crests/URY.svg"
+        "crest": "https://crests.football-data.org/758.svg"
       },
       "away": {
         "code": "ESP",
