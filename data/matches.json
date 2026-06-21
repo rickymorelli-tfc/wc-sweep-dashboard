@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-21T22:05:13.232Z",
+  "lastUpdated": "2026-06-21T23:39:16.290Z",
   "matches": [
     {
       "id": 537327,
@@ -815,8 +815,8 @@
         "name": "Cape Verde Islands",
         "crest": "assets/crests/CPV.svg"
       },
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": 2,
+      "awayScore": 2,
       "decidedBy": "REGULAR",
       "winner": "DRAW"
     },
