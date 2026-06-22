@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-22T02:07:14.457Z",
+  "lastUpdated": "2026-06-22T07:37:32.983Z",
   "matches": [
     {
       "id": 537327,
@@ -825,7 +825,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
       "utcDate": "2026-06-22T01:00:00Z",
-      "status": "PAUSED",
+      "status": "FINISHED",
       "home": {
         "code": "NZL",
         "name": "New Zealand",
@@ -837,9 +837,9 @@
         "crest": "assets/crests/EGY.svg"
       },
       "homeScore": 1,
-      "awayScore": 0,
+      "awayScore": 3,
       "decidedBy": "REGULAR",
-      "winner": "HOME_TEAM"
+      "winner": "AWAY_TEAM"
     },
     {
       "id": 537399,
