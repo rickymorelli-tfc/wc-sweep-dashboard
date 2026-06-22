@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-22T20:26:01.884Z",
+  "lastUpdated": "2026-06-22T22:20:53.055Z",
   "matches": [
     {
       "id": 537327,
@@ -59,10 +59,10 @@
         "name": "Bosnia-Herzegovina",
         "crest": "assets/crests/BIH.svg"
       },
-      "homeScore": 1,
-      "awayScore": 1,
+      "homeScore": null,
+      "awayScore": null,
       "decidedBy": "REGULAR",
-      "winner": "DRAW"
+      "winner": null
     },
     {
       "id": 537345,
@@ -307,9 +307,9 @@
         "crest": "assets/crests/KSA.svg"
       },
       "away": {
-        "code": "URU",
+        "code": "URY",
         "name": "Uruguay",
-        "crest": "https://crests.football-data.org/758.svg"
+        "crest": "assets/crests/URY.svg"
       },
       "homeScore": 1,
       "awayScore": 1,
@@ -806,9 +806,9 @@
       "utcDate": "2026-06-21T22:00:00Z",
       "status": "FINISHED",
       "home": {
-        "code": "URU",
+        "code": "URY",
         "name": "Uruguay",
-        "crest": "https://crests.football-data.org/758.svg"
+        "crest": "assets/crests/URY.svg"
       },
       "away": {
         "code": "CPV",
@@ -867,7 +867,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
       "utcDate": "2026-06-22T21:00:00Z",
-      "status": "TIMED",
+      "status": "PAUSED",
       "home": {
         "code": "FRA",
         "name": "France",
@@ -878,10 +878,10 @@
         "name": "Iraq",
         "crest": "assets/crests/IRQ.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 0,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "HOME_TEAM"
     },
     {
       "id": 537394,
@@ -1310,9 +1310,9 @@
       "utcDate": "2026-06-27T00:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "URU",
+        "code": "URY",
         "name": "Uruguay",
-        "crest": "https://crests.football-data.org/758.svg"
+        "crest": "assets/crests/URY.svg"
       },
       "away": {
         "code": "ESP",
