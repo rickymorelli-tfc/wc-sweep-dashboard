@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-21T23:39:16.290Z",
+  "lastUpdated": "2026-06-22T02:07:14.457Z",
   "matches": [
     {
       "id": 537327,
@@ -804,7 +804,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_H",
       "utcDate": "2026-06-21T22:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "home": {
         "code": "URU",
         "name": "Uruguay",
@@ -825,7 +825,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
       "utcDate": "2026-06-22T01:00:00Z",
-      "status": "TIMED",
+      "status": "PAUSED",
       "home": {
         "code": "NZL",
         "name": "New Zealand",
@@ -836,10 +836,10 @@
         "name": "Egypt",
         "crest": "assets/crests/EGY.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 0,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "HOME_TEAM"
     },
     {
       "id": 537399,
