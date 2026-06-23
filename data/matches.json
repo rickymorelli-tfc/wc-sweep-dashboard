@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-23T17:23:11.186Z",
+  "lastUpdated": "2026-06-23T19:21:59.971Z",
   "matches": [
     {
       "id": 537327,
@@ -307,9 +307,9 @@
         "crest": "assets/crests/KSA.svg"
       },
       "away": {
-        "code": "URU",
+        "code": "URY",
         "name": "Uruguay",
-        "crest": "https://crests.football-data.org/758.svg"
+        "crest": "assets/crests/URY.svg"
       },
       "homeScore": 1,
       "awayScore": 1,
@@ -806,9 +806,9 @@
       "utcDate": "2026-06-21T22:00:00Z",
       "status": "FINISHED",
       "home": {
-        "code": "URU",
+        "code": "URY",
         "name": "Uruguay",
-        "crest": "https://crests.football-data.org/758.svg"
+        "crest": "assets/crests/URY.svg"
       },
       "away": {
         "code": "CPV",
@@ -930,7 +930,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_K",
       "utcDate": "2026-06-23T17:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "home": {
         "code": "POR",
         "name": "Portugal",
@@ -941,7 +941,7 @@
         "name": "Uzbekistan",
         "crest": "assets/crests/UZB.png"
       },
-      "homeScore": 2,
+      "homeScore": 5,
       "awayScore": 0,
       "decidedBy": "REGULAR",
       "winner": "HOME_TEAM"
@@ -951,7 +951,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_L",
       "utcDate": "2026-06-23T20:00:00Z",
-      "status": "TIMED",
+      "status": "SCHEDULED",
       "home": {
         "code": "ENG",
         "name": "England",
@@ -1310,9 +1310,9 @@
       "utcDate": "2026-06-27T00:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "URU",
+        "code": "URY",
         "name": "Uruguay",
-        "crest": "https://crests.football-data.org/758.svg"
+        "crest": "assets/crests/URY.svg"
       },
       "away": {
         "code": "ESP",
@@ -1562,9 +1562,9 @@
       "utcDate": "2026-06-29T20:30:00Z",
       "status": "TIMED",
       "home": {
-        "code": "GER",
-        "name": "Germany",
-        "crest": "assets/crests/GER.svg"
+        "code": null,
+        "name": "TBD",
+        "crest": ""
       },
       "away": {
         "code": null,
@@ -1646,9 +1646,9 @@
       "utcDate": "2026-07-01T01:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "MEX",
-        "name": "Mexico",
-        "crest": "assets/crests/MEX.svg"
+        "code": null,
+        "name": "TBD",
+        "crest": ""
       },
       "away": {
         "code": null,
@@ -1709,9 +1709,9 @@
       "utcDate": "2026-07-02T00:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "USA",
-        "name": "United States",
-        "crest": "assets/crests/USA.svg"
+        "code": null,
+        "name": "TBD",
+        "crest": ""
       },
       "away": {
         "code": null,
