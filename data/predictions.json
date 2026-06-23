@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-23T22:22:10.183Z",
+  "lastUpdated": "2026-06-23T23:32:57.294Z",
   "source": "Polymarket",
   "predictions": {
     "537331": {
@@ -63,9 +63,9 @@
       "slug": "fifwc-kor-civ-2026-06-25"
     },
     "537361": {
-      "home": 0.037,
-      "draw": 0.085,
-      "away": 0.878,
+      "home": 0.036,
+      "draw": 0.094,
+      "away": 0.869,
       "slug": "fifwc-tun-nld-2026-06-25"
     },
     "537362": {
@@ -123,15 +123,15 @@
       "slug": "fifwc-alg-aut-2026-06-27"
     },
     "537406": {
-      "home": 0.632,
-      "draw": 0.234,
-      "away": 0.134,
+      "home": 0.628,
+      "draw": 0.236,
+      "away": 0.136,
       "slug": "fifwc-col-cdr-2026-06-23"
     },
     "537407": {
-      "home": 0.246,
-      "draw": 0.246,
-      "away": 0.508,
+      "home": 0.251,
+      "draw": 0.241,
+      "away": 0.507,
       "slug": "fifwc-col-prt-2026-06-27"
     },
     "537408": {
@@ -140,12 +140,6 @@
       "away": 0.244,
       "slug": "fifwc-cdr-uzb-2026-06-27"
     },
-    "537412": {
-      "home": 0.116,
-      "draw": 0.206,
-      "away": 0.678,
-      "slug": "fifwc-pan-hrv-2026-06-23"
-    },
     "537413": {
       "home": 0.055,
       "draw": 0.124,
@@ -153,9 +147,9 @@
       "slug": "fifwc-pan-eng-2026-06-27"
     },
     "537414": {
-      "home": 0.562,
-      "draw": 0.264,
-      "away": 0.174,
+      "home": 0.557,
+      "draw": 0.271,
+      "away": 0.172,
       "slug": "fifwc-hrv-gha-2026-06-27"
     }
   }
