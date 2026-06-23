@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-23T19:21:59.971Z",
+  "lastUpdated": "2026-06-23T21:09:24.081Z",
   "matches": [
     {
       "id": 537327,
@@ -951,7 +951,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_L",
       "utcDate": "2026-06-23T20:00:00Z",
-      "status": "SCHEDULED",
+      "status": "PAUSED",
       "home": {
         "code": "ENG",
         "name": "England",
@@ -962,10 +962,10 @@
         "name": "Ghana",
         "crest": "assets/crests/GHA.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "DRAW"
     },
     {
       "id": 537412,
