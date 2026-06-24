@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-24T08:40:49.058Z",
+  "lastUpdated": "2026-06-24T11:28:42.508Z",
   "matches": [
     {
       "id": 537327,
@@ -1562,9 +1562,9 @@
       "utcDate": "2026-06-29T20:30:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "GER",
+        "name": "Germany",
+        "crest": "assets/crests/GER.svg"
       },
       "away": {
         "code": null,
@@ -1646,9 +1646,9 @@
       "utcDate": "2026-07-01T01:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "MEX",
+        "name": "Mexico",
+        "crest": "assets/crests/MEX.svg"
       },
       "away": {
         "code": null,
@@ -1709,9 +1709,9 @@
       "utcDate": "2026-07-02T00:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "USA",
+        "name": "United States",
+        "crest": "assets/crests/USA.svg"
       },
       "away": {
         "code": null,
@@ -1814,9 +1814,9 @@
       "utcDate": "2026-07-03T22:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "ARG",
+        "name": "Argentina",
+        "crest": "assets/crests/ARG.png"
       },
       "away": {
         "code": null,
