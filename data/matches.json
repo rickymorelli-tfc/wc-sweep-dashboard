@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-24T17:50:31.267Z",
+  "lastUpdated": "2026-06-24T19:20:46.518Z",
   "matches": [
     {
       "id": 537327,
@@ -1014,7 +1014,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_B",
       "utcDate": "2026-06-24T19:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "home": {
         "code": "SUI",
         "name": "Switzerland",
@@ -1025,17 +1025,17 @@
         "name": "Canada",
         "crest": "assets/crests/CAN.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "DRAW"
     },
     {
       "id": 537338,
       "stage": "GROUP_STAGE",
       "group": "GROUP_B",
       "utcDate": "2026-06-24T19:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "home": {
         "code": "BIH",
         "name": "Bosnia-Herzegovina",
@@ -1046,10 +1046,10 @@
         "name": "Qatar",
         "crest": "assets/crests/QAT.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "DRAW"
     },
     {
       "id": 537344,
@@ -1562,9 +1562,9 @@
       "utcDate": "2026-06-29T20:30:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "GER",
+        "name": "Germany",
+        "crest": "assets/crests/GER.svg"
       },
       "away": {
         "code": null,
@@ -1646,9 +1646,9 @@
       "utcDate": "2026-07-01T01:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "MEX",
+        "name": "Mexico",
+        "crest": "assets/crests/MEX.svg"
       },
       "away": {
         "code": null,
@@ -1709,9 +1709,9 @@
       "utcDate": "2026-07-02T00:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "USA",
+        "name": "United States",
+        "crest": "assets/crests/USA.svg"
       },
       "away": {
         "code": null,
@@ -1814,9 +1814,9 @@
       "utcDate": "2026-07-03T22:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "ARG",
+        "name": "Argentina",
+        "crest": "assets/crests/ARG.png"
       },
       "away": {
         "code": null,
