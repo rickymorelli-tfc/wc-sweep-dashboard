@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-24T22:23:49.583Z",
+  "lastUpdated": "2026-06-24T23:38:14.619Z",
   "matches": [
     {
       "id": 537327,
@@ -307,9 +307,9 @@
         "crest": "assets/crests/KSA.svg"
       },
       "away": {
-        "code": "URY",
+        "code": "URU",
         "name": "Uruguay",
-        "crest": "assets/crests/URY.svg"
+        "crest": "https://crests.football-data.org/758.svg"
       },
       "homeScore": 1,
       "awayScore": 1,
@@ -806,9 +806,9 @@
       "utcDate": "2026-06-21T22:00:00Z",
       "status": "FINISHED",
       "home": {
-        "code": "URY",
+        "code": "URU",
         "name": "Uruguay",
-        "crest": "assets/crests/URY.svg"
+        "crest": "https://crests.football-data.org/758.svg"
       },
       "away": {
         "code": "CPV",
@@ -1056,7 +1056,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_C",
       "utcDate": "2026-06-24T22:00:00Z",
-      "status": "LIVE",
+      "status": "IN_PLAY",
       "home": {
         "code": "MAR",
         "name": "Morocco",
@@ -1067,17 +1067,17 @@
         "name": "Haiti",
         "crest": "assets/crests/HAI.svg"
       },
-      "homeScore": 0,
-      "awayScore": 1,
+      "homeScore": 2,
+      "awayScore": 2,
       "decidedBy": "REGULAR",
-      "winner": "AWAY_TEAM"
+      "winner": "DRAW"
     },
     {
       "id": 537343,
       "stage": "GROUP_STAGE",
       "group": "GROUP_C",
       "utcDate": "2026-06-24T22:00:00Z",
-      "status": "LIVE",
+      "status": "IN_PLAY",
       "home": {
         "code": "SCO",
         "name": "Scotland",
@@ -1089,7 +1089,7 @@
         "crest": "assets/crests/BRA.svg"
       },
       "homeScore": 0,
-      "awayScore": 1,
+      "awayScore": 3,
       "decidedBy": "REGULAR",
       "winner": "AWAY_TEAM"
     },
@@ -1310,9 +1310,9 @@
       "utcDate": "2026-06-27T00:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "URY",
+        "code": "URU",
         "name": "Uruguay",
-        "crest": "assets/crests/URY.svg"
+        "crest": "https://crests.football-data.org/758.svg"
       },
       "away": {
         "code": "ESP",
