@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-25T01:35:34.631Z",
+  "lastUpdated": "2026-06-25T05:48:53.013Z",
   "matches": [
     {
       "id": 537327,
@@ -181,9 +181,9 @@
         "crest": "assets/crests/GER.svg"
       },
       "away": {
-        "code": "CUR",
+        "code": "CUW",
         "name": "Curaçao",
-        "crest": "https://crests.football-data.org/curacao.svg"
+        "crest": "assets/crests/CUW.svg"
       },
       "homeScore": 7,
       "awayScore": 1,
@@ -307,9 +307,9 @@
         "crest": "assets/crests/KSA.svg"
       },
       "away": {
-        "code": "URY",
+        "code": "URU",
         "name": "Uruguay",
-        "crest": "assets/crests/URY.svg"
+        "crest": "https://crests.football-data.org/758.svg"
       },
       "homeScore": 1,
       "awayScore": 1,
@@ -727,9 +727,9 @@
         "crest": "assets/crests/ECU.svg"
       },
       "away": {
-        "code": "CUR",
+        "code": "CUW",
         "name": "Curaçao",
-        "crest": "https://crests.football-data.org/curacao.svg"
+        "crest": "assets/crests/CUW.svg"
       },
       "homeScore": 0,
       "awayScore": 0,
@@ -806,9 +806,9 @@
       "utcDate": "2026-06-21T22:00:00Z",
       "status": "FINISHED",
       "home": {
-        "code": "URY",
+        "code": "URU",
         "name": "Uruguay",
-        "crest": "assets/crests/URY.svg"
+        "crest": "https://crests.football-data.org/758.svg"
       },
       "away": {
         "code": "CPV",
@@ -1098,7 +1098,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_A",
       "utcDate": "2026-06-25T01:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "home": {
         "code": "CZE",
         "name": "Czechia",
@@ -1110,16 +1110,16 @@
         "crest": "assets/crests/MEX.svg"
       },
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 3,
       "decidedBy": "REGULAR",
-      "winner": "DRAW"
+      "winner": "AWAY_TEAM"
     },
     {
       "id": 537332,
       "stage": "GROUP_STAGE",
       "group": "GROUP_A",
       "utcDate": "2026-06-25T01:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "home": {
         "code": "RSA",
         "name": "South Africa",
@@ -1130,10 +1130,10 @@
         "name": "South Korea",
         "crest": "assets/crests/KOR.png"
       },
-      "homeScore": 0,
+      "homeScore": 1,
       "awayScore": 0,
       "decidedBy": "REGULAR",
-      "winner": "DRAW"
+      "winner": "HOME_TEAM"
     },
     {
       "id": 537355,
@@ -1163,9 +1163,9 @@
       "utcDate": "2026-06-25T20:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "CUR",
+        "code": "CUW",
         "name": "Curaçao",
-        "crest": "https://crests.football-data.org/curacao.svg"
+        "crest": "assets/crests/CUW.svg"
       },
       "away": {
         "code": "CIV",
@@ -1310,9 +1310,9 @@
       "utcDate": "2026-06-27T00:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "URY",
+        "code": "URU",
         "name": "Uruguay",
-        "crest": "assets/crests/URY.svg"
+        "crest": "https://crests.football-data.org/758.svg"
       },
       "away": {
         "code": "ESP",
@@ -1562,9 +1562,9 @@
       "utcDate": "2026-06-29T20:30:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "GER",
+        "name": "Germany",
+        "crest": "assets/crests/GER.svg"
       },
       "away": {
         "code": null,
@@ -1646,9 +1646,9 @@
       "utcDate": "2026-07-01T01:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "MEX",
+        "name": "Mexico",
+        "crest": "assets/crests/MEX.svg"
       },
       "away": {
         "code": null,
@@ -1709,9 +1709,9 @@
       "utcDate": "2026-07-02T00:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "USA",
+        "name": "United States",
+        "crest": "assets/crests/USA.svg"
       },
       "away": {
         "code": null,
@@ -1814,9 +1814,9 @@
       "utcDate": "2026-07-03T22:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "ARG",
+        "name": "Argentina",
+        "crest": "assets/crests/ARG.png"
       },
       "away": {
         "code": null,
