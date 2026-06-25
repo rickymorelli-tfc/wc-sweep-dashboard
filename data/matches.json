@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-24T23:38:14.619Z",
+  "lastUpdated": "2026-06-25T01:35:34.631Z",
   "matches": [
     {
       "id": 537327,
@@ -181,9 +181,9 @@
         "crest": "assets/crests/GER.svg"
       },
       "away": {
-        "code": "CUW",
+        "code": "CUR",
         "name": "Curaçao",
-        "crest": "assets/crests/CUW.svg"
+        "crest": "https://crests.football-data.org/curacao.svg"
       },
       "homeScore": 7,
       "awayScore": 1,
@@ -307,9 +307,9 @@
         "crest": "assets/crests/KSA.svg"
       },
       "away": {
-        "code": "URU",
+        "code": "URY",
         "name": "Uruguay",
-        "crest": "https://crests.football-data.org/758.svg"
+        "crest": "assets/crests/URY.svg"
       },
       "homeScore": 1,
       "awayScore": 1,
@@ -727,9 +727,9 @@
         "crest": "assets/crests/ECU.svg"
       },
       "away": {
-        "code": "CUW",
+        "code": "CUR",
         "name": "Curaçao",
-        "crest": "assets/crests/CUW.svg"
+        "crest": "https://crests.football-data.org/curacao.svg"
       },
       "homeScore": 0,
       "awayScore": 0,
@@ -806,9 +806,9 @@
       "utcDate": "2026-06-21T22:00:00Z",
       "status": "FINISHED",
       "home": {
-        "code": "URU",
+        "code": "URY",
         "name": "Uruguay",
-        "crest": "https://crests.football-data.org/758.svg"
+        "crest": "assets/crests/URY.svg"
       },
       "away": {
         "code": "CPV",
@@ -1056,7 +1056,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_C",
       "utcDate": "2026-06-24T22:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "home": {
         "code": "MAR",
         "name": "Morocco",
@@ -1067,17 +1067,17 @@
         "name": "Haiti",
         "crest": "assets/crests/HAI.svg"
       },
-      "homeScore": 2,
+      "homeScore": 4,
       "awayScore": 2,
       "decidedBy": "REGULAR",
-      "winner": "DRAW"
+      "winner": "HOME_TEAM"
     },
     {
       "id": 537343,
       "stage": "GROUP_STAGE",
       "group": "GROUP_C",
       "utcDate": "2026-06-24T22:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "home": {
         "code": "SCO",
         "name": "Scotland",
@@ -1098,7 +1098,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_A",
       "utcDate": "2026-06-25T01:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "home": {
         "code": "CZE",
         "name": "Czechia",
@@ -1109,17 +1109,17 @@
         "name": "Mexico",
         "crest": "assets/crests/MEX.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "DRAW"
     },
     {
       "id": 537332,
       "stage": "GROUP_STAGE",
       "group": "GROUP_A",
       "utcDate": "2026-06-25T01:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "home": {
         "code": "RSA",
         "name": "South Africa",
@@ -1130,10 +1130,10 @@
         "name": "South Korea",
         "crest": "assets/crests/KOR.png"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "DRAW"
     },
     {
       "id": 537355,
@@ -1163,9 +1163,9 @@
       "utcDate": "2026-06-25T20:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "CUW",
+        "code": "CUR",
         "name": "Curaçao",
-        "crest": "assets/crests/CUW.svg"
+        "crest": "https://crests.football-data.org/curacao.svg"
       },
       "away": {
         "code": "CIV",
@@ -1310,9 +1310,9 @@
       "utcDate": "2026-06-27T00:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "URU",
+        "code": "URY",
         "name": "Uruguay",
-        "crest": "https://crests.football-data.org/758.svg"
+        "crest": "assets/crests/URY.svg"
       },
       "away": {
         "code": "ESP",
