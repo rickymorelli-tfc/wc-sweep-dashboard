@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-25T05:48:53.013Z",
+  "lastUpdated": "2026-06-25T08:41:01.705Z",
   "matches": [
     {
       "id": 537327,
@@ -307,9 +307,9 @@
         "crest": "assets/crests/KSA.svg"
       },
       "away": {
-        "code": "URU",
+        "code": "URY",
         "name": "Uruguay",
-        "crest": "https://crests.football-data.org/758.svg"
+        "crest": "assets/crests/URY.svg"
       },
       "homeScore": 1,
       "awayScore": 1,
@@ -806,9 +806,9 @@
       "utcDate": "2026-06-21T22:00:00Z",
       "status": "FINISHED",
       "home": {
-        "code": "URU",
+        "code": "URY",
         "name": "Uruguay",
-        "crest": "https://crests.football-data.org/758.svg"
+        "crest": "assets/crests/URY.svg"
       },
       "away": {
         "code": "CPV",
@@ -1310,9 +1310,9 @@
       "utcDate": "2026-06-27T00:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "URU",
+        "code": "URY",
         "name": "Uruguay",
-        "crest": "https://crests.football-data.org/758.svg"
+        "crest": "assets/crests/URY.svg"
       },
       "away": {
         "code": "ESP",
@@ -1562,9 +1562,9 @@
       "utcDate": "2026-06-29T20:30:00Z",
       "status": "TIMED",
       "home": {
-        "code": "GER",
-        "name": "Germany",
-        "crest": "assets/crests/GER.svg"
+        "code": null,
+        "name": "TBD",
+        "crest": ""
       },
       "away": {
         "code": null,
@@ -1646,9 +1646,9 @@
       "utcDate": "2026-07-01T01:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "MEX",
-        "name": "Mexico",
-        "crest": "assets/crests/MEX.svg"
+        "code": null,
+        "name": "TBD",
+        "crest": ""
       },
       "away": {
         "code": null,
@@ -1709,9 +1709,9 @@
       "utcDate": "2026-07-02T00:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "USA",
-        "name": "United States",
-        "crest": "assets/crests/USA.svg"
+        "code": null,
+        "name": "TBD",
+        "crest": ""
       },
       "away": {
         "code": null,
@@ -1814,9 +1814,9 @@
       "utcDate": "2026-07-03T22:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "ARG",
-        "name": "Argentina",
-        "crest": "assets/crests/ARG.png"
+        "code": null,
+        "name": "TBD",
+        "crest": ""
       },
       "away": {
         "code": null,
