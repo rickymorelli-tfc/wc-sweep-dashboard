@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-25T18:21:28.346Z",
+  "lastUpdated": "2026-06-25T20:25:27.961Z",
   "matches": [
     {
       "id": 537327,
@@ -1140,7 +1140,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_E",
       "utcDate": "2026-06-25T20:00:00Z",
-      "status": "TIMED",
+      "status": "LIVE",
       "home": {
         "code": "ECU",
         "name": "Ecuador",
@@ -1151,17 +1151,17 @@
         "name": "Germany",
         "crest": "assets/crests/GER.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 1,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "DRAW"
     },
     {
       "id": 537356,
       "stage": "GROUP_STAGE",
       "group": "GROUP_E",
       "utcDate": "2026-06-25T20:00:00Z",
-      "status": "TIMED",
+      "status": "LIVE",
       "home": {
         "code": "CUW",
         "name": "Curaçao",
@@ -1172,10 +1172,10 @@
         "name": "Ivory Coast",
         "crest": "assets/crests/CIV.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 1,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "AWAY_TEAM"
     },
     {
       "id": 537361,
