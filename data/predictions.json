@@ -1,19 +1,7 @@
 {
-  "lastUpdated": "2026-06-26T01:32:43.514Z",
+  "lastUpdated": "2026-06-26T05:52:00.527Z",
   "source": "Polymarket",
   "predictions": {
-    "537349": {
-      "home": 0.286,
-      "draw": 0.236,
-      "away": 0.477,
-      "slug": "fifwc-tur-usa-2026-06-25"
-    },
-    "537350": {
-      "home": 0.373,
-      "draw": 0.403,
-      "away": 0.224,
-      "slug": "fifwc-par-aus-2026-06-25"
-    },
     "537367": {
       "home": 0.055,
       "draw": 0.114,
@@ -21,45 +9,45 @@
       "slug": "fifwc-nzl-bel-2026-06-26"
     },
     "537368": {
-      "home": 0.393,
-      "draw": 0.363,
+      "home": 0.383,
+      "draw": 0.373,
       "away": 0.244,
       "slug": "fifwc-egy-irn-2026-06-26"
     },
     "537373": {
-      "home": 0.114,
-      "draw": 0.224,
-      "away": 0.662,
+      "home": 0.127,
+      "draw": 0.228,
+      "away": 0.645,
       "slug": "fifwc-ury-esp-2026-06-26"
     },
     "537374": {
-      "home": 0.357,
-      "draw": 0.286,
-      "away": 0.357,
+      "home": 0.363,
+      "draw": 0.284,
+      "away": 0.353,
       "slug": "fifwc-cvi-ksa-2026-06-26"
     },
     "537395": {
-      "home": 0.184,
-      "draw": 0.204,
+      "home": 0.194,
+      "draw": 0.194,
       "away": 0.612,
       "slug": "fifwc-nor-fra-2026-06-26"
     },
     "537396": {
-      "home": 0.799,
-      "draw": 0.136,
-      "away": 0.065,
+      "home": 0.791,
+      "draw": 0.134,
+      "away": 0.075,
       "slug": "fifwc-sen-irq-2026-06-26"
     },
     "537401": {
-      "home": 0.054,
+      "home": 0.051,
       "draw": 0.105,
-      "away": 0.841,
+      "away": 0.844,
       "slug": "fifwc-jor-arg-2026-06-27"
     },
     "537402": {
-      "home": 0.236,
-      "draw": 0.427,
-      "away": 0.337,
+      "home": 0.234,
+      "draw": 0.433,
+      "away": 0.333,
       "slug": "fifwc-alg-aut-2026-06-27"
     },
     "537407": {
@@ -76,8 +64,8 @@
     },
     "537413": {
       "home": 0.045,
-      "draw": 0.116,
-      "away": 0.839,
+      "draw": 0.106,
+      "away": 0.849,
       "slug": "fifwc-pan-eng-2026-06-27"
     },
     "537414": {
