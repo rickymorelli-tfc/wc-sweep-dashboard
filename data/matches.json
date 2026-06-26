@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T17:29:51.300Z",
+  "lastUpdated": "2026-06-26T19:19:49.898Z",
   "matches": [
     {
       "id": 537327,
@@ -1266,7 +1266,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
       "utcDate": "2026-06-26T19:00:00Z",
-      "status": "TIMED",
+      "status": "LIVE",
       "home": {
         "code": "NOR",
         "name": "Norway",
@@ -1277,17 +1277,17 @@
         "name": "France",
         "crest": "assets/crests/FRA.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 1,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "AWAY_TEAM"
     },
     {
       "id": 537396,
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
       "utcDate": "2026-06-26T19:00:00Z",
-      "status": "TIMED",
+      "status": "LIVE",
       "home": {
         "code": "SEN",
         "name": "Senegal",
@@ -1298,10 +1298,10 @@
         "name": "Iraq",
         "crest": "assets/crests/IRQ.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 0,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "HOME_TEAM"
     },
     {
       "id": 537373,
