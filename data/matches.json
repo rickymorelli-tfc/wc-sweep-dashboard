@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T20:58:51.041Z",
+  "lastUpdated": "2026-06-26T22:15:37.481Z",
   "matches": [
     {
       "id": 537327,
@@ -1266,7 +1266,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
       "utcDate": "2026-06-26T19:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "home": {
         "code": "NOR",
         "name": "Norway",
@@ -1278,7 +1278,7 @@
         "crest": "assets/crests/FRA.svg"
       },
       "homeScore": 1,
-      "awayScore": 3,
+      "awayScore": 4,
       "decidedBy": "REGULAR",
       "winner": "AWAY_TEAM"
     },
@@ -1287,7 +1287,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
       "utcDate": "2026-06-26T19:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "home": {
         "code": "SEN",
         "name": "Senegal",
