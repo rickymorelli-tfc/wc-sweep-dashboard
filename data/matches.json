@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-25T23:18:37.248Z",
+  "lastUpdated": "2026-06-26T01:32:42.803Z",
   "matches": [
     {
       "id": 537327,
@@ -307,9 +307,9 @@
         "crest": "assets/crests/KSA.svg"
       },
       "away": {
-        "code": "URY",
+        "code": "URU",
         "name": "Uruguay",
-        "crest": "assets/crests/URY.svg"
+        "crest": "https://crests.football-data.org/758.svg"
       },
       "homeScore": 1,
       "awayScore": 1,
@@ -806,9 +806,9 @@
       "utcDate": "2026-06-21T22:00:00Z",
       "status": "FINISHED",
       "home": {
-        "code": "URY",
+        "code": "URU",
         "name": "Uruguay",
-        "crest": "assets/crests/URY.svg"
+        "crest": "https://crests.football-data.org/758.svg"
       },
       "away": {
         "code": "CPV",
@@ -1098,7 +1098,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_A",
       "utcDate": "2026-06-25T01:00:00Z",
-      "status": "FINISHED",
+      "status": "TIMED",
       "home": {
         "code": "CZE",
         "name": "Czechia",
@@ -1109,17 +1109,17 @@
         "name": "Mexico",
         "crest": "assets/crests/MEX.svg"
       },
-      "homeScore": 0,
-      "awayScore": 3,
+      "homeScore": null,
+      "awayScore": null,
       "decidedBy": "REGULAR",
-      "winner": "AWAY_TEAM"
+      "winner": null
     },
     {
       "id": 537332,
       "stage": "GROUP_STAGE",
       "group": "GROUP_A",
       "utcDate": "2026-06-25T01:00:00Z",
-      "status": "FINISHED",
+      "status": "TIMED",
       "home": {
         "code": "RSA",
         "name": "South Africa",
@@ -1130,17 +1130,17 @@
         "name": "South Korea",
         "crest": "assets/crests/KOR.png"
       },
-      "homeScore": 1,
-      "awayScore": 0,
+      "homeScore": null,
+      "awayScore": null,
       "decidedBy": "REGULAR",
-      "winner": "HOME_TEAM"
+      "winner": null
     },
     {
       "id": 537355,
       "stage": "GROUP_STAGE",
       "group": "GROUP_E",
       "utcDate": "2026-06-25T20:00:00Z",
-      "status": "FINISHED",
+      "status": "TIMED",
       "home": {
         "code": "ECU",
         "name": "Ecuador",
@@ -1151,17 +1151,17 @@
         "name": "Germany",
         "crest": "assets/crests/GER.svg"
       },
-      "homeScore": 2,
-      "awayScore": 1,
+      "homeScore": null,
+      "awayScore": null,
       "decidedBy": "REGULAR",
-      "winner": "HOME_TEAM"
+      "winner": null
     },
     {
       "id": 537356,
       "stage": "GROUP_STAGE",
       "group": "GROUP_E",
       "utcDate": "2026-06-25T20:00:00Z",
-      "status": "FINISHED",
+      "status": "TIMED",
       "home": {
         "code": "CUW",
         "name": "Curaçao",
@@ -1172,17 +1172,17 @@
         "name": "Ivory Coast",
         "crest": "assets/crests/CIV.svg"
       },
-      "homeScore": 0,
-      "awayScore": 2,
+      "homeScore": null,
+      "awayScore": null,
       "decidedBy": "REGULAR",
-      "winner": "AWAY_TEAM"
+      "winner": null
     },
     {
       "id": 537361,
       "stage": "GROUP_STAGE",
       "group": "GROUP_F",
       "utcDate": "2026-06-25T23:00:00Z",
-      "status": "IN_PLAY",
+      "status": "TIMED",
       "home": {
         "code": "TUN",
         "name": "Tunisia",
@@ -1193,17 +1193,17 @@
         "name": "Netherlands",
         "crest": "assets/crests/NED.svg"
       },
-      "homeScore": 0,
-      "awayScore": 2,
+      "homeScore": null,
+      "awayScore": null,
       "decidedBy": "REGULAR",
-      "winner": "AWAY_TEAM"
+      "winner": null
     },
     {
       "id": 537362,
       "stage": "GROUP_STAGE",
       "group": "GROUP_F",
       "utcDate": "2026-06-25T23:00:00Z",
-      "status": "IN_PLAY",
+      "status": "TIMED",
       "home": {
         "code": "JPN",
         "name": "Japan",
@@ -1214,10 +1214,10 @@
         "name": "Sweden",
         "crest": "assets/crests/SWE.svg"
       },
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": null,
+      "awayScore": null,
       "decidedBy": "REGULAR",
-      "winner": "DRAW"
+      "winner": null
     },
     {
       "id": 537349,
@@ -1310,9 +1310,9 @@
       "utcDate": "2026-06-27T00:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "URY",
+        "code": "URU",
         "name": "Uruguay",
-        "crest": "assets/crests/URY.svg"
+        "crest": "https://crests.football-data.org/758.svg"
       },
       "away": {
         "code": "ESP",
@@ -1562,9 +1562,9 @@
       "utcDate": "2026-06-29T20:30:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "GER",
+        "name": "Germany",
+        "crest": "assets/crests/GER.svg"
       },
       "away": {
         "code": null,
@@ -1646,9 +1646,9 @@
       "utcDate": "2026-07-01T01:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "MEX",
+        "name": "Mexico",
+        "crest": "assets/crests/MEX.svg"
       },
       "away": {
         "code": null,
@@ -1709,9 +1709,9 @@
       "utcDate": "2026-07-02T00:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "USA",
+        "name": "United States",
+        "crest": "assets/crests/USA.svg"
       },
       "away": {
         "code": null,
@@ -1814,9 +1814,9 @@
       "utcDate": "2026-07-03T22:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "ARG",
+        "name": "Argentina",
+        "crest": "assets/crests/ARG.png"
       },
       "away": {
         "code": null,
