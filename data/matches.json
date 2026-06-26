@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T05:51:59.405Z",
+  "lastUpdated": "2026-06-26T08:43:08.455Z",
   "matches": [
     {
       "id": 537327,
@@ -307,9 +307,9 @@
         "crest": "assets/crests/KSA.svg"
       },
       "away": {
-        "code": "URY",
+        "code": "URU",
         "name": "Uruguay",
-        "crest": "assets/crests/URY.svg"
+        "crest": "https://crests.football-data.org/758.svg"
       },
       "homeScore": 1,
       "awayScore": 1,
@@ -806,9 +806,9 @@
       "utcDate": "2026-06-21T22:00:00Z",
       "status": "FINISHED",
       "home": {
-        "code": "URY",
+        "code": "URU",
         "name": "Uruguay",
-        "crest": "assets/crests/URY.svg"
+        "crest": "https://crests.football-data.org/758.svg"
       },
       "away": {
         "code": "CPV",
@@ -1310,9 +1310,9 @@
       "utcDate": "2026-06-27T00:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "URY",
+        "code": "URU",
         "name": "Uruguay",
-        "crest": "assets/crests/URY.svg"
+        "crest": "https://crests.football-data.org/758.svg"
       },
       "away": {
         "code": "ESP",
@@ -1520,14 +1520,14 @@
       "utcDate": "2026-06-28T19:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "RSA",
+        "name": "South Africa",
+        "crest": "assets/crests/RSA.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "CAN",
+        "name": "Canada",
+        "crest": "assets/crests/CAN.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1541,14 +1541,14 @@
       "utcDate": "2026-06-29T17:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "BRA",
+        "name": "Brazil",
+        "crest": "assets/crests/BRA.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "JPN",
+        "name": "Japan",
+        "crest": "assets/crests/JPN.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1562,9 +1562,9 @@
       "utcDate": "2026-06-29T20:30:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "GER",
+        "name": "Germany",
+        "crest": "assets/crests/GER.svg"
       },
       "away": {
         "code": null,
@@ -1583,14 +1583,14 @@
       "utcDate": "2026-06-30T01:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "NED",
+        "name": "Netherlands",
+        "crest": "assets/crests/NED.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "MAR",
+        "name": "Morocco",
+        "crest": "assets/crests/MAR.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1646,9 +1646,9 @@
       "utcDate": "2026-07-01T01:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "MEX",
+        "name": "Mexico",
+        "crest": "assets/crests/MEX.svg"
       },
       "away": {
         "code": null,
@@ -1709,14 +1709,14 @@
       "utcDate": "2026-07-02T00:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "USA",
+        "name": "United States",
+        "crest": "assets/crests/USA.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "BIH",
+        "name": "Bosnia-Herzegovina",
+        "crest": "assets/crests/BIH.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1772,9 +1772,9 @@
       "utcDate": "2026-07-03T03:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "SUI",
+        "name": "Switzerland",
+        "crest": "assets/crests/SUI.svg"
       },
       "away": {
         "code": null,
@@ -1793,9 +1793,9 @@
       "utcDate": "2026-07-03T18:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "AUS",
+        "name": "Australia",
+        "crest": "assets/crests/AUS.svg"
       },
       "away": {
         "code": null,
@@ -1814,9 +1814,9 @@
       "utcDate": "2026-07-03T22:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "ARG",
+        "name": "Argentina",
+        "crest": "assets/crests/ARG.png"
       },
       "away": {
         "code": null,
