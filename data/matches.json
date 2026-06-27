@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-27T01:31:04.418Z",
+  "lastUpdated": "2026-06-27T05:31:39.325Z",
   "matches": [
     {
       "id": 537327,
@@ -1308,7 +1308,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_H",
       "utcDate": "2026-06-27T00:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "home": {
         "code": "URU",
         "name": "Uruguay",
@@ -1329,7 +1329,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_H",
       "utcDate": "2026-06-27T00:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "home": {
         "code": "CPV",
         "name": "Cape Verde Islands",
@@ -1350,7 +1350,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
       "utcDate": "2026-06-27T03:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "home": {
         "code": "NZL",
         "name": "New Zealand",
@@ -1361,17 +1361,17 @@
         "name": "Belgium",
         "crest": "assets/crests/BEL.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 5,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "AWAY_TEAM"
     },
     {
       "id": 537368,
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
       "utcDate": "2026-06-27T03:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "home": {
         "code": "EGY",
         "name": "Egypt",
@@ -1382,10 +1382,10 @@
         "name": "Iran",
         "crest": "assets/crests/IRN.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 1,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "DRAW"
     },
     {
       "id": 537413,
