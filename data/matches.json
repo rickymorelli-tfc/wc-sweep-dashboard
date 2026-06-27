@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-27T14:44:33.391Z",
+  "lastUpdated": "2026-06-27T15:53:11.823Z",
   "matches": [
     {
       "id": 537327,
@@ -1520,14 +1520,14 @@
       "utcDate": "2026-06-28T19:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "RSA",
-        "name": "South Africa",
-        "crest": "assets/crests/RSA.svg"
+        "code": null,
+        "name": "TBD",
+        "crest": ""
       },
       "away": {
-        "code": "CAN",
-        "name": "Canada",
-        "crest": "assets/crests/CAN.svg"
+        "code": null,
+        "name": "TBD",
+        "crest": ""
       },
       "homeScore": null,
       "awayScore": null,
@@ -1541,14 +1541,14 @@
       "utcDate": "2026-06-29T17:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "BRA",
-        "name": "Brazil",
-        "crest": "assets/crests/BRA.svg"
+        "code": null,
+        "name": "TBD",
+        "crest": ""
       },
       "away": {
-        "code": "JPN",
-        "name": "Japan",
-        "crest": "assets/crests/JPN.svg"
+        "code": null,
+        "name": "TBD",
+        "crest": ""
       },
       "homeScore": null,
       "awayScore": null,
@@ -1562,9 +1562,9 @@
       "utcDate": "2026-06-29T20:30:00Z",
       "status": "TIMED",
       "home": {
-        "code": "GER",
-        "name": "Germany",
-        "crest": "assets/crests/GER.svg"
+        "code": null,
+        "name": "TBD",
+        "crest": ""
       },
       "away": {
         "code": null,
@@ -1583,14 +1583,14 @@
       "utcDate": "2026-06-30T01:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "NED",
-        "name": "Netherlands",
-        "crest": "assets/crests/NED.svg"
+        "code": null,
+        "name": "TBD",
+        "crest": ""
       },
       "away": {
-        "code": "MAR",
-        "name": "Morocco",
-        "crest": "assets/crests/MAR.svg"
+        "code": null,
+        "name": "TBD",
+        "crest": ""
       },
       "homeScore": null,
       "awayScore": null,
@@ -1604,9 +1604,9 @@
       "utcDate": "2026-06-30T17:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "CIV",
-        "name": "Ivory Coast",
-        "crest": "assets/crests/CIV.svg"
+        "code": null,
+        "name": "TBD",
+        "crest": ""
       },
       "away": {
         "code": null,
@@ -1646,9 +1646,9 @@
       "utcDate": "2026-07-01T01:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "MEX",
-        "name": "Mexico",
-        "crest": "assets/crests/MEX.svg"
+        "code": null,
+        "name": "TBD",
+        "crest": ""
       },
       "away": {
         "code": null,
@@ -1709,14 +1709,14 @@
       "utcDate": "2026-07-02T00:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "USA",
-        "name": "United States",
-        "crest": "assets/crests/USA.svg"
+        "code": null,
+        "name": "TBD",
+        "crest": ""
       },
       "away": {
-        "code": "BIH",
-        "name": "Bosnia-Herzegovina",
-        "crest": "assets/crests/BIH.svg"
+        "code": null,
+        "name": "TBD",
+        "crest": ""
       },
       "homeScore": null,
       "awayScore": null,
@@ -1772,9 +1772,9 @@
       "utcDate": "2026-07-03T03:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "SUI",
-        "name": "Switzerland",
-        "crest": "assets/crests/SUI.svg"
+        "code": null,
+        "name": "TBD",
+        "crest": ""
       },
       "away": {
         "code": null,
@@ -1793,9 +1793,9 @@
       "utcDate": "2026-07-03T18:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "AUS",
-        "name": "Australia",
-        "crest": "assets/crests/AUS.svg"
+        "code": null,
+        "name": "TBD",
+        "crest": ""
       },
       "away": {
         "code": null,
@@ -1814,9 +1814,9 @@
       "utcDate": "2026-07-03T22:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": "ARG",
-        "name": "Argentina",
-        "crest": "assets/crests/ARG.png"
+        "code": null,
+        "name": "TBD",
+        "crest": ""
       },
       "away": {
         "code": null,
