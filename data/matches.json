@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-26T23:35:41.400Z",
+  "lastUpdated": "2026-06-27T01:31:04.418Z",
   "matches": [
     {
       "id": 537327,
@@ -1308,7 +1308,7 @@
       "stage": "GROUP_STAGE",
       "group": "GROUP_H",
       "utcDate": "2026-06-27T00:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "home": {
         "code": "URU",
         "name": "Uruguay",
@@ -1319,17 +1319,17 @@
         "name": "Spain",
         "crest": "assets/crests/ESP.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 1,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "AWAY_TEAM"
     },
     {
       "id": 537374,
       "stage": "GROUP_STAGE",
       "group": "GROUP_H",
       "utcDate": "2026-06-27T00:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "home": {
         "code": "CPV",
         "name": "Cape Verde Islands",
@@ -1340,10 +1340,10 @@
         "name": "Saudi Arabia",
         "crest": "assets/crests/KSA.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "DRAW"
     },
     {
       "id": 537367,
