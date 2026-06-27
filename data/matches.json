@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-27T05:31:39.325Z",
+  "lastUpdated": "2026-06-27T08:11:06.459Z",
   "matches": [
     {
       "id": 537327,
@@ -1604,9 +1604,9 @@
       "utcDate": "2026-06-30T17:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "CIV",
+        "name": "Ivory Coast",
+        "crest": "assets/crests/CIV.svg"
       },
       "away": {
         "code": null,
