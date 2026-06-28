@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-28T05:58:53.654Z",
+  "lastUpdated": "2026-06-28T08:55:09.202Z",
   "matches": [
     {
       "id": 537327,
@@ -1518,16 +1518,16 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-06-28T19:00:00Z",
-      "status": "2026-06-29 19:00:00Z",
+      "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "RSA",
+        "name": "South Africa",
+        "crest": "assets/crests/RSA.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "CAN",
+        "name": "Canada",
+        "crest": "assets/crests/CAN.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1541,14 +1541,14 @@
       "utcDate": "2026-06-29T17:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "BRA",
+        "name": "Brazil",
+        "crest": "assets/crests/BRA.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "JPN",
+        "name": "Japan",
+        "crest": "assets/crests/JPN.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1562,14 +1562,14 @@
       "utcDate": "2026-06-29T20:30:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "GER",
+        "name": "Germany",
+        "crest": "assets/crests/GER.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "PAR",
+        "name": "Paraguay",
+        "crest": "assets/crests/PAR.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1583,14 +1583,14 @@
       "utcDate": "2026-06-30T01:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "NED",
+        "name": "Netherlands",
+        "crest": "assets/crests/NED.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "MAR",
+        "name": "Morocco",
+        "crest": "assets/crests/MAR.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1604,14 +1604,14 @@
       "utcDate": "2026-06-30T17:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "CIV",
+        "name": "Ivory Coast",
+        "crest": "assets/crests/CIV.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "NOR",
+        "name": "Norway",
+        "crest": "assets/crests/NOR.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1625,14 +1625,14 @@
       "utcDate": "2026-06-30T21:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "FRA",
+        "name": "France",
+        "crest": "assets/crests/FRA.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "SWE",
+        "name": "Sweden",
+        "crest": "assets/crests/SWE.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1646,14 +1646,14 @@
       "utcDate": "2026-07-01T01:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "MEX",
+        "name": "Mexico",
+        "crest": "assets/crests/MEX.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "ECU",
+        "name": "Ecuador",
+        "crest": "assets/crests/ECU.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1667,14 +1667,14 @@
       "utcDate": "2026-07-01T16:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "ENG",
+        "name": "England",
+        "crest": "assets/crests/ENG.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "COD",
+        "name": "Congo DR",
+        "crest": "assets/crests/COD.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1688,14 +1688,14 @@
       "utcDate": "2026-07-01T20:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "BEL",
+        "name": "Belgium",
+        "crest": "assets/crests/BEL.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "SEN",
+        "name": "Senegal",
+        "crest": "assets/crests/SEN.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1709,14 +1709,14 @@
       "utcDate": "2026-07-02T00:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "USA",
+        "name": "United States",
+        "crest": "assets/crests/USA.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "BIH",
+        "name": "Bosnia-Herzegovina",
+        "crest": "assets/crests/BIH.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1730,14 +1730,14 @@
       "utcDate": "2026-07-02T19:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "ESP",
+        "name": "Spain",
+        "crest": "assets/crests/ESP.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "AUT",
+        "name": "Austria",
+        "crest": "assets/crests/AUT.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1751,14 +1751,14 @@
       "utcDate": "2026-07-02T23:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "POR",
+        "name": "Portugal",
+        "crest": "assets/crests/POR.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "CRO",
+        "name": "Croatia",
+        "crest": "assets/crests/CRO.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1772,14 +1772,14 @@
       "utcDate": "2026-07-03T03:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "SUI",
+        "name": "Switzerland",
+        "crest": "assets/crests/SUI.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "ALG",
+        "name": "Algeria",
+        "crest": "assets/crests/ALG.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1793,14 +1793,14 @@
       "utcDate": "2026-07-03T18:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "AUS",
+        "name": "Australia",
+        "crest": "assets/crests/AUS.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "EGY",
+        "name": "Egypt",
+        "crest": "assets/crests/EGY.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1814,14 +1814,14 @@
       "utcDate": "2026-07-03T22:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "ARG",
+        "name": "Argentina",
+        "crest": "assets/crests/ARG.png"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "CPV",
+        "name": "Cape Verde Islands",
+        "crest": "assets/crests/CPV.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1835,14 +1835,14 @@
       "utcDate": "2026-07-04T01:30:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "COL",
+        "name": "Colombia",
+        "crest": "assets/crests/COL.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "GHA",
+        "name": "Ghana",
+        "crest": "assets/crests/GHA.svg"
       },
       "homeScore": null,
       "awayScore": null,
