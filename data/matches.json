@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-28T20:10:57.418Z",
+  "lastUpdated": "2026-06-28T21:18:49.209Z",
   "matches": [
     {
       "id": 537327,
@@ -1518,7 +1518,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-06-28T19:00:00Z",
-      "status": "PAUSED",
+      "status": "FINISHED",
       "home": {
         "code": "RSA",
         "name": "South Africa",
@@ -1530,9 +1530,9 @@
         "crest": "assets/crests/CAN.svg"
       },
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 1,
       "decidedBy": "REGULAR",
-      "winner": "DRAW"
+      "winner": "AWAY_TEAM"
     },
     {
       "id": 537423,
