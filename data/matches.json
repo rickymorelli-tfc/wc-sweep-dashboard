@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29T21:05:19.658Z",
+  "lastUpdated": "2026-06-29T22:17:20.431Z",
   "matches": [
     {
       "id": 537327,
@@ -1571,8 +1571,8 @@
         "name": "Paraguay",
         "crest": "assets/crests/PAR.svg"
       },
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": 1,
+      "awayScore": 1,
       "decidedBy": "REGULAR",
       "winner": "DRAW"
     },
