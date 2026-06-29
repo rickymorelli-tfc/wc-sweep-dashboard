@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29T19:24:44.139Z",
+  "lastUpdated": "2026-06-29T21:05:19.658Z",
   "matches": [
     {
       "id": 537327,
@@ -1560,7 +1560,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-06-29T20:30:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "home": {
         "code": "GER",
         "name": "Germany",
@@ -1571,10 +1571,10 @@
         "name": "Paraguay",
         "crest": "assets/crests/PAR.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "DRAW"
     },
     {
       "id": 537418,
