@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29T01:53:57.361Z",
+  "lastUpdated": "2026-06-29T06:26:27.186Z",
   "matches": [
     {
       "id": 537327,
@@ -1856,9 +1856,9 @@
       "utcDate": "2026-07-04T17:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "CAN",
+        "name": "Canada",
+        "crest": "assets/crests/CAN.svg"
       },
       "away": {
         "code": null,
