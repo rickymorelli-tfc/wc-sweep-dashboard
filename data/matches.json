@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-29T17:41:24.491Z",
+  "lastUpdated": "2026-06-29T19:24:44.139Z",
   "matches": [
     {
       "id": 537327,
@@ -1539,7 +1539,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-06-29T17:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "home": {
         "code": "BRA",
         "name": "Brazil",
@@ -1550,10 +1550,10 @@
         "name": "Japan",
         "crest": "assets/crests/JPN.svg"
       },
-      "homeScore": 0,
+      "homeScore": 2,
       "awayScore": 1,
       "decidedBy": "REGULAR",
-      "winner": "AWAY_TEAM"
+      "winner": "HOME_TEAM"
     },
     {
       "id": 537415,
