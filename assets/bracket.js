@@ -1,7 +1,7 @@
 // Tournament bracket for the live dashboard. A two-sided knockout tree that
 // meets at the final, fed by the 12 group tables. Reuses the scoring rules in
 // score.js; clicks route into the app's existing team / match modals.
-import { matchPoints } from './score.js';
+import { matchPoints, decideWinner } from './score.js';
 
 const GROUP_LETTERS = ['A','B','C','D','E','F','G','H','I','J','K','L'];
 
@@ -28,8 +28,9 @@ const isLive = (m) => m && (m.status === 'IN_PLAY' || m.status === 'PAUSED');
 const hasTeams = (m) => m && m.home?.code && m.away?.code;
 
 function winnerOf(m) {
-  if (!isFinished(m) || !m.winner || m.winner === 'DRAW') return null;
-  return m.winner === 'HOME_TEAM' ? m.home : m.away;
+  const decided = decideWinner(m);
+  if (!decided || decided === 'DRAW') return null;
+  return decided === 'HOME_TEAM' ? m.home : m.away;
 }
 
 // Stable colour per owner so a person's two teams read as a pair.

@@ -45,6 +45,19 @@ test('knockout loser is eliminated at that stage, shootout loser too', () => {
   assert.equal(table.get('BBB').exitStage, null);
 });
 
+test('knockout loser is eliminated even when the feed omits the winner', () => {
+  // Germany's real R32: GER 4-5 PAR, FINISHED, winner null. Score still decides.
+  const table = computeTeamTable([
+    m({
+      stage: 'LAST_32', group: null,
+      home: T('GER', 'Germany'), away: T('PAR', 'Paraguay'),
+      homeScore: 4, awayScore: 5, decidedBy: 'PENALTIES', winner: null,
+    }),
+  ]);
+  assert.equal(table.get('GER').exitStage, 'LAST_32');
+  assert.equal(table.get('PAR').exitStage, null);
+});
+
 test('final winner flagged champion', () => {
   const table = computeTeamTable([
     m({ stage: 'FINAL', group: null, homeScore: 2, awayScore: 0, winner: 'HOME_TEAM' }),

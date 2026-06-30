@@ -14,6 +14,18 @@ const localCrests = (() => {
   }
 })();
 
+// The feed occasionally omits score.winner on a finished knockout. Fall back to
+// the penalty tally, then the full-time score, so the loser still advances out.
+function deriveWinner(score) {
+  if (score?.winner) return score.winner;
+  for (const leg of [score?.penalties, score?.fullTime]) {
+    if (leg && leg.home != null && leg.away != null && leg.home !== leg.away) {
+      return leg.home > leg.away ? 'HOME_TEAM' : 'AWAY_TEAM';
+    }
+  }
+  return null;
+}
+
 export function normalise(apiData) {
   const team = (t) => ({
     code: t?.tla || null,
@@ -36,7 +48,7 @@ export function normalise(apiData) {
         m.score?.duration === 'PENALTY_SHOOTOUT' ? 'PENALTIES'
         : m.score?.duration === 'EXTRA_TIME' ? 'EXTRA_TIME'
         : 'REGULAR',
-      winner: m.score?.winner || null,
+      winner: deriveWinner(m.score),
     })),
   };
 }

@@ -18,6 +18,17 @@ export function matchPoints(match) {
   return match.homeScore > match.awayScore ? { home: 3, away: 0 } : { home: 0, away: 3 };
 }
 
+// Who actually advanced. The feed sometimes leaves `winner` null on a finished
+// knockout match (e.g. a shootout it hasn't tagged), so fall back to the stored
+// score, which still tells us who progressed.
+export function decideWinner(match) {
+  if (match.status !== 'FINISHED') return null;
+  if (match.winner && match.winner !== 'DRAW') return match.winner;
+  if (match.homeScore == null || match.awayScore == null) return match.winner || null;
+  if (match.homeScore === match.awayScore) return match.winner || 'DRAW';
+  return match.homeScore > match.awayScore ? 'HOME_TEAM' : 'AWAY_TEAM';
+}
+
 export function computeTeamTable(matches) {
   const teams = new Map();
   const ensure = (t) => {
@@ -75,9 +86,10 @@ function applyEliminations(teams, matches) {
     (m) => m.stage !== 'GROUP_STAGE' && m.stage !== 'THIRD_PLACE'
   );
   for (const match of knockout) {
-    if (match.status !== 'FINISHED' || !match.winner || match.winner === 'DRAW') continue;
-    const loser = match.winner === 'HOME_TEAM' ? match.away : match.home;
-    const winner = match.winner === 'HOME_TEAM' ? match.home : match.away;
+    const decided = decideWinner(match);
+    if (!decided || decided === 'DRAW') continue;
+    const loser = decided === 'HOME_TEAM' ? match.away : match.home;
+    const winner = decided === 'HOME_TEAM' ? match.home : match.away;
     if (loser?.code && teams.has(loser.code)) teams.get(loser.code).exitStage = match.stage;
     if (match.stage === 'FINAL' && winner?.code && teams.has(winner.code)) {
       teams.get(winner.code).champion = true;
