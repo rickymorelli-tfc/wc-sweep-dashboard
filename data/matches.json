@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T01:38:22.708Z",
+  "lastUpdated": "2026-06-30T05:44:24.113Z",
   "matches": [
     {
       "id": 537327,
@@ -1574,14 +1574,14 @@
       "homeScore": 4,
       "awayScore": 5,
       "decidedBy": "PENALTIES",
-      "winner": null
+      "winner": "AWAY_TEAM"
     },
     {
       "id": 537418,
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-06-30T01:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "home": {
         "code": "NED",
         "name": "Netherlands",
@@ -1592,10 +1592,10 @@
         "name": "Morocco",
         "crest": "assets/crests/MAR.svg"
       },
-      "homeScore": 0,
-      "awayScore": 0,
-      "decidedBy": "REGULAR",
-      "winner": "DRAW"
+      "homeScore": 4,
+      "awayScore": 4,
+      "decidedBy": "PENALTIES",
+      "winner": null
     },
     {
       "id": 537424,
