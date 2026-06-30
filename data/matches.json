@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T16:01:14.314Z",
+  "lastUpdated": "2026-06-30T18:06:14.758Z",
   "matches": [
     {
       "id": 537327,
@@ -1602,7 +1602,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-06-30T17:00:00Z",
-      "status": "TIMED",
+      "status": "PAUSED",
       "home": {
         "code": "CIV",
         "name": "Ivory Coast",
@@ -1613,10 +1613,10 @@
         "name": "Norway",
         "crest": "assets/crests/NOR.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 1,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "AWAY_TEAM"
     },
     {
       "id": 537416,
