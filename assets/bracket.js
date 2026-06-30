@@ -135,23 +135,20 @@ function groupCard(g, onTeam) {
   return card;
 }
 
-// Fill empty next-round slots with the winners flowing up the tree. Slot i in a
-// round is fed by slots 2i and 2i+1 of the round before (the same pairing the
-// connector lines draw), so a finished match projects its winner into the next
-// box. Projected teams are flagged so they render as tentative until the feed
-// confirms the fixture.
+// Read each slot's teams straight from the feed. The feed is the source of
+// truth for knockout pairings: when a match finishes, football-data fills the
+// winner into the correct next-round fixture itself (a finished R32 game flips
+// the matching R16 box from "TBD" to the real team). We deliberately do NOT
+// project winners up the tree ourselves: our slots are ordered by kickoff date,
+// not bracket position, so home-grown projection drops teams into the wrong
+// boxes (a winner showing up in two next-round matches at once). Slots stay TBD
+// until the feed confirms them.
 function resolveSlots(rounds) {
-  return rounds.map((round, si) => {
-    const prev = si > 0 ? rounds[si - 1].slots : null;
-    const entries = round.slots.map((m, i) => {
-      let home = m && m.home?.code ? m.home : null;
-      let away = m && m.away?.code ? m.away : null;
-      let homeProj = false, awayProj = false;
-      if (prev) {
-        if (!home) { const w = winnerOf(prev[2 * i]); if (w) { home = w; homeProj = true; } }
-        if (!away) { const w = winnerOf(prev[2 * i + 1]); if (w) { away = w; awayProj = true; } }
-      }
-      return { match: m, home, away, homeProj, awayProj };
+  return rounds.map((round) => {
+    const entries = round.slots.map((m) => {
+      const home = m && m.home?.code ? m.home : null;
+      const away = m && m.away?.code ? m.away : null;
+      return { match: m, home, away, homeProj: false, awayProj: false };
     });
     return { ...round, entries };
   });
@@ -297,5 +294,5 @@ export function renderBracket(root, { matches, roster, ownersByCode }, handlers 
   treeWrap.append(tree);
   root.append(treeWrap);
   root.append(el('p', 'bk-note',
-    'Group standings are live. Knockout fixtures fill as games finish; bracket pairings are illustrative until the draw resolves.'));
+    'Group standings are live. Knockout fixtures fill in from the official feed as each game finishes, so a box stays TBD until the real matchup is confirmed.'));
 }
