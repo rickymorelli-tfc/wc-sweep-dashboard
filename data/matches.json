@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T20:13:36.189Z",
+  "lastUpdated": "2026-06-30T21:46:12.052Z",
   "matches": [
     {
       "id": 537327,
@@ -1623,7 +1623,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-06-30T21:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "home": {
         "code": "FRA",
         "name": "France",
@@ -1634,10 +1634,10 @@
         "name": "Sweden",
         "crest": "assets/crests/SWE.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "DRAW"
     },
     {
       "id": 537425,
