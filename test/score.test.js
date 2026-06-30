@@ -53,15 +53,31 @@ test('final winner flagged champion', () => {
   assert.equal(table.get('BBB').exitStage, 'FINAL');
 });
 
-test('teams missing from knockout are out at groups once groups finish and bracket exists', () => {
+test('4th in a finished group is out immediately, even while other groups play', () => {
   const table = computeTeamTable([
-    m({ homeScore: 1, awayScore: 0, winner: 'HOME_TEAM' }),
-    m({ id: 2, home: T('CCC', 'Gamma'), away: T('DDD', 'Delta'), homeScore: 0, awayScore: 2, winner: 'AWAY_TEAM' }),
-    m({ id: 3, stage: 'LAST_32', group: null, status: 'TIMED', home: T('AAA', 'Alpha'), away: T('DDD', 'Delta'), homeScore: null, awayScore: null, winner: null }),
+    // Group A, all finished. Final order: AAA(6) > BBB(3,gd0) > CCC(3,gd-1) > DDD(0).
+    m({ id: 1, home: T('AAA', 'Alpha'), away: T('DDD', 'Delta'), homeScore: 3, awayScore: 0, winner: 'HOME_TEAM' }),
+    m({ id: 2, home: T('BBB', 'Beta'), away: T('CCC', 'Gamma'), homeScore: 2, awayScore: 1, winner: 'HOME_TEAM' }),
+    m({ id: 3, home: T('AAA', 'Alpha'), away: T('BBB', 'Beta'), homeScore: 2, awayScore: 1, winner: 'HOME_TEAM' }),
+    m({ id: 4, home: T('CCC', 'Gamma'), away: T('DDD', 'Delta'), homeScore: 2, awayScore: 0, winner: 'HOME_TEAM' }),
+    // Group B still in progress, so the whole group stage is NOT complete.
+    m({ id: 5, group: 'Group B', home: T('EEE', 'Eps'), away: T('FFF', 'Phi'), status: 'TIMED', homeScore: null, awayScore: null, winner: null }),
   ]);
-  assert.equal(table.get('BBB').exitStage, 'GROUP_STAGE');
-  assert.equal(table.get('CCC').exitStage, 'GROUP_STAGE');
-  assert.equal(table.get('AAA').exitStage, null);
+  assert.equal(table.get('DDD').exitStage, 'GROUP_STAGE'); // 4th: out now
+  assert.equal(table.get('AAA').exitStage, null);          // winner: safe
+  assert.equal(table.get('BBB').exitStage, null);          // runner-up: safe
+  assert.equal(table.get('CCC').exitStage, null);          // 3rd: undecided until all groups done
+});
+
+test('3rd place survives as a best-eight third once all groups are done', () => {
+  const table = computeTeamTable([
+    m({ id: 1, home: T('AAA', 'Alpha'), away: T('DDD', 'Delta'), homeScore: 3, awayScore: 0, winner: 'HOME_TEAM' }),
+    m({ id: 2, home: T('BBB', 'Beta'), away: T('CCC', 'Gamma'), homeScore: 2, awayScore: 1, winner: 'HOME_TEAM' }),
+    m({ id: 3, home: T('AAA', 'Alpha'), away: T('BBB', 'Beta'), homeScore: 2, awayScore: 1, winner: 'HOME_TEAM' }),
+    m({ id: 4, home: T('CCC', 'Gamma'), away: T('DDD', 'Delta'), homeScore: 2, awayScore: 0, winner: 'HOME_TEAM' }),
+  ]);
+  assert.equal(table.get('CCC').exitStage, null);          // sole 3rd is a best-eight third
+  assert.equal(table.get('DDD').exitStage, 'GROUP_STAGE');
 });
 
 test('leaderboard sums two teams and sorts by points, gd, gf', () => {

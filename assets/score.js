@@ -45,6 +45,31 @@ export function computeTeamTable(matches) {
   return teams;
 }
 
+// Group-only mini-table (codes ranked by pts, GD, GF) so eliminations don't
+// borrow points a team earned in the knockouts.
+function groupRank(groupMatches) {
+  const rows = new Map();
+  const ensure = (t) => {
+    if (!t?.code) return null;
+    if (!rows.has(t.code)) rows.set(t.code, { code: t.code, points: 0, gf: 0, ga: 0 });
+    return rows.get(t.code);
+  };
+  for (const m of groupMatches) { ensure(m.home); ensure(m.away); }
+  for (const m of groupMatches) {
+    if (m.status !== 'FINISHED' || m.homeScore == null || m.awayScore == null) continue;
+    const h = ensure(m.home), a = ensure(m.away);
+    if (!h || !a) continue;
+    h.gf += m.homeScore; h.ga += m.awayScore;
+    a.gf += m.awayScore; a.ga += m.homeScore;
+    const pts = matchPoints(m);
+    h.points += pts.home; a.points += pts.away;
+  }
+  const list = [...rows.values()];
+  list.forEach((r) => { r.gd = r.gf - r.ga; });
+  list.sort((a, b) => b.points - a.points || b.gd - a.gd || b.gf - a.gf || a.code.localeCompare(b.code));
+  return list;
+}
+
 function applyEliminations(teams, matches) {
   const knockout = matches.filter(
     (m) => m.stage !== 'GROUP_STAGE' && m.stage !== 'THIRD_PLACE'
@@ -58,15 +83,32 @@ function applyEliminations(teams, matches) {
       teams.get(winner.code).champion = true;
     }
   }
-  const groupMatches = matches.filter((m) => m.stage === 'GROUP_STAGE');
-  const groupsDone = groupMatches.length > 0 && groupMatches.every((m) => m.status === 'FINISHED');
-  const knockoutTeams = new Set(
-    knockout.flatMap((m) => [m.home?.code, m.away?.code]).filter(Boolean)
-  );
-  if (groupsDone && knockoutTeams.size > 0) {
-    for (const team of teams.values()) {
-      if (!knockoutTeams.has(team.code) && !team.exitStage) team.exitStage = 'GROUP_STAGE';
-    }
+  // Group-stage exits resolved per group, not gated on the whole world's groups
+  // finishing. 4th place (and below) is out the moment its own group completes;
+  // 3rd place only once every group is done and it misses the best-eight cut.
+  const groupKeys = [...new Set(
+    matches.filter((m) => m.stage === 'GROUP_STAGE' && m.group).map((m) => m.group)
+  )];
+  const groupInfo = groupKeys.map((key) => {
+    const gm = matches.filter((m) => m.group === key);
+    return {
+      finished: gm.length > 0 && gm.every((m) => m.status === 'FINISHED'),
+      table: groupRank(gm),
+    };
+  });
+  const allGroupsDone = groupInfo.length > 0 && groupInfo.every((g) => g.finished);
+  const thirds = groupInfo.filter((g) => g.finished).map((g) => g.table[2]).filter(Boolean)
+    .sort((a, b) => b.points - a.points || b.gd - a.gd || b.gf - a.gf || a.code.localeCompare(b.code));
+  const bestThirds = new Set(thirds.slice(0, 8).map((t) => t.code));
+  for (const g of groupInfo) {
+    if (!g.finished) continue;
+    g.table.forEach((row, i) => {
+      const rank = i + 1;
+      const team = teams.get(row.code);
+      if (!team || team.exitStage) return;
+      if (rank >= 4) team.exitStage = 'GROUP_STAGE';
+      else if (rank === 3 && allGroupsDone && !bestThirds.has(row.code)) team.exitStage = 'GROUP_STAGE';
+    });
   }
 }
 

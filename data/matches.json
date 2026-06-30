@@ -309,7 +309,7 @@
       "away": {
         "code": "URU",
         "name": "Uruguay",
-        "crest": "https://crests.football-data.org/758.svg"
+        "crest": "assets/crests/URU.svg"
       },
       "homeScore": 1,
       "awayScore": 1,
@@ -808,7 +808,7 @@
       "home": {
         "code": "URU",
         "name": "Uruguay",
-        "crest": "https://crests.football-data.org/758.svg"
+        "crest": "assets/crests/URU.svg"
       },
       "away": {
         "code": "CPV",
@@ -1312,7 +1312,7 @@
       "home": {
         "code": "URU",
         "name": "Uruguay",
-        "crest": "https://crests.football-data.org/758.svg"
+        "crest": "assets/crests/URU.svg"
       },
       "away": {
         "code": "ESP",

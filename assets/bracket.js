@@ -187,17 +187,21 @@ export function renderBracket(root, { matches, roster, ownersByCode }, handlers 
   const colours = ownerColours(roster);
   const ctx = { ownersByCode, colours, onTeam: handlers.onTeam, onMatch: handlers.onMatch };
 
-  // Groups
+  // Groups: only while the group stage is still relevant. Once every group has
+  // finished the knockouts tell the story, so drop the tables.
   const groups = groupStandings(matches);
-  const gWrap = el('div', 'bk-groups');
-  const gHead = el('div', 'bk-section-head');
-  gHead.append(el('h3', null, 'Groups'));
-  gHead.append(el('span', 'bk-hint', 'Top 2 + 8 best 3rd-placed go through'));
-  gWrap.append(gHead);
-  const grid = el('div', 'bk-group-grid');
-  groups.forEach((g) => grid.append(groupCard(g, ctx.onTeam)));
-  gWrap.append(grid);
-  root.append(gWrap);
+  const groupStageOver = groups.length > 0 && groups.every((g) => g.finished);
+  if (!groupStageOver) {
+    const gWrap = el('div', 'bk-groups');
+    const gHead = el('div', 'bk-section-head');
+    gHead.append(el('h3', null, 'Groups'));
+    gHead.append(el('span', 'bk-hint', 'Top 2 + 8 best 3rd-placed go through'));
+    gWrap.append(gHead);
+    const grid = el('div', 'bk-group-grid');
+    groups.forEach((g) => grid.append(groupCard(g, ctx.onTeam)));
+    gWrap.append(grid);
+    root.append(gWrap);
+  }
 
   // Knockout tree
   const rounds = knockoutRounds(matches);

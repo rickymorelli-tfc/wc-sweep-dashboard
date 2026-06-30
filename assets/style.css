@@ -21,6 +21,7 @@ body {
   background: #ffffff;
   min-height: 100vh;
   color: var(--brown);
+  overflow-x: hidden; /* guard the full-bleed bracket's 100vw against scrollbar jiggle */
 }
 .announce {
   background: var(--green); color: var(--brown);
@@ -312,6 +313,13 @@ footer p { margin: 0 auto; max-width: 620px; font-size: 0.75rem; color: rgba(255
 
 /* ===== Tournament bracket ===== */
 :root { --bk-line: rgba(75, 68, 61, 0.22); }
+/* Break the bracket out of main's 900px cap so it can use the full viewport. */
+.bracket-section {
+  width: 100vw; max-width: 100vw;
+  margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw);
+  padding-left: clamp(1.25rem, 4vw, 4rem); padding-right: clamp(1.25rem, 4vw, 4rem);
+  box-sizing: border-box;
+}
 .bk-section-head { display: flex; align-items: baseline; gap: 0.6rem; flex-wrap: wrap; margin-bottom: 0.8rem; }
 .bk-section-head h3 {
   margin: 0; font-family: var(--heading); text-transform: uppercase;
@@ -356,12 +364,15 @@ footer p { margin: 0 auto; max-width: 620px; font-size: 0.75rem; color: rgba(255
 /* Knockout tree */
 .bk-treewrap { position: relative; }
 .bk-scrollhint { font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
+@media (min-width: 1700px) { .bk-scrollhint { display: none; } }
 .bk-tree {
-  display: flex; gap: 32px; align-items: stretch;
+  display: flex; gap: 32px; align-items: stretch; justify-content: safe center;
   overflow-x: auto; padding: 0.5rem 0.3rem 1.2rem; min-height: 380px;
 }
-.bk-half { display: flex; gap: 32px; align-items: stretch; }
-.bk-col { display: flex; flex-direction: column; min-width: 156px; flex-shrink: 0; }
+/* Halves grow to share the full width; columns inside them grow evenly while
+   the 32px column gap stays fixed so the connectors keep lining up. */
+.bk-half { display: flex; gap: 32px; align-items: stretch; flex: 1 1 auto; min-width: min-content; }
+.bk-col { display: flex; flex-direction: column; flex: 1 1 156px; min-width: 156px; max-width: 260px; }
 .bk-collabel {
   height: 26px; display: flex; align-items: center; justify-content: center;
   font-size: 0.62rem; font-weight: 700; text-transform: uppercase;
