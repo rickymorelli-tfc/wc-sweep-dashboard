@@ -28,6 +28,7 @@ const isLive = (m) => m && (m.status === 'IN_PLAY' || m.status === 'PAUSED');
 const hasTeams = (m) => m && m.home?.code && m.away?.code;
 
 function winnerOf(m) {
+  if (!m) return null;
   const decided = decideWinner(m);
   if (!decided || decided === 'DRAW') return null;
   return decided === 'HOME_TEAM' ? m.home : m.away;
@@ -134,37 +135,77 @@ function groupCard(g, onTeam) {
   return card;
 }
 
-function matchBox(m, ctx) {
-  if (!m || !hasTeams(m)) {
+// Fill empty next-round slots with the winners flowing up the tree. Slot i in a
+// round is fed by slots 2i and 2i+1 of the round before (the same pairing the
+// connector lines draw), so a finished match projects its winner into the next
+// box. Projected teams are flagged so they render as tentative until the feed
+// confirms the fixture.
+function resolveSlots(rounds) {
+  return rounds.map((round, si) => {
+    const prev = si > 0 ? rounds[si - 1].slots : null;
+    const entries = round.slots.map((m, i) => {
+      let home = m && m.home?.code ? m.home : null;
+      let away = m && m.away?.code ? m.away : null;
+      let homeProj = false, awayProj = false;
+      if (prev) {
+        if (!home) { const w = winnerOf(prev[2 * i]); if (w) { home = w; homeProj = true; } }
+        if (!away) { const w = winnerOf(prev[2 * i + 1]); if (w) { away = w; awayProj = true; } }
+      }
+      return { match: m, home, away, homeProj, awayProj };
+    });
+    return { ...round, entries };
+  });
+}
+
+function sideEl(team, state, ctx) {
+  const { score = null, won = false, lost = false, projected = false } = state || {};
+  const row = el('div', 'bk-side' + (won ? ' win' : lost ? ' lose' : '') + (projected ? ' proj' : ''));
+  const dot = el('span', 'bk-dot');
+  if (team) {
+    const owner = ctx.ownersByCode.get(team.code);
+    if (owner) dot.style.background = ctx.colours.get(owner) || 'transparent';
+  }
+  row.append(dot);
+  if (team?.crest) { const i = el('img', 'bk-crest'); i.src = team.crest; i.alt = ''; row.append(i); }
+  row.append(el('span', 'bk-name', team ? team.name : 'TBD'));
+  if (score != null) row.append(el('span', 'bk-score', String(score)));
+  return row;
+}
+
+function matchBox(entry, ctx) {
+  const m = entry?.match;
+  const { home, away, homeProj, awayProj } = entry || {};
+  const bothKnown = !!(m && hasTeams(m)); // feed has named both teams for real
+
+  if (!home && !away) {
     const box = el('div', 'bk-box tbd');
-    const a = el('div', 'bk-side'); a.append(el('span', 'bk-name', (m && m.home?.name) || 'TBD')); box.append(a);
-    const b = el('div', 'bk-side'); b.append(el('span', 'bk-name', (m && m.away?.name) || 'TBD')); box.append(b);
+    box.append(sideEl(null, {}, ctx));
+    box.append(sideEl(null, {}, ctx));
     box.append(el('div', 'bk-meta', m ? fmtDate(m.utcDate) : ''));
     return box;
   }
-  const box = el('button', 'bk-box');
-  box.type = 'button';
-  const winner = winnerOf(m);
-  const side = (team, score) => {
-    const won = winner && winner.code === team.code;
-    const lost = winner && winner.code !== team.code;
-    const row = el('div', 'bk-side' + (won ? ' win' : lost ? ' lose' : ''));
-    const dot = el('span', 'bk-dot');
-    const owner = ctx.ownersByCode.get(team.code);
-    if (owner) dot.style.background = ctx.colours.get(owner) || 'transparent';
-    row.append(dot);
-    if (team.crest) { const i = el('img', 'bk-crest'); i.src = team.crest; i.alt = ''; row.append(i); }
-    row.append(el('span', 'bk-name', team.name));
-    if (score != null) row.append(el('span', 'bk-score', String(score)));
-    return row;
-  };
-  box.append(side(m.home, m.homeScore));
-  box.append(side(m.away, m.awayScore));
-  const meta = isLive(m) ? 'LIVE'
-    : isFinished(m) ? (m.decidedBy === 'PENALTIES' ? 'pens' : m.decidedBy === 'EXTRA_TIME' ? 'aet' : 'full time')
-    : fmtDate(m.utcDate);
-  box.append(el('div', 'bk-meta' + (isLive(m) ? ' live' : ''), meta));
-  box.addEventListener('click', () => ctx.onMatch && ctx.onMatch(m));
+
+  const projected = homeProj || awayProj;
+  const box = el(bothKnown ? 'button' : 'div', 'bk-box' + (projected ? ' proj' : ''));
+  if (bothKnown) box.type = 'button';
+
+  const winner = bothKnown ? winnerOf(m) : null;
+  const state = (team, proj, score) => ({
+    score,
+    won: !!(winner && team && winner.code === team.code),
+    lost: !!(winner && team && winner.code !== team.code),
+    projected: proj,
+  });
+  box.append(sideEl(home, state(home, homeProj, bothKnown ? m.homeScore : null), ctx));
+  box.append(sideEl(away, state(away, awayProj, bothKnown ? m.awayScore : null), ctx));
+
+  const meta = bothKnown
+    ? (isLive(m) ? 'LIVE'
+      : isFinished(m) ? (m.decidedBy === 'PENALTIES' ? 'pens' : m.decidedBy === 'EXTRA_TIME' ? 'aet' : 'full time')
+      : fmtDate(m.utcDate))
+    : (m ? fmtDate(m.utcDate) : '');
+  box.append(el('div', 'bk-meta' + (bothKnown && isLive(m) ? ' live' : ''), meta));
+  if (bothKnown) box.addEventListener('click', () => ctx.onMatch && ctx.onMatch(m));
   return box;
 }
 
@@ -205,8 +246,8 @@ export function renderBracket(root, { matches, roster, ownersByCode }, handlers 
   }
 
   // Knockout tree
-  const rounds = knockoutRounds(matches);
-  const byKey = Object.fromEntries(rounds.map((r) => [r.key, r.slots]));
+  const rounds = resolveSlots(knockoutRounds(matches));
+  const byKey = Object.fromEntries(rounds.map((r) => [r.key, r.entries]));
   const labelOf = Object.fromEntries(KO_STAGES.map((s) => [s.key, s.label]));
   const half = (slots) => [slots.slice(0, slots.length / 2), slots.slice(slots.length / 2)];
   const [r32L, r32R] = half(byKey.LAST_32);
@@ -233,7 +274,7 @@ export function renderBracket(root, { matches, roster, ownersByCode }, handlers 
   const fbox = el('div', 'bk-finalbox');
   fbox.append(el('div', 'bk-trophy', '\u{1F3C6}'));
   fbox.append(matchBox(finalM, ctx));
-  const champ = winnerOf(finalM);
+  const champ = winnerOf(finalM?.match);
   if (champ) {
     fbox.append(el('div', 'bk-champ-name', champ.name));
     const own = ownersByCode.get(champ.code);

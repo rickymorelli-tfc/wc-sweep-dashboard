@@ -399,6 +399,11 @@ button.bk-box:hover { border-color: var(--green); transform: translateY(-1px); b
 .bk-meta.live { color: var(--green-dark); font-weight: 700; }
 .bk-box.tbd { background: rgba(255,255,255,0.55); border-style: dashed; box-shadow: none; cursor: default; }
 .bk-box.tbd .bk-name { color: var(--muted); font-style: italic; font-weight: 500; }
+/* Projected: a slot filled by a winner flowing up the tree, not yet confirmed
+   by the feed. Dashed box; the projected side reads as tentative. */
+.bk-box.proj { background: rgba(255,255,255,0.7); border-style: dashed; box-shadow: none; cursor: default; }
+.bk-side.proj .bk-name { color: var(--muted); font-style: italic; }
+.bk-side.proj .bk-crest { opacity: 0.8; }
 
 /* Connectors: cells are equal-height (flex:1), so a match in the next round
    sits exactly at the midpoint of the pair feeding it. Lines are drawn with
