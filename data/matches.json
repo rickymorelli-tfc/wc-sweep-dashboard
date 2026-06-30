@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T21:46:12.052Z",
+  "lastUpdated": "2026-06-30T22:57:50.527Z",
   "matches": [
     {
       "id": 537327,
@@ -1634,10 +1634,10 @@
         "name": "Sweden",
         "crest": "assets/crests/SWE.svg"
       },
-      "homeScore": 0,
+      "homeScore": 3,
       "awayScore": 0,
       "decidedBy": "REGULAR",
-      "winner": "DRAW"
+      "winner": "HOME_TEAM"
     },
     {
       "id": 537425,
