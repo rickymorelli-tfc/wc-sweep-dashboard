@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T05:44:24.113Z",
+  "lastUpdated": "2026-06-30T08:46:36.595Z",
   "matches": [
     {
       "id": 537327,
@@ -1592,10 +1592,10 @@
         "name": "Morocco",
         "crest": "assets/crests/MAR.svg"
       },
-      "homeScore": 4,
+      "homeScore": 3,
       "awayScore": 4,
       "decidedBy": "PENALTIES",
-      "winner": null
+      "winner": "AWAY_TEAM"
     },
     {
       "id": 537424,
@@ -1861,9 +1861,9 @@
         "crest": "assets/crests/CAN.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "MAR",
+        "name": "Morocco",
+        "crest": "assets/crests/MAR.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -1877,9 +1877,9 @@
       "utcDate": "2026-07-04T21:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "PAR",
+        "name": "Paraguay",
+        "crest": "assets/crests/PAR.svg"
       },
       "away": {
         "code": null,
@@ -1898,9 +1898,9 @@
       "utcDate": "2026-07-05T20:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "BRA",
+        "name": "Brazil",
+        "crest": "assets/crests/BRA.svg"
       },
       "away": {
         "code": null,
