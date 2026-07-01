@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T00:04:24.168Z",
+  "lastUpdated": "2026-07-01T04:48:25.052Z",
   "matches": [
     {
       "id": 537327,
@@ -1644,7 +1644,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-07-01T01:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "home": {
         "code": "MEX",
         "name": "Mexico",
@@ -1655,10 +1655,10 @@
         "name": "Ecuador",
         "crest": "assets/crests/ECU.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 2,
+      "awayScore": 0,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "HOME_TEAM"
     },
     {
       "id": 537426,
