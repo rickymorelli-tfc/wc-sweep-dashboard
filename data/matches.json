@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-06-30T22:57:50.527Z",
+  "lastUpdated": "2026-07-01T00:04:24.168Z",
   "matches": [
     {
       "id": 537327,
@@ -1623,7 +1623,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-06-30T21:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "home": {
         "code": "FRA",
         "name": "France",
