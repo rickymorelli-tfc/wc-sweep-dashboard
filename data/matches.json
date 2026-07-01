@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T13:54:35.617Z",
+  "lastUpdated": "2026-07-01T16:16:08.019Z",
   "matches": [
     {
       "id": 537327,
@@ -1665,7 +1665,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-07-01T16:00:00Z",
-      "status": "TIMED",
+      "status": "LIVE",
       "home": {
         "code": "ENG",
         "name": "England",
@@ -1676,10 +1676,10 @@
         "name": "Congo DR",
         "crest": "assets/crests/COD.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 1,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "AWAY_TEAM"
     },
     {
       "id": 537422,
