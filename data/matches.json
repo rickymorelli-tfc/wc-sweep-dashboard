@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T21:50:36.027Z",
+  "lastUpdated": "2026-07-01T22:57:12.358Z",
   "matches": [
     {
       "id": 537327,
@@ -1686,7 +1686,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-07-01T20:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "home": {
         "code": "BEL",
         "name": "Belgium",
@@ -1697,10 +1697,10 @@
         "name": "Senegal",
         "crest": "assets/crests/SEN.svg"
       },
-      "homeScore": 0,
+      "homeScore": 3,
       "awayScore": 2,
       "decidedBy": "REGULAR",
-      "winner": "AWAY_TEAM"
+      "winner": "HOME_TEAM"
     },
     {
       "id": 537421,
