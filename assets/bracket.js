@@ -12,8 +12,13 @@ const KO_STAGES = [
   { key: 'LAST_16', label: 'Round of 16', matches: 8 },
   { key: 'QUARTER_FINALS', label: 'Quarters', matches: 4 },
   { key: 'SEMI_FINALS', label: 'Semis', matches: 2 },
+  { key: 'THIRD_PLACE', label: 'Third place', matches: 1 },
   { key: 'FINAL', label: 'Final', matches: 1 },
 ];
+
+// The rounds that render as their own left-to-right columns (third place and
+// the final get their own bespoke treatment in the final column).
+const COLUMN_STAGES = ['LAST_32', 'LAST_16', 'QUARTER_FINALS', 'SEMI_FINALS'];
 
 const el = (t, c, x) => {
   const n = document.createElement(t);
@@ -206,10 +211,11 @@ function matchBox(entry, ctx) {
   return box;
 }
 
-// One round column: a fixed-height label then a body of equal-height cells so
-// the CSS connectors line up exactly. Pairs of cells feed one cell next round.
+// One round column: a fixed-height label then a body of equal-height cells.
+// Cells share the column height evenly (flex:1), so as each round has fewer
+// matches the boxes space out, giving the funnel shape without connector lines.
 function column(matches, label, ctx) {
-  const col = el('div', 'bk-col' + (matches.length >= 2 ? ' has-pairs' : ''));
+  const col = el('div', 'bk-col');
   col.append(el('div', 'bk-collabel', label));
   const body = el('div', 'bk-body');
   matches.forEach((m) => {
@@ -242,32 +248,29 @@ export function renderBracket(root, { matches, roster, ownersByCode }, handlers 
     root.append(gWrap);
   }
 
-  // Knockout tree
+  // Knockout tree: one column per round, left to right (Round of 32 → Final).
+  // Each column lists that round's real fixtures in kickoff-date order, read
+  // straight from the feed. We do NOT draw a connected binary tree: the feed
+  // gives us fixtures but not bracket topology (which match feeds which), so
+  // any pairing lines would assert structure we don't actually have. Winners
+  // still flow forward because the feed drops each one into its next-round
+  // fixture as games finish.
   const rounds = resolveSlots(knockoutRounds(matches));
   const byKey = Object.fromEntries(rounds.map((r) => [r.key, r.entries]));
   const labelOf = Object.fromEntries(KO_STAGES.map((s) => [s.key, s.label]));
-  const half = (slots) => [slots.slice(0, slots.length / 2), slots.slice(slots.length / 2)];
-  const [r32L, r32R] = half(byKey.LAST_32);
-  const [r16L, r16R] = half(byKey.LAST_16);
-  const [qfL, qfR] = half(byKey.QUARTER_FINALS);
-  const [sfL, sfR] = half(byKey.SEMI_FINALS);
   const finalM = byKey.FINAL[0];
+  const thirdM = byKey.THIRD_PLACE?.[0];
 
   const treeWrap = el('div', 'bk-treewrap');
   treeWrap.append(el('div', 'bk-scrollhint', 'Knockouts (scroll) →'));
   const tree = el('div', 'bk-tree');
 
-  const left = el('div', 'bk-half left');
-  left.append(column(r32L, labelOf.LAST_32, ctx));
-  left.append(column(r16L, labelOf.LAST_16, ctx));
-  left.append(column(qfL, labelOf.QUARTER_FINALS, ctx));
-  left.append(column(sfL, labelOf.SEMI_FINALS, ctx));
-  tree.append(left);
+  COLUMN_STAGES.forEach((key) => tree.append(column(byKey[key], labelOf[key], ctx)));
 
+  // Final column: the trophy card, with the third-place playoff beneath it.
   const finalCol = el('div', 'bk-col bk-finalcol');
-  finalCol.append(el('div', 'bk-collabel', 'Final'));
+  finalCol.append(el('div', 'bk-collabel', labelOf.FINAL));
   const fbody = el('div', 'bk-body');
-  const fcell = el('div', 'bk-cell');
   const fbox = el('div', 'bk-finalbox');
   fbox.append(el('div', 'bk-trophy', '\u{1F3C6}'));
   fbox.append(matchBox(finalM, ctx));
@@ -277,19 +280,18 @@ export function renderBracket(root, { matches, roster, ownersByCode }, handlers 
     const own = ownersByCode.get(champ.code);
     if (own) fbox.append(el('div', 'bk-champ-own', own + ' wins the sweep'));
   } else {
-    fbox.append(el('div', 'bk-champ-own', 'Champions decided 19 Jul'));
+    const when = finalM?.match ? fmtDate(finalM.match.utcDate) : '';
+    fbox.append(el('div', 'bk-champ-own', when ? 'Champions decided ' + when : 'Champions TBD'));
   }
-  fcell.append(fbox);
-  fbody.append(fcell);
+  fbody.append(fbox);
+  if (thirdM) {
+    const third = el('div', 'bk-third');
+    third.append(el('div', 'bk-third-label', labelOf.THIRD_PLACE));
+    third.append(matchBox(thirdM, ctx));
+    fbody.append(third);
+  }
   finalCol.append(fbody);
   tree.append(finalCol);
-
-  const right = el('div', 'bk-half right');
-  right.append(column(sfR, labelOf.SEMI_FINALS, ctx));
-  right.append(column(qfR, labelOf.QUARTER_FINALS, ctx));
-  right.append(column(r16R, labelOf.LAST_16, ctx));
-  right.append(column(r32R, labelOf.LAST_32, ctx));
-  tree.append(right);
 
   treeWrap.append(tree);
   root.append(treeWrap);

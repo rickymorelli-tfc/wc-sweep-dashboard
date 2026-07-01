@@ -361,25 +361,25 @@ footer p { margin: 0 auto; max-width: 620px; font-size: 0.75rem; color: rgba(255
 .bk-trow.out { opacity: 0.5; }
 .bk-trow.out .bk-name { text-decoration: line-through; text-decoration-thickness: 1px; }
 
-/* Knockout tree */
+/* Knockout tree: one column per round, left to right (Round of 32 → Final).
+   No connector lines: the feed gives fixtures but not bracket topology, so we
+   don't assert which match feeds which. The funnel shape comes from each round
+   having fewer, more spaced-out boxes. */
 .bk-treewrap { position: relative; }
 .bk-scrollhint { font-size: 0.68rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.5rem; }
-@media (min-width: 1700px) { .bk-scrollhint { display: none; } }
+@media (min-width: 1200px) { .bk-scrollhint { display: none; } }
 .bk-tree {
-  display: flex; gap: 32px; align-items: stretch; justify-content: safe center;
+  display: flex; gap: 20px; align-items: stretch;
   overflow-x: auto; padding: 0.5rem 0.3rem 1.2rem; min-height: 380px;
 }
-/* Halves grow to share the full width; columns inside them grow evenly while
-   the 32px column gap stays fixed so the connectors keep lining up. */
-.bk-half { display: flex; gap: 32px; align-items: stretch; flex: 1 1 auto; min-width: min-content; }
-.bk-col { display: flex; flex-direction: column; flex: 1 1 156px; min-width: 156px; max-width: 260px; }
+.bk-col { display: flex; flex-direction: column; flex: 1 0 150px; min-width: 150px; max-width: 240px; }
 .bk-collabel {
   height: 26px; display: flex; align-items: center; justify-content: center;
   font-size: 0.62rem; font-weight: 700; text-transform: uppercase;
   letter-spacing: 0.05em; color: var(--muted); margin-bottom: 0.3rem;
 }
 .bk-body { flex: 1; display: flex; flex-direction: column; }
-.bk-cell { flex: 1; display: flex; align-items: center; position: relative; padding: 4px 0; min-height: 60px; }
+.bk-cell { flex: 1; display: flex; align-items: center; position: relative; padding: 4px 0; min-height: 54px; }
 
 .bk-box {
   width: 100%; background: #fff; border: 1px solid var(--border); border-radius: 9px;
@@ -405,50 +405,28 @@ button.bk-box:hover { border-color: var(--green); transform: translateY(-1px); b
 .bk-side.proj .bk-name { color: var(--muted); font-style: italic; }
 .bk-side.proj .bk-crest { opacity: 0.8; }
 
-/* Connectors: cells are equal-height (flex:1), so a match in the next round
-   sits exactly at the midpoint of the pair feeding it. Lines are drawn with
-   half the 32px column gap (16px) on each facing side so they meet centred. */
-.bk-half.left .bk-cell::after,
-.bk-half.right .bk-cell::after { content: ''; position: absolute; top: 50%; width: 16px; height: 2px; background: var(--bk-line); }
-.bk-half.left .bk-cell::after { right: -16px; }
-.bk-half.right .bk-cell::after { left: -16px; }
-
-.bk-half.left .bk-col.has-pairs .bk-cell::before,
-.bk-half.right .bk-col.has-pairs .bk-cell::before { content: ''; position: absolute; width: 2px; height: 50%; background: var(--bk-line); }
-.bk-half.left .bk-col.has-pairs .bk-cell:nth-child(odd)::before { right: -16px; top: 50%; }
-.bk-half.left .bk-col.has-pairs .bk-cell:nth-child(even)::before { right: -16px; bottom: 50%; }
-.bk-half.right .bk-col.has-pairs .bk-cell:nth-child(odd)::before { left: -16px; top: 50%; }
-.bk-half.right .bk-col.has-pairs .bk-cell:nth-child(even)::before { left: -16px; bottom: 50%; }
-
-.bk-half.left .bk-col:not(:first-child) .bk-box::before { content: ''; position: absolute; top: 50%; left: -16px; width: 16px; height: 2px; background: var(--bk-line); }
-.bk-half.right .bk-col:not(:last-child) .bk-box::before { content: ''; position: absolute; top: 50%; right: -16px; width: 16px; height: 2px; background: var(--bk-line); }
-
-/* Final */
+/* Final column: trophy card, vertically centred, with the third-place playoff
+   tucked beneath it. */
 .bk-finalcol { justify-content: center; min-width: 168px; }
 .bk-finalbox {
   background: linear-gradient(160deg, var(--peach), var(--green-soft));
   border: 2px solid var(--green); border-radius: 14px; padding: 0.7rem 0.7rem 0.8rem;
   text-align: center; position: relative;
 }
-.bk-finalbox::before, .bk-finalbox::after { content: ''; position: absolute; top: 50%; width: 16px; height: 2px; background: var(--bk-line); }
-.bk-finalbox::before { left: -16px; }
-.bk-finalbox::after { right: -16px; }
 .bk-trophy { font-size: 1.6rem; line-height: 1; }
 .bk-finalbox .bk-box { margin: 0.4rem 0 0.3rem; background: rgba(255,255,255,0.78); cursor: default; }
 .bk-finalbox .bk-box.tbd { border-style: dashed; }
 .bk-champ-name { font-weight: 700; font-size: 1rem; color: var(--brown-deep); }
 .bk-champ-own { font-size: 0.66rem; color: var(--brown-deep); }
+.bk-third { margin-top: 1rem; }
+.bk-third-label {
+  font-size: 0.58rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.05em; color: var(--muted); text-align: center; margin-bottom: 0.25rem;
+}
 
 .bk-note { font-size: 0.7rem; color: var(--muted); margin: 0.4rem 0 0; }
 
 @media (max-width: 640px) {
   .bk-col, .bk-finalcol { min-width: 138px; }
-  .bk-tree, .bk-half { gap: 28px; }
-  .bk-half.left .bk-cell::after, .bk-half.left .bk-col.has-pairs .bk-cell:nth-child(odd)::before,
-  .bk-half.left .bk-col.has-pairs .bk-cell:nth-child(even)::before { right: -14px; }
-  .bk-half.right .bk-cell::after, .bk-half.right .bk-col.has-pairs .bk-cell:nth-child(odd)::before,
-  .bk-half.right .bk-col.has-pairs .bk-cell:nth-child(even)::before { left: -14px; }
-  .bk-half.left .bk-col:not(:first-child) .bk-box::before { left: -14px; }
-  .bk-half.right .bk-col:not(:last-child) .bk-box::before { right: -14px; }
-  .bk-finalbox::before { left: -14px; } .bk-finalbox::after { right: -14px; }
+  .bk-tree { gap: 14px; }
 }
