@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-01T20:17:05.245Z",
+  "lastUpdated": "2026-07-01T21:50:36.027Z",
   "matches": [
     {
       "id": 537327,
@@ -1698,9 +1698,9 @@
         "crest": "assets/crests/SEN.svg"
       },
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 2,
       "decidedBy": "REGULAR",
-      "winner": "DRAW"
+      "winner": "AWAY_TEAM"
     },
     {
       "id": 537421,
