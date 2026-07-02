@@ -26,6 +26,26 @@ function deriveWinner(score) {
   return null;
 }
 
+// v4 quirk: for a shootout, score.fullTime INCLUDES the shootout goals
+// (e.g. 1-1 aet + 4-3 pens arrives as fullTime 5-4). The match score we store
+// and count towards GD/GF is fullTime minus penalties, falling back to the
+// regular + extra time legs if the shootout split is ever missing.
+function matchGoals(score) {
+  const ft = score?.fullTime;
+  const plain = { home: ft?.home ?? null, away: ft?.away ?? null };
+  if (score?.duration !== 'PENALTY_SHOOTOUT') return plain;
+  const pens = score?.penalties;
+  if (ft?.home != null && ft?.away != null && pens?.home != null && pens?.away != null) {
+    return { home: ft.home - pens.home, away: ft.away - pens.away };
+  }
+  const reg = score?.regularTime;
+  if (reg?.home != null && reg?.away != null) {
+    const et = score?.extraTime;
+    return { home: reg.home + (et?.home ?? 0), away: reg.away + (et?.away ?? 0) };
+  }
+  return plain;
+}
+
 export function normalise(apiData) {
   const team = (t) => ({
     code: t?.tla || null,
@@ -34,22 +54,27 @@ export function normalise(apiData) {
   });
   return {
     lastUpdated: new Date().toISOString(),
-    matches: (apiData.matches || []).map((m) => ({
-      id: m.id,
-      stage: m.stage,
-      group: m.group || null,
-      utcDate: m.utcDate,
-      status: m.status,
-      home: team(m.homeTeam),
-      away: team(m.awayTeam),
-      homeScore: m.score?.fullTime?.home ?? null,
-      awayScore: m.score?.fullTime?.away ?? null,
-      decidedBy:
-        m.score?.duration === 'PENALTY_SHOOTOUT' ? 'PENALTIES'
-        : m.score?.duration === 'EXTRA_TIME' ? 'EXTRA_TIME'
-        : 'REGULAR',
-      winner: deriveWinner(m.score),
-    })),
+    matches: (apiData.matches || []).map((m) => {
+      const goals = matchGoals(m.score);
+      return {
+        id: m.id,
+        stage: m.stage,
+        group: m.group || null,
+        utcDate: m.utcDate,
+        status: m.status,
+        home: team(m.homeTeam),
+        away: team(m.awayTeam),
+        homeScore: goals.home,
+        awayScore: goals.away,
+        pensHome: m.score?.penalties?.home ?? null,
+        pensAway: m.score?.penalties?.away ?? null,
+        decidedBy:
+          m.score?.duration === 'PENALTY_SHOOTOUT' ? 'PENALTIES'
+          : m.score?.duration === 'EXTRA_TIME' ? 'EXTRA_TIME'
+          : 'REGULAR',
+        winner: deriveWinner(m.score),
+      };
+    }),
   };
 }
 

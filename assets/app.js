@@ -323,8 +323,12 @@ function openMatchModal(match) {
   if (match.homeScore !== null) {
     centre.append(el('div', 'mm-score', `${match.homeScore} - ${match.awayScore}`));
     if (match.decidedBy === 'PENALTIES') {
-      const through = match.winner === 'HOME_TEAM' ? match.home.name : match.away.name;
-      centre.append(el('div', 'mm-note', `${through} through on pens`));
+      const homeWon = match.winner === 'HOME_TEAM';
+      const through = homeWon ? match.home.name : match.away.name;
+      const tally = match.pensHome != null && match.pensAway != null
+        ? (homeWon ? `${match.pensHome}-${match.pensAway}` : `${match.pensAway}-${match.pensHome}`) + ' '
+        : '';
+      centre.append(el('div', 'mm-note', `${through} through ${tally}on pens`));
     } else if (match.decidedBy === 'EXTRA_TIME') {
       centre.append(el('div', 'mm-note', 'after extra time'));
     }
