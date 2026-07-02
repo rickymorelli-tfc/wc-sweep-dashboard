@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-02T20:45:32.076Z",
+  "lastUpdated": "2026-07-02T21:50:26.648Z",
   "matches": [
     {
       "id": 537327,
@@ -1892,7 +1892,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-07-02T19:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "home": {
         "code": "ESP",
         "name": "Spain",
@@ -1903,7 +1903,7 @@
         "name": "Austria",
         "crest": "assets/crests/AUT.svg"
       },
-      "homeScore": 2,
+      "homeScore": 3,
       "awayScore": 0,
       "pensHome": null,
       "pensAway": null,
