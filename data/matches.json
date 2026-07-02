@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-02T04:20:12.086Z",
+  "lastUpdated": "2026-07-02T07:45:20.558Z",
   "matches": [
     {
       "id": 537327,
@@ -1861,7 +1861,7 @@
       "awayScore": 2,
       "pensHome": null,
       "pensAway": null,
-      "decidedBy": "REGULAR",
+      "decidedBy": "EXTRA_TIME",
       "winner": "HOME_TEAM"
     },
     {
@@ -2101,14 +2101,14 @@
       "utcDate": "2026-07-06T00:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "MEX",
+        "name": "Mexico",
+        "crest": "assets/crests/MEX.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "ENG",
+        "name": "England",
+        "crest": "assets/crests/ENG.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -2147,14 +2147,14 @@
       "utcDate": "2026-07-07T00:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "USA",
+        "name": "United States",
+        "crest": "assets/crests/USA.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "BEL",
+        "name": "Belgium",
+        "crest": "assets/crests/BEL.svg"
       },
       "homeScore": null,
       "awayScore": null,
