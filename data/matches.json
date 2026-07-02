@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-02T18:07:34.483Z",
+  "lastUpdated": "2026-07-02T19:46:51.243Z",
   "matches": [
     {
       "id": 537327,
@@ -1903,12 +1903,12 @@
         "name": "Austria",
         "crest": "assets/crests/AUT.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 0,
       "pensHome": null,
       "pensAway": null,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "HOME_TEAM"
     },
     {
       "id": 537419,
