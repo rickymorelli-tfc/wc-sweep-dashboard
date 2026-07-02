@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-02T04:02:31.085Z",
+  "lastUpdated": "2026-07-02T04:16:36.210Z",
   "matches": [
     {
       "id": 537327,
@@ -1699,7 +1699,7 @@
       },
       "homeScore": 3,
       "awayScore": 2,
-      "decidedBy": "EXTRA_TIME",
+      "decidedBy": "REGULAR",
       "winner": "HOME_TEAM"
     },
     {
