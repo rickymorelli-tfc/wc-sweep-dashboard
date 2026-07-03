@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03T19:42:25.772Z",
+  "lastUpdated": "2026-07-03T20:42:49.493Z",
   "matches": [
     {
       "id": 537327,
@@ -1961,7 +1961,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-07-03T18:00:00Z",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "home": {
         "code": "AUS",
         "name": "Australia",
@@ -1976,7 +1976,7 @@
       "awayScore": 1,
       "pensHome": null,
       "pensAway": null,
-      "decidedBy": "REGULAR",
+      "decidedBy": "EXTRA_TIME",
       "winner": "DRAW"
     },
     {
