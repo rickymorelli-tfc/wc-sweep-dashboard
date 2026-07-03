@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03T22:43:19.427Z",
+  "lastUpdated": "2026-07-03T23:42:54.926Z",
   "matches": [
     {
       "id": 537327,
@@ -1996,11 +1996,11 @@
         "crest": "assets/crests/CPV.svg"
       },
       "homeScore": 1,
-      "awayScore": 0,
+      "awayScore": 1,
       "pensHome": null,
       "pensAway": null,
       "decidedBy": "REGULAR",
-      "winner": "HOME_TEAM"
+      "winner": "DRAW"
     },
     {
       "id": 537430,
