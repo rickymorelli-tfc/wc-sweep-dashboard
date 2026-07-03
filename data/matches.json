@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03T21:44:55.399Z",
+  "lastUpdated": "2026-07-03T22:43:19.427Z",
   "matches": [
     {
       "id": 537327,
@@ -1984,7 +1984,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-07-03T22:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "home": {
         "code": "ARG",
         "name": "Argentina",
@@ -1995,12 +1995,12 @@
         "name": "Cape Verde Islands",
         "crest": "assets/crests/CPV.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 0,
       "pensHome": null,
       "pensAway": null,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "HOME_TEAM"
     },
     {
       "id": 537430,
