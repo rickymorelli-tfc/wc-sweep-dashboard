@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-02T23:50:06.549Z",
+  "lastUpdated": "2026-07-03T01:21:22.717Z",
   "matches": [
     {
       "id": 537327,
@@ -1915,7 +1915,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-07-02T23:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "home": {
         "code": "POR",
         "name": "Portugal",
@@ -1926,8 +1926,8 @@
         "name": "Croatia",
         "crest": "assets/crests/CRO.svg"
       },
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": 2,
+      "awayScore": 2,
       "pensHome": null,
       "pensAway": null,
       "decidedBy": "REGULAR",
