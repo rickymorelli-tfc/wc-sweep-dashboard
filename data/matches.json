@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03T18:03:25.820Z",
+  "lastUpdated": "2026-07-03T19:42:25.772Z",
   "matches": [
     {
       "id": 537327,
@@ -1961,7 +1961,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-07-03T18:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "home": {
         "code": "AUS",
         "name": "Australia",
@@ -1972,12 +1972,12 @@
         "name": "Egypt",
         "crest": "assets/crests/EGY.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 1,
       "pensHome": null,
       "pensAway": null,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "DRAW"
     },
     {
       "id": 537427,
