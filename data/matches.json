@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-03T01:21:22.717Z",
+  "lastUpdated": "2026-07-03T05:02:47.799Z",
   "matches": [
     {
       "id": 537327,
@@ -1927,18 +1927,18 @@
         "crest": "assets/crests/CRO.svg"
       },
       "homeScore": 2,
-      "awayScore": 2,
+      "awayScore": 1,
       "pensHome": null,
       "pensAway": null,
       "decidedBy": "REGULAR",
-      "winner": "DRAW"
+      "winner": "HOME_TEAM"
     },
     {
       "id": 537429,
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-07-03T03:00:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "home": {
         "code": "SUI",
         "name": "Switzerland",
@@ -1949,12 +1949,12 @@
         "name": "Algeria",
         "crest": "assets/crests/ALG.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 2,
+      "awayScore": 0,
       "pensHome": null,
       "pensAway": null,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "HOME_TEAM"
     },
     {
       "id": 537428,
