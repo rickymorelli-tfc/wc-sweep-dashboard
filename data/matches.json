@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-04T17:28:37.862Z",
+  "lastUpdated": "2026-07-04T18:32:15.254Z",
   "matches": [
     {
       "id": 537327,
@@ -2042,11 +2042,11 @@
         "crest": "assets/crests/MAR.svg"
       },
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 1,
       "pensHome": null,
       "pensAway": null,
       "decidedBy": "REGULAR",
-      "winner": "DRAW"
+      "winner": "AWAY_TEAM"
     },
     {
       "id": 537375,
