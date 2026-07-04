@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-04T04:53:56.954Z",
+  "lastUpdated": "2026-07-04T07:35:19.722Z",
   "matches": [
     {
       "id": 537327,
@@ -1972,9 +1972,9 @@
         "name": "Egypt",
         "crest": "assets/crests/EGY.svg"
       },
-      "homeScore": -1,
+      "homeScore": 1,
       "awayScore": 1,
-      "pensHome": 4,
+      "pensHome": 2,
       "pensAway": 4,
       "decidedBy": "PENALTIES",
       "winner": "AWAY_TEAM"
@@ -2124,14 +2124,14 @@
       "utcDate": "2026-07-06T19:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "POR",
+        "name": "Portugal",
+        "crest": "assets/crests/POR.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "ESP",
+        "name": "Spain",
+        "crest": "assets/crests/ESP.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -2170,14 +2170,14 @@
       "utcDate": "2026-07-07T16:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "ARG",
+        "name": "Argentina",
+        "crest": "assets/crests/ARG.png"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "EGY",
+        "name": "Egypt",
+        "crest": "assets/crests/EGY.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -2193,14 +2193,14 @@
       "utcDate": "2026-07-07T20:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "SUI",
+        "name": "Switzerland",
+        "crest": "assets/crests/SUI.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "COL",
+        "name": "Colombia",
+        "crest": "assets/crests/COL.svg"
       },
       "homeScore": null,
       "awayScore": null,
