@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-04T21:34:38.335Z",
+  "lastUpdated": "2026-07-04T22:33:30.393Z",
   "matches": [
     {
       "id": 537327,
@@ -2053,7 +2053,7 @@
       "stage": "LAST_16",
       "group": null,
       "utcDate": "2026-07-04T21:00:00Z",
-      "status": "LIVE",
+      "status": "IN_PLAY",
       "home": {
         "code": "PAR",
         "name": "Paraguay",
