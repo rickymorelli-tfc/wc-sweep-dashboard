@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-04T01:16:38.683Z",
+  "lastUpdated": "2026-07-04T04:53:56.954Z",
   "matches": [
     {
       "id": 537327,
@@ -2007,7 +2007,7 @@
       "stage": "LAST_32",
       "group": null,
       "utcDate": "2026-07-04T01:30:00Z",
-      "status": "TIMED",
+      "status": "FINISHED",
       "home": {
         "code": "COL",
         "name": "Colombia",
@@ -2018,12 +2018,12 @@
         "name": "Ghana",
         "crest": "assets/crests/GHA.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 0,
       "pensHome": null,
       "pensAway": null,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "HOME_TEAM"
     },
     {
       "id": 537376,
