@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-04T16:15:43.517Z",
+  "lastUpdated": "2026-07-04T17:28:37.862Z",
   "matches": [
     {
       "id": 537327,
@@ -2030,7 +2030,7 @@
       "stage": "LAST_16",
       "group": null,
       "utcDate": "2026-07-04T17:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "home": {
         "code": "CAN",
         "name": "Canada",
@@ -2041,12 +2041,12 @@
         "name": "Morocco",
         "crest": "assets/crests/MAR.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "pensHome": null,
       "pensAway": null,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "DRAW"
     },
     {
       "id": 537375,
