@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-04T20:36:45.433Z",
+  "lastUpdated": "2026-07-04T21:34:38.335Z",
   "matches": [
     {
       "id": 537327,
@@ -2053,7 +2053,7 @@
       "stage": "LAST_16",
       "group": null,
       "utcDate": "2026-07-04T21:00:00Z",
-      "status": "TIMED",
+      "status": "LIVE",
       "home": {
         "code": "PAR",
         "name": "Paraguay",
@@ -2064,12 +2064,12 @@
         "name": "France",
         "crest": "assets/crests/FRA.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "pensHome": null,
       "pensAway": null,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "DRAW"
     },
     {
       "id": 537377,
