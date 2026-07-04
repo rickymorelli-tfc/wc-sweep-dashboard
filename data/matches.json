@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-04T18:32:15.254Z",
+  "lastUpdated": "2026-07-04T19:47:16.136Z",
   "matches": [
     {
       "id": 537327,
@@ -2030,7 +2030,7 @@
       "stage": "LAST_16",
       "group": null,
       "utcDate": "2026-07-04T17:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "home": {
         "code": "CAN",
         "name": "Canada",
@@ -2042,7 +2042,7 @@
         "crest": "assets/crests/MAR.svg"
       },
       "homeScore": 0,
-      "awayScore": 1,
+      "awayScore": 3,
       "pensHome": null,
       "pensAway": null,
       "decidedBy": "REGULAR",
