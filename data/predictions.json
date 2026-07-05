@@ -1,17 +1,17 @@
 {
-  "lastUpdated": "2026-07-05T05:11:52.726Z",
+  "lastUpdated": "2026-07-05T08:15:57.012Z",
   "source": "Polymarket",
   "predictions": {
     "537377": {
-      "home": 0.532,
+      "home": 0.542,
       "draw": 0.264,
-      "away": 0.204,
+      "away": 0.194,
       "slug": "fifwc-bra-nor-2026-07-05"
     },
     "537378": {
-      "home": 0.303,
-      "draw": 0.303,
-      "away": 0.393,
+      "home": 0.296,
+      "draw": 0.307,
+      "away": 0.397,
       "slug": "fifwc-mex-eng-2026-07-05"
     },
     "537379": {
@@ -21,9 +21,9 @@
       "slug": "fifwc-prt-esp-2026-07-06"
     },
     "537380": {
-      "home": 0.343,
-      "draw": 0.294,
-      "away": 0.363,
+      "home": 0.347,
+      "draw": 0.286,
+      "away": 0.367,
       "slug": "fifwc-usa-bel-2026-07-06"
     },
     "537381": {

@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-05T05:11:52.129Z",
+  "lastUpdated": "2026-07-05T08:15:56.091Z",
   "matches": [
     {
       "id": 537327,
@@ -2216,14 +2216,14 @@
       "utcDate": "2026-07-09T20:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "FRA",
+        "name": "France",
+        "crest": "assets/crests/FRA.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "MAR",
+        "name": "Morocco",
+        "crest": "assets/crests/MAR.svg"
       },
       "homeScore": null,
       "awayScore": null,
