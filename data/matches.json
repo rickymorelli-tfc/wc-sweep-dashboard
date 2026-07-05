@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-05T20:40:03.918Z",
+  "lastUpdated": "2026-07-05T21:39:03.372Z",
   "matches": [
     {
       "id": 537327,
@@ -2076,7 +2076,7 @@
       "stage": "LAST_16",
       "group": null,
       "utcDate": "2026-07-05T20:00:00Z",
-      "status": "IN_PLAY",
+      "status": "LIVE",
       "home": {
         "code": "BRA",
         "name": "Brazil",
