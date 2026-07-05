@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-05T21:39:03.372Z",
+  "lastUpdated": "2026-07-05T22:36:54.805Z",
   "matches": [
     {
       "id": 537327,
@@ -2076,7 +2076,7 @@
       "stage": "LAST_16",
       "group": null,
       "utcDate": "2026-07-05T20:00:00Z",
-      "status": "LIVE",
+      "status": "FINISHED",
       "home": {
         "code": "BRA",
         "name": "Brazil",
@@ -2087,12 +2087,12 @@
         "name": "Norway",
         "crest": "assets/crests/NOR.svg"
       },
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": 1,
+      "awayScore": 2,
       "pensHome": null,
       "pensAway": null,
       "decidedBy": "REGULAR",
-      "winner": "DRAW"
+      "winner": "AWAY_TEAM"
     },
     {
       "id": 537378,
