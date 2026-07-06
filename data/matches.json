@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-06T20:25:10.623Z",
+  "lastUpdated": "2026-07-06T21:52:34.152Z",
   "matches": [
     {
       "id": 537327,
@@ -2122,7 +2122,7 @@
       "stage": "LAST_16",
       "group": null,
       "utcDate": "2026-07-06T19:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "home": {
         "code": "POR",
         "name": "Portugal",
@@ -2134,11 +2134,11 @@
         "crest": "assets/crests/ESP.svg"
       },
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 1,
       "pensHome": null,
       "pensAway": null,
       "decidedBy": "REGULAR",
-      "winner": "DRAW"
+      "winner": "AWAY_TEAM"
     },
     {
       "id": 537380,
