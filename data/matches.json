@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-06T01:22:06.744Z",
+  "lastUpdated": "2026-07-06T05:41:44.672Z",
   "matches": [
     {
       "id": 537327,
@@ -2099,7 +2099,7 @@
       "stage": "LAST_16",
       "group": null,
       "utcDate": "2026-07-06T01:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "home": {
         "code": "MEX",
         "name": "Mexico",
@@ -2110,12 +2110,12 @@
         "name": "England",
         "crest": "assets/crests/ENG.svg"
       },
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": 2,
+      "awayScore": 3,
       "pensHome": null,
       "pensAway": null,
       "decidedBy": "REGULAR",
-      "winner": "DRAW"
+      "winner": "AWAY_TEAM"
     },
     {
       "id": 537379,
