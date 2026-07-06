@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-06T05:41:44.672Z",
+  "lastUpdated": "2026-07-06T09:42:36.465Z",
   "matches": [
     {
       "id": 537327,
@@ -2262,14 +2262,14 @@
       "utcDate": "2026-07-11T21:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "NOR",
+        "name": "Norway",
+        "crest": "assets/crests/NOR.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "ENG",
+        "name": "England",
+        "crest": "assets/crests/ENG.svg"
       },
       "homeScore": null,
       "awayScore": null,
