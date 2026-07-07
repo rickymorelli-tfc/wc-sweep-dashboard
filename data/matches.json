@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-07T16:59:33.000Z",
+  "lastUpdated": "2026-07-07T19:04:37.056Z",
   "matches": [
     {
       "id": 537327,
@@ -2168,7 +2168,7 @@
       "stage": "LAST_16",
       "group": null,
       "utcDate": "2026-07-07T16:00:00Z",
-      "status": "PAUSED",
+      "status": "FINISHED",
       "home": {
         "code": "ARG",
         "name": "Argentina",
@@ -2179,12 +2179,12 @@
         "name": "Egypt",
         "crest": "assets/crests/EGY.svg"
       },
-      "homeScore": 0,
-      "awayScore": 1,
+      "homeScore": 3,
+      "awayScore": 2,
       "pensHome": null,
       "pensAway": null,
       "decidedBy": "REGULAR",
-      "winner": "AWAY_TEAM"
+      "winner": "HOME_TEAM"
     },
     {
       "id": 537382,
