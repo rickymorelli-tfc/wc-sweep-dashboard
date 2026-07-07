@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-07T20:55:28.191Z",
+  "lastUpdated": "2026-07-07T22:06:38.691Z",
   "matches": [
     {
       "id": 537327,
@@ -2191,7 +2191,7 @@
       "stage": "LAST_16",
       "group": null,
       "utcDate": "2026-07-07T20:00:00Z",
-      "status": "PAUSED",
+      "status": "LIVE",
       "home": {
         "code": "SUI",
         "name": "Switzerland",
