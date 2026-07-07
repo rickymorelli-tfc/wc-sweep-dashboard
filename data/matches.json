@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-07T05:53:27.437Z",
+  "lastUpdated": "2026-07-07T09:00:41.206Z",
   "matches": [
     {
       "id": 537327,
@@ -2239,14 +2239,14 @@
       "utcDate": "2026-07-10T19:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "ESP",
+        "name": "Spain",
+        "crest": "assets/crests/ESP.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "BEL",
+        "name": "Belgium",
+        "crest": "assets/crests/BEL.svg"
       },
       "homeScore": null,
       "awayScore": null,
