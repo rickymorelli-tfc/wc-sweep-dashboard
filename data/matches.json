@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-07T01:49:46.560Z",
+  "lastUpdated": "2026-07-07T05:53:27.437Z",
   "matches": [
     {
       "id": 537327,
@@ -2145,7 +2145,7 @@
       "stage": "LAST_16",
       "group": null,
       "utcDate": "2026-07-07T00:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "home": {
         "code": "USA",
         "name": "United States",
@@ -2157,7 +2157,7 @@
         "crest": "assets/crests/BEL.svg"
       },
       "homeScore": 1,
-      "awayScore": 3,
+      "awayScore": 4,
       "pensHome": null,
       "pensAway": null,
       "decidedBy": "REGULAR",
