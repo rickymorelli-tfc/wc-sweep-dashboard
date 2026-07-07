@@ -109,10 +109,34 @@ function groupStandings(matches) {
   return groups;
 }
 
-function knockoutRounds(matches) {
+// Fixture ids in true bracket order (top of the draw down to the bottom) for
+// any round football-data does NOT number in bracket order. Only the Round of
+// 16 needs it: those ties are scheduled, and so id'd, out of bracket sequence,
+// so ordering the boxes by id or kickoff drops them out of line with the boxes
+// they feed (Norway/England, winners of R16 537377+537378, land in the 3rd QF,
+// but a plain sort renders their two feeder boxes as the 3rd/4th of eight).
+// Every other round is already id-ordered by bracket position and falls through
+// to the id sort below. Derived from the feed's own winner-placement linkage and
+// verified: each R16 slot here is fed by a consecutive R32 id pair, and each
+// played QF by the matching R16 pair. Stable for the whole tournament.
+const BRACKET_ORDER = {
+  LAST_16: [537375, 537376, 537379, 537380, 537377, 537378, 537381, 537382],
+};
+
+// Order each round's fixtures by bracket position, not kickoff date. The funnel
+// layout only lines up when box N sits directly above the two boxes that feed
+// it, and kickoff order scrambles that (a QF played later can sit earlier in the
+// draw). Winners still come from the feed, which drops each into its correct
+// next-round fixture id; we only decide where each fixture is drawn.
+export function knockoutRounds(matches) {
   return KO_STAGES.map((stage) => {
+    const order = BRACKET_ORDER[stage.key];
+    const rank = (m) => {
+      const i = order ? order.indexOf(m.id) : -1;
+      return i !== -1 ? i : (m.id ?? Infinity); // else feed id (already bracket-ordered)
+    };
     const ms = matches.filter((m) => m.stage === stage.key)
-      .sort((a, b) => new Date(a.utcDate) - new Date(b.utcDate));
+      .sort((a, b) => rank(a) - rank(b));
     const slots = [];
     for (let i = 0; i < stage.matches; i++) slots.push(ms[i] || null);
     return { ...stage, slots };
