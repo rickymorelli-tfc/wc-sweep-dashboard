@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-07T19:04:37.056Z",
+  "lastUpdated": "2026-07-07T20:55:28.191Z",
   "matches": [
     {
       "id": 537327,
@@ -2191,7 +2191,7 @@
       "stage": "LAST_16",
       "group": null,
       "utcDate": "2026-07-07T20:00:00Z",
-      "status": "TIMED",
+      "status": "PAUSED",
       "home": {
         "code": "SUI",
         "name": "Switzerland",
@@ -2202,12 +2202,12 @@
         "name": "Colombia",
         "crest": "assets/crests/COL.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "pensHome": null,
       "pensAway": null,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "DRAW"
     },
     {
       "id": 537383,
