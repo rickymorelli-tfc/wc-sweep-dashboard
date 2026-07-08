@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-08T03:41:56.252Z",
+  "lastUpdated": "2026-07-08T06:15:21.643Z",
   "matches": [
     {
       "id": 537327,
@@ -2202,9 +2202,9 @@
         "name": "Colombia",
         "crest": "assets/crests/COL.svg"
       },
-      "homeScore": 1,
+      "homeScore": 0,
       "awayScore": 0,
-      "pensHome": 3,
+      "pensHome": 4,
       "pensAway": 3,
       "decidedBy": "PENALTIES",
       "winner": "HOME_TEAM"
@@ -2285,14 +2285,14 @@
       "utcDate": "2026-07-12T01:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "ARG",
+        "name": "Argentina",
+        "crest": "assets/crests/ARG.png"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "SUI",
+        "name": "Switzerland",
+        "crest": "assets/crests/SUI.svg"
       },
       "homeScore": null,
       "awayScore": null,
