@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-08T08:45:03.182Z",
+  "lastUpdated": "2026-07-08T10:49:50.186Z",
   "source": "Polymarket",
   "predictions": {
     "537383": {
@@ -19,6 +19,12 @@
       "draw": 0.261,
       "away": 0.517,
       "slug": "fifwc-nor-eng-2026-07-11"
+    },
+    "537386": {
+      "home": 0.564,
+      "draw": 0.27,
+      "away": 0.167,
+      "slug": "fifwc-arg-che-2026-07-11"
     }
   }
 }
