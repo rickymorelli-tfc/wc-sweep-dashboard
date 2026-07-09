@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-09T18:22:30.709Z",
+  "lastUpdated": "2026-07-09T20:12:46.350Z",
   "matches": [
     {
       "id": 537327,
@@ -2214,7 +2214,7 @@
       "stage": "QUARTER_FINALS",
       "group": null,
       "utcDate": "2026-07-09T20:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "home": {
         "code": "FRA",
         "name": "France",
@@ -2225,12 +2225,12 @@
         "name": "Morocco",
         "crest": "assets/crests/MAR.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "pensHome": null,
       "pensAway": null,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "DRAW"
     },
     {
       "id": 537384,
