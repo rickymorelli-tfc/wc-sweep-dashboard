@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-10T18:44:09.948Z",
+  "lastUpdated": "2026-07-10T20:06:26.810Z",
   "matches": [
     {
       "id": 537327,
@@ -2237,7 +2237,7 @@
       "stage": "QUARTER_FINALS",
       "group": null,
       "utcDate": "2026-07-10T19:00:00Z",
-      "status": "TIMED",
+      "status": "PAUSED",
       "home": {
         "code": "ESP",
         "name": "Spain",
@@ -2248,12 +2248,12 @@
         "name": "Belgium",
         "crest": "assets/crests/BEL.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 1,
       "pensHome": null,
       "pensAway": null,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "DRAW"
     },
     {
       "id": 537385,
