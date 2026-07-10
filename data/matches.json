@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-10T03:44:15.365Z",
+  "lastUpdated": "2026-07-10T07:03:13.151Z",
   "matches": [
     {
       "id": 537327,
@@ -2308,9 +2308,9 @@
       "utcDate": "2026-07-14T19:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "FRA",
+        "name": "France",
+        "crest": "assets/crests/FRA.svg"
       },
       "away": {
         "code": null,
