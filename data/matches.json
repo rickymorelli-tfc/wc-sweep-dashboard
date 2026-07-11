@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-11T22:01:06.285Z",
+  "lastUpdated": "2026-07-11T22:57:06.009Z",
   "matches": [
     {
       "id": 537327,
@@ -2260,7 +2260,7 @@
       "stage": "QUARTER_FINALS",
       "group": null,
       "utcDate": "2026-07-11T21:00:00Z",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "home": {
         "code": "NOR",
         "name": "Norway",
@@ -2271,12 +2271,12 @@
         "name": "England",
         "crest": "assets/crests/ENG.svg"
       },
-      "homeScore": 1,
+      "homeScore": 2,
       "awayScore": 1,
       "pensHome": null,
       "pensAway": null,
       "decidedBy": "REGULAR",
-      "winner": "DRAW"
+      "winner": "HOME_TEAM"
     },
     {
       "id": 537386,
