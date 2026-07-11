@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-11T21:05:39.051Z",
+  "lastUpdated": "2026-07-11T22:01:06.285Z",
   "matches": [
     {
       "id": 537327,
@@ -2099,7 +2099,7 @@
       "stage": "LAST_16",
       "group": null,
       "utcDate": "2026-07-06T01:00:00Z",
-      "status": "FINISHED",
+      "status": "2026-07-06 01:00:00Z",
       "home": {
         "code": "MEX",
         "name": "Mexico",
@@ -2260,7 +2260,7 @@
       "stage": "QUARTER_FINALS",
       "group": null,
       "utcDate": "2026-07-11T21:00:00Z",
-      "status": "TIMED",
+      "status": "PAUSED",
       "home": {
         "code": "NOR",
         "name": "Norway",
@@ -2271,12 +2271,12 @@
         "name": "England",
         "crest": "assets/crests/ENG.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 1,
+      "awayScore": 1,
       "pensHome": null,
       "pensAway": null,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "DRAW"
     },
     {
       "id": 537386,
