@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-11T06:00:13.678Z",
+  "lastUpdated": "2026-07-11T08:03:53.172Z",
   "matches": [
     {
       "id": 537327,
@@ -2313,9 +2313,9 @@
         "crest": "assets/crests/FRA.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "ESP",
+        "name": "Spain",
+        "crest": "assets/crests/ESP.svg"
       },
       "homeScore": null,
       "awayScore": null,
