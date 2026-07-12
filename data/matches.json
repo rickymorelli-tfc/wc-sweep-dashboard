@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-12T01:14:40.564Z",
+  "lastUpdated": "2026-07-12T04:41:27.273Z",
   "matches": [
     {
       "id": 537327,
@@ -2283,7 +2283,7 @@
       "stage": "QUARTER_FINALS",
       "group": null,
       "utcDate": "2026-07-12T01:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "home": {
         "code": "ARG",
         "name": "Argentina",
@@ -2294,12 +2294,12 @@
         "name": "Switzerland",
         "crest": "assets/crests/SUI.svg"
       },
-      "homeScore": 0,
-      "awayScore": 0,
+      "homeScore": 3,
+      "awayScore": 1,
       "pensHome": null,
       "pensAway": null,
-      "decidedBy": "REGULAR",
-      "winner": "DRAW"
+      "decidedBy": "EXTRA_TIME",
+      "winner": "HOME_TEAM"
     },
     {
       "id": 537387,
