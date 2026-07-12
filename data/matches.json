@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-11T23:52:11.217Z",
+  "lastUpdated": "2026-07-12T01:14:40.564Z",
   "matches": [
     {
       "id": 537327,
@@ -2260,7 +2260,7 @@
       "stage": "QUARTER_FINALS",
       "group": null,
       "utcDate": "2026-07-11T21:00:00Z",
-      "status": "PAUSED",
+      "status": "FINISHED",
       "home": {
         "code": "NOR",
         "name": "Norway",
@@ -2283,7 +2283,7 @@
       "stage": "QUARTER_FINALS",
       "group": null,
       "utcDate": "2026-07-12T01:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "home": {
         "code": "ARG",
         "name": "Argentina",
@@ -2294,12 +2294,12 @@
         "name": "Switzerland",
         "crest": "assets/crests/SUI.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "pensHome": null,
       "pensAway": null,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "DRAW"
     },
     {
       "id": 537387,
