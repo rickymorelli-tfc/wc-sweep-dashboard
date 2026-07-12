@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-12T04:41:27.273Z",
+  "lastUpdated": "2026-07-12T07:15:14.437Z",
   "matches": [
     {
       "id": 537327,
@@ -2099,7 +2099,7 @@
       "stage": "LAST_16",
       "group": null,
       "utcDate": "2026-07-06T01:00:00Z",
-      "status": "2026-07-06 01:00:00Z",
+      "status": "FINISHED",
       "home": {
         "code": "MEX",
         "name": "Mexico",
@@ -2331,14 +2331,14 @@
       "utcDate": "2026-07-15T19:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "ENG",
+        "name": "England",
+        "crest": "assets/crests/ENG.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "ARG",
+        "name": "Argentina",
+        "crest": "assets/crests/ARG.png"
       },
       "homeScore": null,
       "awayScore": null,
