@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-14T20:32:45.179Z",
+  "lastUpdated": "2026-07-14T21:32:16.101Z",
   "matches": [
     {
       "id": 537327,
@@ -2306,7 +2306,7 @@
       "stage": "SEMI_FINALS",
       "group": null,
       "utcDate": "2026-07-14T19:00:00Z",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "home": {
         "code": "FRA",
         "name": "France",
