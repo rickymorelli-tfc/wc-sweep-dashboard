@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-14T19:16:25.951Z",
+  "lastUpdated": "2026-07-14T20:32:45.179Z",
   "matches": [
     {
       "id": 537327,
@@ -2318,11 +2318,11 @@
         "crest": "assets/crests/ESP.svg"
       },
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 2,
       "pensHome": null,
       "pensAway": null,
       "decidedBy": "REGULAR",
-      "winner": "DRAW"
+      "winner": "AWAY_TEAM"
     },
     {
       "id": 537388,
