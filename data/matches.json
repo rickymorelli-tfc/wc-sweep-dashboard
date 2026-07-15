@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-15T18:36:34.717Z",
+  "lastUpdated": "2026-07-15T19:48:15.860Z",
   "matches": [
     {
       "id": 537327,
@@ -2329,7 +2329,7 @@
       "stage": "SEMI_FINALS",
       "group": null,
       "utcDate": "2026-07-15T19:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "home": {
         "code": "ENG",
         "name": "England",
@@ -2340,12 +2340,12 @@
         "name": "Argentina",
         "crest": "assets/crests/ARG.png"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 0,
       "pensHome": null,
       "pensAway": null,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "DRAW"
     },
     {
       "id": 537389,
