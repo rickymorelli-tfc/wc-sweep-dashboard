@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-15T05:56:01.586Z",
+  "lastUpdated": "2026-07-15T07:56:06.590Z",
   "matches": [
     {
       "id": 537327,
@@ -2354,9 +2354,9 @@
       "utcDate": "2026-07-18T21:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "FRA",
+        "name": "France",
+        "crest": "assets/crests/FRA.svg"
       },
       "away": {
         "code": null,
@@ -2377,9 +2377,9 @@
       "utcDate": "2026-07-19T19:00:00Z",
       "status": "TIMED",
       "home": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "ESP",
+        "name": "Spain",
+        "crest": "assets/crests/ESP.svg"
       },
       "away": {
         "code": null,
