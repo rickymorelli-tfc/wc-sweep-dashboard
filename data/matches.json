@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-16T04:18:17.996Z",
+  "lastUpdated": "2026-07-16T06:34:34.249Z",
   "matches": [
     {
       "id": 537327,
@@ -2359,9 +2359,9 @@
         "crest": "assets/crests/FRA.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "ENG",
+        "name": "England",
+        "crest": "assets/crests/ENG.svg"
       },
       "homeScore": null,
       "awayScore": null,
@@ -2382,9 +2382,9 @@
         "crest": "assets/crests/ESP.svg"
       },
       "away": {
-        "code": null,
-        "name": "TBD",
-        "crest": ""
+        "code": "ARG",
+        "name": "Argentina",
+        "crest": "assets/crests/ARG.png"
       },
       "homeScore": null,
       "awayScore": null,
