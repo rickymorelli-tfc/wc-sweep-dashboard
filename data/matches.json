@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-18T20:28:46.781Z",
+  "lastUpdated": "2026-07-18T21:23:54.118Z",
   "matches": [
     {
       "id": 537327,
@@ -2352,7 +2352,7 @@
       "stage": "THIRD_PLACE",
       "group": null,
       "utcDate": "2026-07-18T21:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "home": {
         "code": "FRA",
         "name": "France",
@@ -2363,12 +2363,12 @@
         "name": "England",
         "crest": "assets/crests/ENG.svg"
       },
-      "homeScore": null,
-      "awayScore": null,
+      "homeScore": 0,
+      "awayScore": 1,
       "pensHome": null,
       "pensAway": null,
       "decidedBy": "REGULAR",
-      "winner": null
+      "winner": "AWAY_TEAM"
     },
     {
       "id": 537390,
