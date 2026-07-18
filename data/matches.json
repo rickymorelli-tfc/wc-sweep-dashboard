@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-18T22:11:09.706Z",
+  "lastUpdated": "2026-07-18T23:09:00.968Z",
   "matches": [
     {
       "id": 537327,
@@ -2352,7 +2352,7 @@
       "stage": "THIRD_PLACE",
       "group": null,
       "utcDate": "2026-07-18T21:00:00Z",
-      "status": "PAUSED",
+      "status": "FINISHED",
       "home": {
         "code": "FRA",
         "name": "France",
@@ -2363,8 +2363,8 @@
         "name": "England",
         "crest": "assets/crests/ENG.svg"
       },
-      "homeScore": 0,
-      "awayScore": 4,
+      "homeScore": 4,
+      "awayScore": 6,
       "pensHome": null,
       "pensAway": null,
       "decidedBy": "REGULAR",
