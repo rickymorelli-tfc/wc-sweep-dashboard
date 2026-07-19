@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-19T21:25:52.268Z",
+  "lastUpdated": "2026-07-19T22:22:45.526Z",
   "matches": [
     {
       "id": 537327,
@@ -2375,7 +2375,7 @@
       "stage": "FINAL",
       "group": null,
       "utcDate": "2026-07-19T19:00:00Z",
-      "status": "PAUSED",
+      "status": "FINISHED",
       "home": {
         "code": "ESP",
         "name": "Spain",
@@ -2386,12 +2386,12 @@
         "name": "Argentina",
         "crest": "assets/crests/ARG.png"
       },
-      "homeScore": 0,
+      "homeScore": 1,
       "awayScore": 0,
       "pensHome": null,
       "pensAway": null,
-      "decidedBy": "REGULAR",
-      "winner": "DRAW"
+      "decidedBy": "EXTRA_TIME",
+      "winner": "HOME_TEAM"
     }
   ]
 }
