@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-19T20:29:33.206Z",
+  "lastUpdated": "2026-07-19T21:25:52.268Z",
   "matches": [
     {
       "id": 537327,
@@ -2375,7 +2375,7 @@
       "stage": "FINAL",
       "group": null,
       "utcDate": "2026-07-19T19:00:00Z",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "home": {
         "code": "ESP",
         "name": "Spain",
